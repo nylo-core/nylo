@@ -2,12 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_app/app/interface/home_interface.dart';
+import 'package:flutter_app/app/networking/services/base_url_api_service.dart';
 import 'package:flutter_app/common/themes/dark_theme.dart';
 import 'package:flutter_app/common/themes/default_theme.dart';
 import 'package:lottie/lottie.dart';
+import 'package:nylo_framework/theme/helper/theme_helper.dart';
 
 class MyHomePage extends StatefulWidget {
   final HomeInterface interface;
+  final BaseUrlApiService baseUrlApiService = BaseUrlApiService();
   final String title;
 
   MyHomePage({Key key, this.title, this.interface}) : super(key: key);
@@ -18,6 +21,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool _switchValue = true;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -102,9 +110,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       onChanged: (val) {
                         _switchValue = val;
                         if (val) {
-//                          AppThemeHelper.set(context, theme: defaultTheme());
+                          AppThemeHelper.set(context, theme: defaultTheme());
                         } else {
-//                          AppThemeHelper.set(context, theme: darkTheme());
+                          AppThemeHelper.set(context, theme: darkTheme());
                         }
                       }),
                   Icon(Icons.wb_sunny, color: Colors.grey),

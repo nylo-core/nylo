@@ -1,28 +1,13 @@
-import 'package:flutter_app/app/networking/base_networking.dart';
+import 'dart:convert';
+import '../base_api.dart';
+import 'package:http/http.dart';
 
-abstract class NyApi {
-  String _url();
-}
 
-class BaseUrlApiService extends NyApi {
+class BaseUrlApiService extends BaseApi {
+  
   var _client;
-  BaseNetworking _baseNetworking;
 
-  BaseUrlApiService() {
-    _baseNetworking = BaseNetworking();
-//    String toke =  await NySecureStoage('sdsdjnskjcn');
-  }
+  BaseUrlApiService() : _client = new Client();
 
-  String _url() {
-    return _baseNetworking.getUrl(tag: "base_url");
-  }
-
-  fetchChangeLog() async {
-    try {
-      var uriResponse = await _client.get(this._url() + '/changelog');
-      return await _client.get(uriResponse);
-    } finally {
-      _client.close();
-    }
-  }
+  
 }

@@ -34,23 +34,23 @@ class _ChangeLogPageState extends State<ChangeLogPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: LoadableBody(
-        callable: _fetchChangeLogs(),
-        body: () => SafeArea(
-          child: ListView.builder(
-            itemBuilder: (context, index) {
-              return ListTile(
-                title: Text(
-                  "",
-                  //changeLog.changes[index]
-                  style: Theme.of(context).textTheme.subtitle1,
-                ),
-              );
-            },
-            itemCount: 0,
-          ),
-        ),
-      ),
+//      body: LoadableBody(
+//        callable: _fetchChangeLogs(),
+//        body: () => SafeArea(
+//          child: ListView.builder(
+//            itemBuilder: (context, index) {
+//              return ListTile(
+//                title: Text(
+//                  "",
+//                  //changeLog.changes[index]
+//                  style: Theme.of(context).textTheme.subtitle1,
+//                ),
+//              );
+//            },
+//            itemCount: 0,
+//          ),
+//        ),
+//      ),
     );
   }
 }

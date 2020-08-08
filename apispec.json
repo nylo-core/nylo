@@ -1,0 +1,26 @@
+[
+  {
+    "url":  "https://reqres.in/api/unknown",
+    "method": "get",
+    "headers": [],
+    "model_name": "Post",
+    "model_type": "object",
+    "data": {}
+  },
+  {
+    "url":  "https://reqres.in/api/users?page=2",
+    "method": "get",
+    "headers": [],
+    "model_name": "AppUser",
+    "model_type": "object",
+    "data": {}
+  },
+  {
+    "url":  "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyAsmCgv6JhzyEq4pi6M3eEqalM_CBzEu3g",
+    "method": "get",
+    "headers": [],
+    "model_name": "GoogleLocation",
+    "model_type": "object",
+    "data": {}
+  }
+]

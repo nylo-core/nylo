@@ -9,12 +9,12 @@ class AuthMiddleware {
     Object request,
   ) {
     if (request == null) {
-      return router().getRouteNamed("app.error");
+//      return router().getRouteNamed("app.error");
     }
     if (Map.of(request)["index"] == 22) {
       return null;
     } else {
-      return router().getRouteNamed("app.error");
+//      return router().getRouteNamed("app.error");
     }
   }
 }

@@ -13,7 +13,7 @@ class AdminMiddleware implements Middleware {
     if (Map.of(request)["index"] == 22) {
       return null;
     } else {
-      return router().getRouteNamed("landing.error");
+//      return router().getRouteNamed("landing.error");
     }
   }
 }

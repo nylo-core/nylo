@@ -1,4 +1,4 @@
-# flutter_app
+# nylo_app
 
 A new Flutter application.
 

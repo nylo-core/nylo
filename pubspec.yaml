@@ -1,5 +1,5 @@
 name: flutter_app
-description: A new Flutter application.
+description: A new Nylo Flutter application.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -21,12 +21,12 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  http: ^0.12.1
-  lottie: ^0.4.1
+  http: ^0.12.2
+  lottie: ^0.5.0
+  flutter_dotenv: ^2.1.0
+  pretty_dio_logger: ^1.1.1
   nylo_framework:
     path: ../nylo_framework
-#  metro:
-#    path: ../metro
   flutter:
     sdk: flutter
 

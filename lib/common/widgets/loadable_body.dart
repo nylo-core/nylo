@@ -28,8 +28,8 @@ import 'package:flutter/material.dart';
 //}
 
 class LoadableBody extends StatelessWidget {
-  final Future<void> callable;
-  final Widget Function() body;
+  final Future<dynamic> callable;
+  final Widget Function(AsyncSnapshot<void>) body;
 
   const LoadableBody({Key key, @required this.callable, @required this.body})
       : super(key: key);
@@ -38,7 +38,7 @@ class LoadableBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder<void>(
       future: callable,
-      builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
+      builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
             return Container(
@@ -54,7 +54,7 @@ class LoadableBody extends StatelessWidget {
               return new Text('Error: ${snapshot.error}',
                   textAlign: TextAlign.center);
             else
-              return body();
+              return this.body(snapshot.data);
         }
       },
     );
