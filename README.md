@@ -1,4 +1,4 @@
-![Nylo Banner](https://woosignal.com/images/nylo_banner.png)
+![Nylo Banner](https://woosignal.com/images/nylo.png)
 
 <p align="center">
   <a href="/"><img src="https://img.shields.io/github/v/release/woosignal/flutter-woocommerce-app?style=plastic" alt="Latest Release Version"></a>
@@ -38,8 +38,8 @@ View our [docs](https://nylo.dev/docs) and visit [nylo.dev](https://nylo.dev)
 Please see [CHANGELOG](https://woosignal.com) for more information what has changed recently.
 
 ## Social
-* [Twitter](https://twitter.com/nylo-dev)
-* [YouTube](https://youtube.com)
+* [Twitter](https://twitter.com/nylo_dev)
+* [YouTube](https://youtube.com/nylo)
 
 ## Security
 If you discover any security related issues, please email support@nylo.dev instead of using the issue tracker.
