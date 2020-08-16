@@ -1,8 +1,4 @@
 PODS:
-  - auto_json_to_dart_converter (0.0.1):
-    - Flutter
-  - ext_storage (0.0.1):
-    - Flutter
   - Flutter (1.0.0)
   - flutter_secure_storage (3.3.1):
     - Flutter
@@ -14,8 +10,6 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - auto_json_to_dart_converter (from `.symlinks/plugins/auto_json_to_dart_converter/ios`)
-  - ext_storage (from `.symlinks/plugins/ext_storage/ios`)
   - Flutter (from `Flutter`)
   - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
@@ -23,10 +17,6 @@ DEPENDENCIES:
   - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
 
 EXTERNAL SOURCES:
-  auto_json_to_dart_converter:
-    :path: ".symlinks/plugins/auto_json_to_dart_converter/ios"
-  ext_storage:
-    :path: ".symlinks/plugins/ext_storage/ios"
   Flutter:
     :path: Flutter
   flutter_secure_storage:
@@ -39,8 +29,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/url_launcher/ios"
 
 SPEC CHECKSUMS:
-  auto_json_to_dart_converter: e8b12f9a7c94ec66b248eb8a3bf352d526181f82
-  ext_storage: 4eaf3a84d5594106e2ebcc2502248cfde53c8fa1
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_secure_storage: 7953c38a04c3fdbb00571bcd87d8e3b5ceb9daec
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c

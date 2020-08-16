@@ -1,12 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
+// Theme main font
+final TextStyle appThemeFont = GoogleFonts.lato();
+
+// Theme colors
 class AppColors {
   // MAIN
   Color _mainLightColor = Color(0xFF232c33);
   Color _mainDarkColor = Color(0xFFFAFAFA);
 
-  // SECOND
+  // SECONDARY
   Color _secondLightColor = Color(0xFF232c33);
   Color _secondDarkColor = Color(0xFFccccdd);
 
@@ -17,7 +21,9 @@ class AppColors {
   // SCAFFOLD
   Color _scaffoldDarkColor = Color(0xFF2C2C2C);
   Color _scaffoldLightColor = Color(0xFFFAFAFA);
+}
 
+class AppTheme extends AppColors {
   Color mainColor(
       {double opacity = 1, Brightness brightness = Brightness.light}) {
     return (brightness == Brightness.light

@@ -1,6 +1,4 @@
 {
-  "Documentation": "Documentation",
-  "ChangeLog": "ChangeLog",
-  "Shop": "Shop",
-  "Newest": "Newest"
+  "documentation": "documentation",
+  "changelog": "changelog"
 }

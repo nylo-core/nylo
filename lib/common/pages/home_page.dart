@@ -1,27 +1,20 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:flutter_app/app/interface/home_interface.dart';
-import 'package:flutter_app/app/networking/services/base_url_api_service.dart';
-import 'package:flutter_app/common/themes/dark_theme.dart';
-import 'package:flutter_app/common/themes/default_theme.dart';
-import 'package:lottie/lottie.dart';
-import 'package:nylo_framework/theme/helper/theme_helper.dart';
+import 'package:flutter_app/app/controllers/home_controller.dart';
+import 'package:nylo_framework/helpers/helper.dart';
+import 'package:nylo_framework/localization/app_localization.dart';
+import 'package:nylo_framework/nylo_framework.dart';
 
 class MyHomePage extends StatefulWidget {
-  final HomeInterface interface;
-  final BaseUrlApiService baseUrlApiService = BaseUrlApiService();
+  final HomeController controller;
   final String title;
 
-  MyHomePage({Key key, this.title, this.interface}) : super(key: key);
+  MyHomePage({Key key, this.title, this.controller}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  bool _switchValue = true;
-
   @override
   void initState() {
     super.initState();
@@ -39,9 +32,8 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              LottieBuilder.asset(
-                "public/assets/lottie/creation.json",
-                repeat: false,
+              Image.asset(
+                getImageAsset("nylo_logo.png"),
                 height: 100,
                 width: 100,
               ),
@@ -50,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Nylo",
+                    getEnv("APP_NAME"),
                     style: Theme.of(context).textTheme.headline2,
                   ),
                   Row(
@@ -58,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       Text(
-                        "v1.0.0",
+                        "v$nyloVersion",
                         style: Theme.of(context).accentTextTheme.bodyText2,
                         textAlign: TextAlign.center,
                       ),
@@ -73,49 +65,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: <Widget>[
                         MaterialButton(
                           child: Text(
-                            "Documentation",
+                            trans(context, "documentation").capitalize(),
                             style: Theme.of(context).textTheme.bodyText1,
                           ),
-                          onPressed: widget.interface.onTapDocumentation,
+                          onPressed: widget.controller.onTapDocumentation,
                         ),
                         MaterialButton(
                           child: Text(
                             "GitHub",
                             style: Theme.of(context).textTheme.bodyText1,
                           ),
-                          onPressed: widget.interface.onTapGithub,
+                          onPressed: widget.controller.onTapGithub,
                         ),
                         MaterialButton(
                           child: Text(
-                            "ChangeLog",
+                            trans(context, "changelog").capitalize(),
                             style: Theme.of(context).textTheme.bodyText1,
                           ),
-                          onPressed: widget.interface.onTapChangeLog,
+                          onPressed: widget.controller.onTapChangeLog,
                         ),
                       ],
                     ),
                   ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Icon(
-                    Icons.brightness_2,
-                    color: Colors.grey,
-                  ),
-                  Switch(
-                      value: _switchValue,
-                      onChanged: (val) {
-                        _switchValue = val;
-                        if (val) {
-                          AppThemeHelper.set(context, theme: defaultTheme());
-                        } else {
-                          AppThemeHelper.set(context, theme: darkTheme());
-                        }
-                      }),
-                  Icon(Icons.wb_sunny, color: Colors.grey),
                 ],
               ),
             ],
