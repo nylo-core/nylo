@@ -24,8 +24,7 @@ dependencies:
   http: ^0.12.2
   url_launcher: ^5.5.0
   google_fonts: ^1.1.0
-  nylo_framework:
-    path: ../nylo_framework
+  nylo_framework: ^0.1.0
   flutter:
     sdk: flutter
 
