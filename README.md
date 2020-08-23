@@ -6,7 +6,7 @@
   <a href="/"><img alt="GitHub stars" src="https://img.shields.io/github/stars/woosignal/flutter-woocommerce-app?style=plastic"></a>
 </p>
 
-## Nylo
+## Nylo (Beta v0.1.0)
 
 Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple bolierplate and MVC pattern to help you build apps easier. 
 
