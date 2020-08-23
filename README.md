@@ -8,7 +8,7 @@
 
 ## Nylo (Beta v0.1.0)
 
-Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple bolierplate and MVC pattern to help you build apps easier. 
+Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple boilerplate and MVC pattern to help you build apps easier. 
 
 This project is open source and MIT-licenced, we welcome any contributions. You can join as a backer/sponsor to fund future development for this project [here](https://nylo.dev)
 
