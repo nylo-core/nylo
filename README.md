@@ -39,7 +39,6 @@ Please see [CHANGELOG](https://woosignal.com) for more information what has chan
 
 ## Social
 * [Twitter](https://twitter.com/nylo_dev)
-* [YouTube](https://youtube.com/nylo)
 
 ## Security
 If you discover any security related issues, please email support@nylo.dev instead of using the issue tracker.
