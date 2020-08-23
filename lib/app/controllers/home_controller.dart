@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/networking/base_api_service.dart';
-import 'package:nylo_framework/metro/controllers/controller.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'controller.dart';
 
 class HomeController extends Controller {
 
@@ -10,7 +9,7 @@ class HomeController extends Controller {
   }
 
   onTapDocumentation() {
-    launch("https://nylo.dev/docs/1x");
+    launch("https://nylo.dev/docs");
   }
 
   onTapGithub() {
@@ -18,6 +17,6 @@ class HomeController extends Controller {
   }
 
   onTapChangeLog() {
-    launch("https://github.com/nylo-core/framework/changelog");
+    launch("https://github.com/nylo-core/framework/1.x/changelog.md");
   }
 }

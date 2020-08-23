@@ -11,7 +11,7 @@ buildRouter() => nyCreateRoutes((router) {
           controller: HomeController.of(context),
           title: "Hello World",
         );
-      },
+      }
     ));
 
   });

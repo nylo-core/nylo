@@ -286,7 +286,7 @@ packages:
       path: "../nylo_framework"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.1.0"
   package_config:
     dependency: transitive
     description:

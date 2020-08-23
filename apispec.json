@@ -6,12 +6,5 @@
     "model_name": "DemoUser",
     "model_type": "object",
     "data": {}
-  },
-  {
-    "url": "https://raw.githubusercontent.com/javiercbk/json_to_dart/master/example/sample.json",
-    "method": "get",
-    "headers": [],
-    "model_name": "Sane",
-    "model_type": "object"
   }
 ]
