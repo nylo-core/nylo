@@ -1,9 +1,9 @@
 ![Nylo Banner](https://woosignal.com/images/nylo.png)
 
 <p align="center">
-  <a href="/"><img src="https://img.shields.io/github/v/release/nylo-core/nylo?style=plastic" alt="Latest Release Version"></a>
-  <a href="/"><img src="https://img.shields.io/github/license/release/nylo-core/nylo?style=plastic" alt="Latest Stable Version"></a>
-  <a href="/"><img alt="GitHub stars" src="https://img.shields.io/github/stars/release/nylo-core/nylo?style=plastic"></a>
+  <a href="https://github.com/nylo-core/nylo/releases"><img src="https://img.shields.io/github/v/release/nylo-core/nylo?style=plastic" alt="Latest Release Version"></a>
+  <a href="https://github.com/nylo-core/nylo/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/nylo-core/nylo?style=plastic"></a>
+  <a href="#"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nylo-core/nylo?style=plastic"></a>
 </p>
 
 ## Nylo (Beta v0.1.0)
