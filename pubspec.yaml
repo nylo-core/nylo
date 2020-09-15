@@ -1,20 +1,20 @@
+# Nylo - Micro-framework for Flutter.
+#
+# ! IMPORTANT !
+# Run: 'flutter pub run nylo_framework:main project:init'
+#
+# This creates an .env file for you at the project.
+# You need a .env file for the project to build.
+#
+# ! DOCS !
+# https://nylo.dev
+# Author: Anthony Gordon <agordon@nylo.dev>
+
 name: flutter_app
 description: A new Nylo Flutter application.
 
-# The following line prevents the package from being accidentally published to
-# pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
 environment:
@@ -24,8 +24,12 @@ dependencies:
   http: ^0.12.2
   url_launcher: ^5.5.0
   google_fonts: ^1.1.0
-  nylo_framework: ^0.1.0
+  intl: ^0.16.1
+  dynamic_theme: ^1.0.0
+  nylo_framework: ^0.2.0
   flutter:
+    sdk: flutter
+  flutter_localizations:
     sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
@@ -33,19 +37,16 @@ dependencies:
   cupertino_icons: ^0.1.3
 
 dev_dependencies:
+  flutter_application_id: "^1.0.0"
   flutter_test:
     sdk: flutter
 
-# App Icon
+# APP ICON
 flutter_icons:
   android: "launcher_icon"
   ios: true
   image_path: "public/assets/app_icon/icon.png"
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter.
 flutter:
 
   # The following line ensures that the Material Icons font is

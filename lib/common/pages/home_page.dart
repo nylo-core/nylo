@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/app/controllers/home_controller.dart';
 import 'package:nylo_framework/helpers/helper.dart';
 import 'package:nylo_framework/localization/app_localization.dart';
-import 'package:nylo_framework/nylo_framework.dart';
+import 'package:nylo_framework/widgets/stateful_page_widget.dart';
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatefulPageWidget {
   final HomeController controller;
   final String title;
 
@@ -50,8 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       Text(
-                        "v$nyloVersion",
-                        style: Theme.of(context).accentTextTheme.bodyText2,
+                        "Micro-framework for Flutter",
+                        style: Theme.of(context).accentTextTheme.subtitle1,
                         textAlign: TextAlign.center,
                       ),
                     ],
