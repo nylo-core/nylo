@@ -4,14 +4,13 @@ import 'package:nylo_framework/router/router.dart';
 
 buildRouter() => nyCreateRoutes((router) {
 
-    router.addRoute(NyRoute(
-      name: "/",
-      builder: (context, args, params) {
-        return MyHomePage(
-          controller: HomeController.of(context),
+  router.addRoute(NyRoute(
+        name: "/",
+        view: (context) => MyHomePage(
           title: "Hello World",
-        );
-      }
-    ));
+          controller: HomeController.of(context),
+        ),
+      ));
 
-  });
+
+});

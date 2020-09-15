@@ -1,12 +1,12 @@
 ![Nylo Banner](https://woosignal.com/images/nylo.png)
 
 <p align="center">
-  <a href="/"><img src="https://img.shields.io/github/v/release/woosignal/flutter-woocommerce-app?style=plastic" alt="Latest Release Version"></a>
-  <a href="/"><img src="https://img.shields.io/github/license/woosignal/flutter-woocommerce-app?style=plastic" alt="Latest Stable Version"></a>
-  <a href="/"><img alt="GitHub stars" src="https://img.shields.io/github/stars/woosignal/flutter-woocommerce-app?style=plastic"></a>
+  <a href="https://github.com/nylo-core/nylo/releases"><img src="https://img.shields.io/github/v/release/nylo-core/nylo?style=plastic" alt="Latest Release Version"></a>
+  <a href="https://github.com/nylo-core/nylo/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/nylo-core/nylo?style=plastic"></a>
+  <a href="#"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nylo-core/nylo?style=plastic"></a>
 </p>
 
-## Nylo (Beta v0.1.0)
+## Nylo (Beta v0.2.0)
 
 Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple boilerplate and MVC pattern to help you build apps easier. 
 
@@ -16,10 +16,13 @@ This project is open source and MIT-licenced, we welcome any contributions. You 
 
 ## Features
 Some core features available 
-* Auto generate models from API urls
-* Cli for generating new files 
-* Router file to manage routes 
-* Project stucture for widgets, assets, controllers + more
+* Auto generate models from API urls in the new apispec.json file
+* Cli for generating new files
+* Router file to manage routes
+* Light and dark themes preset for customization
+* Localization ready
+* Project structure for widgets, assets, controllers + more
+* Update package name, app display name in the flutter_application_id.yaml
 
 ## Requirements
 * Dart >= 2.7.0
