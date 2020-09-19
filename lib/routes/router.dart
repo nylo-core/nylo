@@ -3,6 +3,7 @@ import 'package:flutter_app/common/pages/home_page.dart';
 import 'package:nylo_framework/router/router.dart';
 
 buildRouter() => nyCreateRoutes((router) {
+
       router.addRoute(NyRoute(
         name: "/",
         view: (context) => MyHomePage(
@@ -10,4 +11,6 @@ buildRouter() => nyCreateRoutes((router) {
           controller: HomeController.of(context),
         ),
       ));
+
+
     });
