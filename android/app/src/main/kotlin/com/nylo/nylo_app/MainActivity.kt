@@ -1,4 +1,4 @@
-package com.mavsoft.flutter_app
+package com.nylo.nylo_app
 
 import io.flutter.embedding.android.FlutterActivity
 
