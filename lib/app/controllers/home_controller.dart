@@ -16,6 +16,6 @@ class HomeController extends Controller {
   }
 
   onTapChangeLog() async {
-    launch("https://github.com/nylo-core/framework/blob/1.x/CHANGELOG.md");
+    launch("https://github.com/nylo-core/framework/blob/0.x/CHANGELOG.md");
   }
 }

@@ -4,7 +4,7 @@ import 'package:nylo_framework/router/router.dart';
 
 buildRouter() => nyCreateRoutes((router) {
 
-  router.addRoute(NyRoute(
+      router.addRoute(NyRoute(
         name: "/",
         view: (context) => MyHomePage(
           title: "Hello World",
@@ -13,4 +13,4 @@ buildRouter() => nyCreateRoutes((router) {
       ));
 
 
-});
+    });

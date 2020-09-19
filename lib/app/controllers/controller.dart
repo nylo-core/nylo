@@ -1,4 +1,4 @@
-import 'package:flutter_app/app/networking/base_api_service.dart';
+import 'package:flutter_app/app/networking/api_service.dart';
 import 'package:nylo_framework/controllers/controller.dart';
 
 class Controller extends BaseController {
