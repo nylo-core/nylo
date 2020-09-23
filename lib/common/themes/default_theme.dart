@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/common/themes/theme_config.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:nylo_framework/helpers/helper.dart';
 
 TextTheme _defaultTextTheme = TextTheme(
@@ -28,9 +27,19 @@ TextTheme _defaultTextTheme = TextTheme(
     fontWeight: FontWeight.w300,
     color: AppTheme().secondColor(),
   ),
+  subtitle2: TextStyle(
+    fontSize: 14.0,
+    fontWeight: FontWeight.w500,
+    color: AppTheme().secondColor(),
+  ),
   subtitle1: TextStyle(
     fontSize: 16.0,
     fontWeight: FontWeight.w500,
+    color: AppTheme().secondColor(),
+  ),
+  overline: TextStyle(
+    fontSize: 10.0,
+    fontWeight: FontWeight.w400,
     color: AppTheme().secondColor(),
   ),
   button: TextStyle(
@@ -75,8 +84,8 @@ ThemeData defaultTheme() => ThemeData(
       scaffoldBackgroundColor: AppTheme().scaffoldColor(),
       hintColor: AppTheme().secondColor(),
       appBarTheme: AppBarTheme(
-        textTheme: GoogleFonts.latoTextTheme(_defaultTextTheme),
         color: Colors.white,
+        textTheme: getAppTextTheme(appThemeFont, _defaultTextTheme),
         iconTheme: IconThemeData(color: AppTheme().mainColor()),
         elevation: 1.0,
         brightness: Brightness.light,

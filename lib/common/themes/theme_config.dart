@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // Theme main font
-final TextStyle appThemeFont = GoogleFonts.lato();
+final TextStyle appThemeFont = GoogleFonts.montserrat();
 
 // Theme colors
 class AppColors {
@@ -12,7 +12,7 @@ class AppColors {
 
   // SECONDARY
   Color _secondLightColor = Color(0xFF232c33);
-  Color _secondDarkColor = Color(0xFFccccdd);
+  Color _secondDarkColor = Color(0xFF232c33);
 
   // ACCENT
   Color _accentLightColor = Color(0xFF87c694);
