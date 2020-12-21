@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/app/controllers/home_controller.dart';
 import 'package:flutter_app/common/widgets/app_container_widget.dart';
 import 'package:nylo_framework/helpers/helper.dart';
+import 'package:nylo_framework/widgets/ny_state.dart';
 import 'package:nylo_framework/widgets/stateful_page_widget.dart';
 
 class MyHomePage extends StatefulPageWidget {
@@ -14,10 +15,11 @@ class MyHomePage extends StatefulPageWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends NyState<MyHomePage> {
+
   @override
-  void initState() {
-    super.initState();
+  widgetDidLoad() async {
+
   }
 
   @override
