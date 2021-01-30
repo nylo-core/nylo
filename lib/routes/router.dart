@@ -9,10 +9,10 @@ import 'package:nylo_framework/router/router.dart';
 
 buildRouter() => nyCreateRoutes((router) {
 
-      router.route("/", (context) => MyHomePage(
-        title: "Hello World",
-      ));
+  router.route("/", (context) => MyHomePage(
+                title: "Hello World",
+              ));
 
-      // Add your routes here
+  // Add your routes here
 
-    });
+});

@@ -10,11 +10,7 @@ import 'package:http/http.dart';
 /// To learn more about the API spec, check out our documentation here
 /// https://nylo.dev/docs/1.x/metro#what-is-an-apispec
 class ApiService extends BaseApi {
-  
   var _client;
 
   ApiService() : _client = new Client();
-  
-  
-  
 }
