@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+/*
+|--------------------------------------------------------------------------
+| App Theme
+|
+| Here you can change the font and colors for your themes.
+|--------------------------------------------------------------------------
+*/
+
 // Theme main font
 final TextStyle appThemeFont = GoogleFonts.montserrat();
 

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/controllers/home_controller.dart';
-import 'package:flutter_app/common/widgets/app_container_widget.dart';
+import 'package:flutter_app/resources/widgets/safearea_container_widget.dart';
 import 'package:nylo_framework/helpers/helper.dart';
 import 'package:nylo_framework/widgets/ny_state.dart';
 import 'package:nylo_framework/widgets/stateful_page_widget.dart';
 
 class MyHomePage extends StatefulPageWidget {
-  final HomeController controller;
+  final HomeController controller = HomeController();
   final String title;
 
-  MyHomePage({Key key, this.title, this.controller}) : super(key: key);
+  MyHomePage({Key key, this.title}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -28,7 +28,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: AppContainerWidget(
+      body: SafeAreaContainerWidget(
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,6 +46,11 @@ class _MyHomePageState extends NyState<MyHomePage> {
               Text(
                 "Micro-framework for Flutter",
                 style: Theme.of(context).accentTextTheme.subtitle1,
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                "Build something amazing 💡️",
+                style: Theme.of(context).textTheme.bodyText2,
                 textAlign: TextAlign.center,
               ),
               Column(
@@ -103,6 +108,11 @@ class _MyHomePageState extends NyState<MyHomePage> {
                         ),
                       ],
                     ),
+                  ),
+                  Image.asset(
+                    getPublicAsset("images/nylo_logo.png"),
+                    height: 50,
+                    width: 50,
                   ),
                   Text(
                     nyloVersion,
