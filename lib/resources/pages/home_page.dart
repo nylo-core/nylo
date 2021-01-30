@@ -109,11 +109,6 @@ class _MyHomePageState extends NyState<MyHomePage> {
                       ],
                     ),
                   ),
-                  Image.asset(
-                    getPublicAsset("images/nylo_logo.png"),
-                    height: 50,
-                    width: 50,
-                  ),
                   Text(
                     nyloVersion,
                     style: Theme.of(context)
