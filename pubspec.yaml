@@ -28,7 +28,7 @@ dependencies:
   intl: ^0.16.1
   dynamic_theme: ^1.0.0
   toast: ^0.1.5
-  nylo_framework: ^0.5.1
+  nylo_framework: ^0.5.2
   flutter:
     sdk: flutter
   flutter_localizations:
