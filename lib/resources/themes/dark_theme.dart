@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/config/app_theme.dart';
 import 'package:nylo_framework/helpers/helper.dart';
 
+/*
+|--------------------------------------------------------------------------
+| Dark Theme
+|
+| Theme Config - config/app_theme.dart
+|--------------------------------------------------------------------------
+*/
+
 TextTheme _defaultTextTheme(AppTheme appTheme) {
   return TextTheme(
     headline5: TextStyle(

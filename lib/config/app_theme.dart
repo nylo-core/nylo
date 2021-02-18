@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 |--------------------------------------------------------------------------
 | App Theme
 |
-| Here you can change the font and colors for your themes.
+| Change the font and colors for your themes.
 |--------------------------------------------------------------------------
 */
 
