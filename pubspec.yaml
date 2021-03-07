@@ -25,11 +25,10 @@ dependencies:
   url_launcher: ^5.7.10
   google_fonts: ^1.1.2
   analyzer: ^0.38.2
-  intl: ^0.16.1
+  adaptive_theme: ^1.1.0
+  intl: ^0.17.0
   page_transition: ^1.1.7+6
-  dynamic_theme: ^1.0.0
-  toast: ^0.1.5
-  nylo_framework: ^0.6.1+1
+  nylo_framework: ^0.6.2
   flutter:
     sdk: flutter
   flutter_localizations:
