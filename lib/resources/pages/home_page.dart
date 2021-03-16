@@ -24,6 +24,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: SafeAreaWidget(
         child: Center(
