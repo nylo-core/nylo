@@ -21,14 +21,14 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  http: ^0.12.2
-  url_launcher: ^6.0.2
-  google_fonts: ^1.1.2
-  analyzer: ^0.38.2
-  adaptive_theme: ^1.1.0
+  dio: ^4.0.0
+  url_launcher: ^6.0.3
+  google_fonts: ^2.0.0
+  analyzer: ^1.4.0
+  adaptive_theme: ^2.1.1
   intl: ^0.17.0
-  page_transition: ^1.1.7+6
-  nylo_framework: ^0.7.0+1
+  page_transition: ^2.0.1-nullsafety.0
+  nylo_framework: ^0.8.2
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -39,7 +39,6 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
-  flutter_application_id: "^1.0.0"
   flutter_test:
     sdk: flutter
 

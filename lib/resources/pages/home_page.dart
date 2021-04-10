@@ -3,9 +3,9 @@ import 'package:flutter_app/app/controllers/home_controller.dart';
 import 'package:flutter_app/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/helpers/helper.dart';
 import 'package:nylo_framework/widgets/ny_state.dart';
-import 'package:nylo_framework/widgets/stateful_page_widget.dart';
+import 'package:nylo_framework/widgets/ny_stateful_widget.dart';
 
-class MyHomePage extends StatefulPageWidget {
+class MyHomePage extends NyStatefulWidget {
   final HomeController controller = HomeController();
   final String title;
 

@@ -6,7 +6,7 @@
   <a href="#"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nylo-core/nylo?style=plastic"></a>
 </p>
 
-## Nylo (Beta v0.7-beta.0)
+## Nylo (Beta v0.8-beta.0)
 
 Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple boilerplate and MVC pattern to help you build apps easier. 
 
@@ -15,8 +15,7 @@ This project is open source and MIT-licenced, we welcome any contributions. You 
 ---
 
 ## Features
-Some core features available 
-* Auto generate models from API urls in the new apispec.json file
+Some core features available
 * Cli for generating new files
 * Router file to manage routes
 * Light and dark themes preset for customization
