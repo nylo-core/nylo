@@ -1,4 +1,4 @@
-import 'package:dynamic_theme/dynamic_theme.dart';
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -62,11 +62,11 @@ class AppBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DynamicTheme(
-      defaultBrightness: Brightness.light,
-      data: (brightness) => themeData,
-      themedWidgetBuilder: (context, theme) {
-        return ValueListenableBuilder(
+    return AdaptiveTheme(
+        light: themeData,
+        dark: darkTheme,
+        initial: AdaptiveThemeMode.light,
+        builder: (theme, darkTheme) => ValueListenableBuilder(
           valueListenable: ValueNotifier(locale),
           builder: (context, Locale locale, _) => MaterialApp(
             navigatorKey: navigatorKey,
@@ -102,8 +102,7 @@ class AppBuild extends StatelessWidget {
               return locale;
             },
           ),
-        );
-      },
-    );
+        )
+      );
   }
 }

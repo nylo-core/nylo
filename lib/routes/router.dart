@@ -1,16 +1,25 @@
-import 'package:flutter_app/app/controllers/home_controller.dart';
-import 'package:flutter_app/common/pages/home_page.dart';
+import 'package:flutter_app/resources/pages/home_page.dart';
 import 'package:nylo_framework/router/router.dart';
+
+/*
+|--------------------------------------------------------------------------
+| App Router
+|
+| * [Tip] Create pages faster 🚀
+| // Run the below in the terminal to create new a page and controller.
+| // "flutter pub run nylo_framework:main make:page my_page -c"
+| // Learn more https://nylo.dev/docs/1.x/router
+|--------------------------------------------------------------------------
+*/
 
 buildRouter() => nyCreateRoutes((router) {
 
-      router.addRoute(NyRoute(
-        name: "/",
-        view: (context) => MyHomePage(
-          title: "Hello World",
-          controller: HomeController.of(context),
-        ),
-      ));
+      router.route("/", (context) => MyHomePage(
+                title: "Hello World",
+              ));
 
+      // Add your routes here
+
+      // router.route("/new-page", (context) => NewPage());
 
     });
