@@ -2,7 +2,7 @@ import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:nylo_framework/localization/app_localization.dart';
+import 'package:nylo_support/localization/app_localization.dart';
 
 // ignore: must_be_immutable
 class AppBuild extends StatelessWidget {

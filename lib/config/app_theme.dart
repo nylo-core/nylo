@@ -31,6 +31,7 @@ class AppColors {
   Color _scaffoldLightColor = Color(0xFFFAFAFA);
 }
 
+// Theme helper
 class AppTheme extends AppColors {
   Color mainColor(
       {double opacity = 1, Brightness brightness = Brightness.light}) {

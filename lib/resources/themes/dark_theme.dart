@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/config/app_theme.dart';
 import 'package:flutter_app/resources/themes/text_theme/default_text_theme.dart';
-import 'package:nylo_framework/helpers/helper.dart';
+import 'package:nylo_support/helpers/helper.dart';
 
 /*
 |--------------------------------------------------------------------------

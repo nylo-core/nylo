@@ -6,7 +6,7 @@
   <a href="#"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nylo-core/nylo?style=plastic"></a>
 </p>
 
-## Nylo (Beta v0.8-beta.2)
+## Nylo (v1.0.0)
 
 Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple boilerplate and MVC pattern to help you build apps easier. 
 
@@ -21,7 +21,6 @@ Some core features available
 * Light and dark themes preset for customization
 * Localization ready
 * Project structure for widgets, assets, controllers + more
-* Update package name, app display name in the flutter_application_id.yaml
 
 ## Requirements
 * Dart >= 2.7.0

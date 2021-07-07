@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 
+/*
+|--------------------------------------------------------------------------
+| Default text theme
+|--------------------------------------------------------------------------
+*/
+
 const TextTheme defaultTextTheme = TextTheme(
+  headline6: TextStyle(
+    fontSize: 20.0,
+    fontWeight: FontWeight.w600,
+  ),
   headline5: TextStyle(
     fontSize: 22.0,
   ),
@@ -33,10 +43,6 @@ const TextTheme defaultTextTheme = TextTheme(
     fontWeight: FontWeight.w400,
   ),
   button: TextStyle(
-  ),
-  headline6: TextStyle(
-    fontSize: 16.0,
-    fontWeight: FontWeight.w600,
   ),
   bodyText2: TextStyle(
     fontSize: 14.0,
