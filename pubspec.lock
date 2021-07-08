@@ -253,7 +253,7 @@ packages:
     source: hosted
     version: "1.0.1"
   nylo_support:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: nylo_support
       url: "https://pub.dartlang.org"

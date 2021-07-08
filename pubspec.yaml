@@ -29,6 +29,7 @@ dependencies:
   intl: ^0.17.0
   page_transition: ^2.0.2
   nylo_framework: ^1.0.1
+  nylo_support: ^1.0.0
   flutter:
     sdk: flutter
   flutter_localizations:
