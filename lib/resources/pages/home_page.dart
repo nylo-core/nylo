@@ -10,7 +10,7 @@ class MyHomePage extends NyStatefulWidget {
   final HomeController controller = HomeController();
   final String title;
 
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -77,7 +77,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                       children: [
                         MaterialButton(
                           child: Text(
-                            trans(context, "documentation").capitalize(),
+                            trans(context, "documentation")!.capitalize(),
                             style: Theme.of(context).textTheme.bodyText1,
                           ),
                           onPressed: widget.controller.onTapDocumentation,
@@ -97,7 +97,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                         ),
                         MaterialButton(
                           child: Text(
-                            trans(context, "changelog").capitalize(),
+                            trans(context, "changelog")!.capitalize(),
                             style: Theme.of(context).textTheme.bodyText1,
                           ),
                           onPressed: widget.controller.onTapChangeLog,
@@ -109,7 +109,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                     nyloVersion,
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2
+                        .bodyText2!
                         .copyWith(color: Colors.grey),
                   ),
                 ],

@@ -17,9 +17,9 @@ void main() async {
 
   runApp(
     AppBuild(
-      navigatorKey: nylo.router.navigatorKey,
-      onGenerateRoute: nylo.router.generator(),
-      themeData: CurrentTheme.instance.theme,
+      navigatorKey: nylo.router!.navigatorKey,
+      onGenerateRoute: nylo.router!.generator(),
+      themeData: CurrentTheme.instance.theme!,
       darkTheme: darkTheme(appTheme),
       locale: AppLocale.instance.locale,
     ),

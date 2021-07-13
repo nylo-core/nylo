@@ -3,8 +3,8 @@ import 'package:nylo_support/helpers/helper.dart';
 class User extends Storable {
 
   // 👤 It all starts with a user
-  String name; // name
-  String token; // authentication token
+  late String name; // name
+  late String token; // authentication token
 
   @override
   toStorage() => {

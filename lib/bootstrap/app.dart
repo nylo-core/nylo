@@ -6,40 +6,40 @@ import 'package:nylo_support/localization/app_localization.dart';
 
 // ignore: must_be_immutable
 class AppBuild extends StatelessWidget {
-  final String initialRoute;
-  Brightness defaultBrightness;
+  String? initialRoute;
+  Brightness? defaultBrightness;
   ThemeData themeData;
-  ThemeData darkTheme;
+  ThemeData? darkTheme;
   Locale locale;
-  String title;
+  String? title;
   bool debugShowCheckedModeBanner;
   bool debugShowMaterialGrid;
   bool showPerformanceOverlay;
   bool checkerboardRasterCacheImages;
   bool checkerboardOffscreenLayers;
   bool showSemanticsDebugger;
-  Map<LogicalKeySet, Intent> shortcuts;
-  Map<Type, Action<Intent>> actions;
+  Map<LogicalKeySet, Intent>? shortcuts;
+  Map<Type, Action<Intent>>? actions;
   List<Locale> supportedLocales;
   ThemeMode themeMode;
-  Color color;
-  GenerateAppTitle onGenerateTitle;
-  TransitionBuilder builder;
+  Color? color;
+  GenerateAppTitle? onGenerateTitle;
+  TransitionBuilder? builder;
   List<NavigatorObserver> navigatorObservers;
-  RouteFactory onUnknownRoute;
-  InitialRouteListFactory onGenerateInitialRoutes;
-  GlobalKey<NavigatorState> navigatorKey;
+  RouteFactory? onUnknownRoute;
+  InitialRouteListFactory? onGenerateInitialRoutes;
+  GlobalKey<NavigatorState>? navigatorKey;
 
-  final Route<dynamic> Function(RouteSettings settings) onGenerateRoute;
+  Route<dynamic>? Function(RouteSettings settings) onGenerateRoute;
 
   AppBuild({
-    Key key,
+    Key? key,
     this.initialRoute,
     this.title,
     this.defaultBrightness,
-    this.locale,
-    this.themeData,
-    this.onGenerateRoute,
+    required this.locale,
+    required this.themeData,
+    required this.onGenerateRoute,
     this.navigatorKey,
     this.onGenerateInitialRoutes,
     this.onUnknownRoute,
@@ -98,7 +98,7 @@ class AppBuild extends StatelessWidget {
               GlobalMaterialLocalizations.delegate
             ],
             localeResolutionCallback:
-                (Locale locale, Iterable<Locale> supportedLocales) {
+                (Locale? locale, Iterable<Locale> supportedLocales) {
               return locale;
             },
           ),

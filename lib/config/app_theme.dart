@@ -10,7 +10,12 @@ import 'package:google_fonts/google_fonts.dart';
 */
 
 // Theme main font
+
+// Google Fonts (v2.1.0) - https://pub.dev/packages/google_fonts
 final TextStyle appThemeFont = GoogleFonts.montserrat();
+
+// e.g. custom font in pubspec.yaml - https://flutter.dev/docs/cookbook/design/fonts
+// final TextStyle appThemeFont = TextStyle(fontFamily: "ZenTokyoZoo");
 
 // Theme colors
 class AppColors {
