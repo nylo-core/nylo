@@ -28,7 +28,7 @@ dependencies:
   adaptive_theme: ^2.2.0
   intl: ^0.17.0
   page_transition: ^2.0.2
-  nylo_framework: ^1.0.1
+  nylo_framework: ^1.1.0
   nylo_support: ^1.0.0
   flutter:
     sdk: flutter
