@@ -36,15 +36,9 @@ class _MyHomePageState extends NyState<MyHomePage> {
                 height: 100,
                 width: 100,
               ),
-              InkWell(
-                child: Text(
-                  getEnv("APP_NAME"),
-                  style: textTheme.headline2,
-                ),
-                onTap: () async {
-                  routeTo("/new-page", data: "Hello World");
-                  setState(() {});
-                },
+              Text(
+                getEnv("APP_NAME"),
+                style: textTheme.headline2,
               ),
               Text(
                 "Micro-framework for Flutter",
