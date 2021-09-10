@@ -3,7 +3,6 @@ import 'package:flutter_app/app/controllers/home_controller.dart';
 import 'package:flutter_app/config/app_theme.dart';
 import 'package:flutter_app/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import 'package:nylo_framework/theme/helper/theme_helper.dart';
 
 class MyHomePage extends NyStatefulWidget {
   final HomeController controller = HomeController();
@@ -17,9 +16,7 @@ class MyHomePage extends NyStatefulWidget {
 
 class _MyHomePageState extends NyState<MyHomePage> {
   @override
-  widgetDidLoad() async {
-
-  }
+  widgetDidLoad() async {}
 
   @override
   Widget build(BuildContext context) {
@@ -45,15 +42,14 @@ class _MyHomePageState extends NyState<MyHomePage> {
                   style: textTheme.headline2,
                 ),
                 onTap: () async {
-                  // NyTheme.set(context, themeName: "default_dark_theme");
-                  setState(() {
-
-                  });
+                  routeTo("/new-page", data: "Hello World");
+                  setState(() {});
                 },
               ),
               Text(
                 "Micro-framework for Flutter",
-                style: textTheme.subtitle1!.copyWith(color: NyColors.light.primaryAccent),
+                style: textTheme.subtitle1!
+                    .copyWith(color: NyColors.light.primaryAccent),
                 textAlign: TextAlign.center,
               ),
               Text(
@@ -116,9 +112,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                   ),
                   Text(
                     nyloVersion,
-                    style: textTheme
-                        .bodyText2!
-                        .copyWith(color: Colors.grey),
+                    style: textTheme.bodyText2!.copyWith(color: Colors.grey),
                   ),
                 ],
               ),

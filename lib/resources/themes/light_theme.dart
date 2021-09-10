@@ -13,7 +13,8 @@ import 'package:nylo_framework/nylo_framework.dart';
 */
 
 ThemeData lightTheme() {
-  TextTheme lightTheme = getAppTextTheme(appThemeFont, defaultTextTheme.merge(_lightTextTheme()));
+  TextTheme lightTheme =
+      getAppTextTheme(appThemeFont, defaultTextTheme.merge(_lightTextTheme()));
   return ThemeData(
     primaryColor: NyColors.light.primaryContent,
     backgroundColor: NyColors.light.background,
@@ -25,22 +26,21 @@ ThemeData lightTheme() {
     hintColor: NyColors.light.primaryAccent,
     appBarTheme: AppBarTheme(
         backgroundColor: NyColors.light.appBarBackground,
-        titleTextStyle: lightTheme.headline6!.copyWith(color: NyColors.light.appBarPrimaryContent),
+        titleTextStyle: lightTheme.headline6!
+            .copyWith(color: NyColors.light.appBarPrimaryContent),
         iconTheme: IconThemeData(color: NyColors.dark.appBarPrimaryContent),
         elevation: 1.0,
-        systemOverlayStyle: SystemUiOverlayStyle.light
-    ),
+        systemOverlayStyle: SystemUiOverlayStyle.light),
     buttonTheme: ButtonThemeData(
-      buttonColor: NyColors.light.buttonPrimaryContent,
-        colorScheme: ColorScheme.light(primary: NyColors.light.buttonBackground)
-    ),
-    textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(
-        primary: NyColors.light.primaryContent
-    )),
-    elevatedButtonTheme: ElevatedButtonThemeData(style: TextButton.styleFrom(
-        primary: NyColors.light.buttonPrimaryContent,
-        backgroundColor: NyColors.light.buttonBackground
-    )),
+        buttonColor: NyColors.light.buttonPrimaryContent,
+        colorScheme:
+            ColorScheme.light(primary: NyColors.light.buttonBackground)),
+    textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(primary: NyColors.light.primaryContent)),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+        style: TextButton.styleFrom(
+            primary: NyColors.light.buttonPrimaryContent,
+            backgroundColor: NyColors.light.buttonBackground)),
     textTheme: lightTheme,
   );
 }

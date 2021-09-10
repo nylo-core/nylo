@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nylo_framework/theme/helper/theme_helper.dart';
+import 'package:nylo_framework/theme/helper/ny_theme.dart';
 
 /*
 |--------------------------------------------------------------------------

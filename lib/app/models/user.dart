@@ -1,7 +1,6 @@
 import 'package:nylo_framework/nylo_framework.dart';
 
 class User extends Storable {
-
   late String name; // name
   late String token; // authentication token
 

@@ -62,11 +62,18 @@ class AppBuild extends StatelessWidget {
   Widget build(BuildContext context) {
     return ThemeProvider(
       themes: [
-        AppTheme(id: "default_light_theme", data: this.lightTheme ?? ThemeData.fallback(), description: 'Light theme'),
-        AppTheme(id: "default_dark_theme", data: this.darkTheme ?? ThemeData.fallback(), description: 'Dark theme'),
+        AppTheme(
+            id: "default_light_theme",
+            data: this.lightTheme ?? ThemeData.fallback(),
+            description: 'Light theme'),
+        AppTheme(
+            id: "default_dark_theme",
+            data: this.darkTheme ?? ThemeData.fallback(),
+            description: 'Dark theme'),
       ],
       child: ThemeConsumer(
-        child: Builder (builder: (themeContext) => ValueListenableBuilder(
+        child: Builder(
+          builder: (themeContext) => ValueListenableBuilder(
             valueListenable: ValueNotifier(locale),
             builder: (context, Locale locale, _) => MaterialApp(
               navigatorKey: navigatorKey,

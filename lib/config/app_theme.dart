@@ -29,7 +29,6 @@ final TextStyle appThemeFont = GoogleFonts.montserrat();
 */
 
 class NyColors {
-
   // Light Colors
   static LightThemeColors light = LightThemeColors();
 

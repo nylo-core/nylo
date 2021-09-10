@@ -15,12 +15,9 @@ import 'package:page_transition/page_transition.dart';
 
 buildRouter() => nyRoutes((router) {
 
-      router.route("/", (context) => MyHomePage(
-                title: "Hello World",
-              ), transition: PageTransitionType.fade);
+      router.route("/", (context) => MyHomePage(title: "Hello World"));
 
       // Add your routes here
-
-      // router.route("/new-page", (context) => NewPage());
+      // router.route("/new-page", (context) => NewPage(), transition: PageTransitionType.fade);
 
     });

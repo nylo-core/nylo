@@ -13,7 +13,8 @@ import 'package:nylo_framework/nylo_framework.dart';
 */
 
 ThemeData darkTheme() {
-  TextTheme darkTheme = getAppTextTheme(appThemeFont, defaultTextTheme.merge(_darkTextTheme()));
+  TextTheme darkTheme =
+      getAppTextTheme(appThemeFont, defaultTextTheme.merge(_darkTextTheme()));
   return ThemeData(
     primaryColor: NyColors.light.primaryContent,
     backgroundColor: NyColors.dark.background,
@@ -25,22 +26,21 @@ ThemeData darkTheme() {
     hintColor: NyColors.light.primaryAccent,
     appBarTheme: AppBarTheme(
         backgroundColor: NyColors.dark.appBarBackground,
-        titleTextStyle: darkTheme.headline6!.copyWith(color: NyColors.dark.appBarPrimaryContent),
+        titleTextStyle: darkTheme.headline6!
+            .copyWith(color: NyColors.dark.appBarPrimaryContent),
         iconTheme: IconThemeData(color: NyColors.light.appBarPrimaryContent),
         elevation: 1.0,
-        systemOverlayStyle: SystemUiOverlayStyle.light
-    ),
-      buttonTheme: ButtonThemeData(
-      buttonColor: NyColors.dark.primaryAccent,
-  colorScheme: ColorScheme.light(primary: NyColors.dark.buttonBackground)
-  ),
-  textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(
-  primary: NyColors.dark.primaryContent
-  )),
-  elevatedButtonTheme: ElevatedButtonThemeData(style: TextButton.styleFrom(
-  primary: NyColors.dark.buttonPrimaryContent,
-  backgroundColor: NyColors.dark.buttonBackground
-  )),
+        systemOverlayStyle: SystemUiOverlayStyle.light),
+    buttonTheme: ButtonThemeData(
+        buttonColor: NyColors.dark.primaryAccent,
+        colorScheme:
+            ColorScheme.light(primary: NyColors.dark.buttonBackground)),
+    textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(primary: NyColors.dark.primaryContent)),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+        style: TextButton.styleFrom(
+            primary: NyColors.dark.buttonPrimaryContent,
+            backgroundColor: NyColors.dark.buttonBackground)),
     textTheme: darkTheme,
   );
 }

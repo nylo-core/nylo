@@ -42,8 +42,7 @@ const TextTheme defaultTextTheme = TextTheme(
     fontSize: 10.0,
     fontWeight: FontWeight.w400,
   ),
-  button: TextStyle(
-  ),
+  button: TextStyle(),
   bodyText2: TextStyle(
     fontSize: 14.0,
   ),
