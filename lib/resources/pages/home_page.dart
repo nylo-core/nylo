@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/controllers/home_controller.dart';
+import 'package:flutter_app/config/app_theme.dart';
 import 'package:flutter_app/resources/widgets/safearea_widget.dart';
-import 'package:nylo_framework/helpers/helper.dart';
-import 'package:nylo_support/helpers/helper.dart';
-import 'package:nylo_support/widgets/ny_state.dart';
-import 'package:nylo_support/widgets/ny_stateful_widget.dart';
+import 'package:nylo_framework/nylo_framework.dart';
+import 'package:nylo_framework/theme/helper/theme_helper.dart';
 
 class MyHomePage extends NyStatefulWidget {
   final HomeController controller = HomeController();
@@ -18,7 +17,9 @@ class MyHomePage extends NyStatefulWidget {
 
 class _MyHomePageState extends NyState<MyHomePage> {
   @override
-  widgetDidLoad() async {}
+  widgetDidLoad() async {
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,18 +39,26 @@ class _MyHomePageState extends NyState<MyHomePage> {
                 height: 100,
                 width: 100,
               ),
-              Text(
-                getEnv("APP_NAME"),
-                style: Theme.of(context).textTheme.headline2,
+              InkWell(
+                child: Text(
+                  getEnv("APP_NAME"),
+                  style: textTheme.headline2,
+                ),
+                onTap: () async {
+                  // NyTheme.set(context, themeName: "default_dark_theme");
+                  setState(() {
+
+                  });
+                },
               ),
               Text(
                 "Micro-framework for Flutter",
-                style: Theme.of(context).accentTextTheme.subtitle1,
+                style: textTheme.subtitle1!.copyWith(color: NyColors.light.primaryAccent),
                 textAlign: TextAlign.center,
               ),
               Text(
                 "Build something amazing 💡️",
-                style: Theme.of(context).textTheme.bodyText2,
+                style: textTheme.bodyText2,
                 textAlign: TextAlign.center,
               ),
               Column(
@@ -88,7 +97,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                         MaterialButton(
                           child: Text(
                             "GitHub",
-                            style: Theme.of(context).textTheme.bodyText1,
+                            style: textTheme.bodyText1,
                           ),
                           onPressed: widget.controller.onTapGithub,
                         ),
@@ -107,8 +116,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                   ),
                   Text(
                     nyloVersion,
-                    style: Theme.of(context)
-                        .textTheme
+                    style: textTheme
                         .bodyText2!
                         .copyWith(color: Colors.grey),
                   ),

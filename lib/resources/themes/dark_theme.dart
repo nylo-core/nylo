@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_app/config/app_theme.dart';
 import 'package:flutter_app/resources/themes/text_theme/default_text_theme.dart';
-import 'package:nylo_support/helpers/helper.dart';
+import 'package:nylo_framework/nylo_framework.dart';
 
 /*
 |--------------------------------------------------------------------------
@@ -11,82 +12,85 @@ import 'package:nylo_support/helpers/helper.dart';
 |--------------------------------------------------------------------------
 */
 
-ThemeData darkTheme(AppTheme appTheme) => ThemeData(
-      primaryColor: appTheme.mainColor(brightness: Brightness.dark),
-      backgroundColor: Colors.white,
-      brightness: Brightness.light,
-      accentColor: appTheme.accentColor(brightness: Brightness.dark),
-      primaryColorLight: appTheme.accentColor(
-        brightness: Brightness.light,
-      ),
-      primaryColorDark: appTheme.accentColor(
-        brightness: Brightness.dark,
-      ),
-      accentColorBrightness: Brightness.dark,
-      accentTextTheme: defaultTextTheme.merge(_darkTextTheme(appTheme)).apply(
-        bodyColor: appTheme.accentColor(brightness: Brightness.dark),
-        displayColor: appTheme.accentColor(brightness: Brightness.dark),
-      ),
-      focusColor: appTheme.accentColor(brightness: Brightness.dark),
-      scaffoldBackgroundColor:
-          appTheme.scaffoldColor(brightness: Brightness.dark),
-      hintColor: appTheme.secondColor(brightness: Brightness.dark),
-      appBarTheme: AppBarTheme(
-        textTheme: getAppTextTheme(appThemeFont, defaultTextTheme.merge(_darkTextTheme(appTheme))),
-        color:
-            appTheme.scaffoldColor(brightness: Brightness.dark, opacity: 0.5),
-        iconTheme: IconThemeData(
-            color: appTheme.mainColor(brightness: Brightness.dark)),
+ThemeData darkTheme() {
+  TextTheme darkTheme = getAppTextTheme(appThemeFont, defaultTextTheme.merge(_darkTextTheme()));
+  return ThemeData(
+    primaryColor: NyColors.light.primaryContent,
+    backgroundColor: NyColors.dark.background,
+    colorScheme: ColorScheme.light(),
+    primaryColorLight: NyColors.light.primaryAccent,
+    primaryColorDark: NyColors.dark.primaryContent,
+    focusColor: NyColors.dark.primaryContent,
+    scaffoldBackgroundColor: NyColors.dark.background,
+    hintColor: NyColors.light.primaryAccent,
+    appBarTheme: AppBarTheme(
+        backgroundColor: NyColors.dark.appBarBackground,
+        titleTextStyle: darkTheme.headline6!.copyWith(color: NyColors.dark.appBarPrimaryContent),
+        iconTheme: IconThemeData(color: NyColors.light.appBarPrimaryContent),
         elevation: 1.0,
-        brightness: Brightness.dark,
-      ),
-      buttonColor: Colors.white,
+        systemOverlayStyle: SystemUiOverlayStyle.light
+    ),
       buttonTheme: ButtonThemeData(
-        buttonColor: appTheme.accentColor(),
-      ),
-      textTheme: getAppTextTheme(appThemeFont, defaultTextTheme.merge(_darkTextTheme(appTheme))),
-    );
+      buttonColor: NyColors.dark.primaryAccent,
+  colorScheme: ColorScheme.light(primary: NyColors.dark.buttonBackground)
+  ),
+  textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(
+  primary: NyColors.dark.primaryContent
+  )),
+  elevatedButtonTheme: ElevatedButtonThemeData(style: TextButton.styleFrom(
+  primary: NyColors.dark.buttonPrimaryContent,
+  backgroundColor: NyColors.dark.buttonBackground
+  )),
+    textTheme: darkTheme,
+  );
+}
 
-TextTheme _darkTextTheme(AppTheme appTheme) {
+/*
+|--------------------------------------------------------------------------
+| Dark Text Theme
+|--------------------------------------------------------------------------
+*/
+
+TextTheme _darkTextTheme() {
   return TextTheme(
     headline5: TextStyle(
-      color: appTheme.secondColor(brightness: Brightness.dark),
+      color: NyColors.light.primaryContent,
     ),
     headline4: TextStyle(
-      color: appTheme.secondColor(brightness: Brightness.dark),
+      color: NyColors.light.primaryContent,
     ),
     headline3: TextStyle(
-      color: appTheme.secondColor(brightness: Brightness.dark),
+      color: NyColors.light.primaryContent,
     ),
     headline2: TextStyle(
-      color: appTheme.mainColor(brightness: Brightness.dark),
+      color: NyColors.dark.primaryContent,
     ),
     headline1: TextStyle(
-      color: appTheme.secondColor(brightness: Brightness.dark),
+      color: NyColors.light.primaryContent,
     ),
     subtitle2: TextStyle(
-      color: appTheme.secondColor(brightness: Brightness.dark),
+      color: NyColors.light.primaryContent,
     ),
     subtitle1: TextStyle(
-      color: appTheme.secondColor(brightness: Brightness.dark),
+      color: NyColors.light.primaryContent,
     ),
     overline: TextStyle(
-      color: appTheme.secondColor(brightness: Brightness.dark),
+      color: NyColors.light.primaryContent,
     ),
     button: TextStyle(
-      color: Colors.white,
+      color: NyColors.dark.primaryContent,
     ),
     headline6: TextStyle(
-      color: appTheme.mainColor(brightness: Brightness.dark),
+      color: NyColors.dark.primaryContent,
     ),
     bodyText2: TextStyle(
-      color: appTheme.secondColor(brightness: Brightness.dark),
+      color: NyColors.dark.primaryContent,
     ),
     bodyText1: TextStyle(
-      color: appTheme.secondColor(brightness: Brightness.dark),
+      color: NyColors.light.primaryContent,
     ),
     caption: TextStyle(
-      color: appTheme.accentColor(brightness: Brightness.dark),
+      color: NyColors.dark.primaryContent,
     ),
   );
 }

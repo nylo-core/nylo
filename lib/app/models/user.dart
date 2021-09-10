@@ -1,8 +1,7 @@
-import 'package:nylo_support/helpers/helper.dart';
+import 'package:nylo_framework/nylo_framework.dart';
 
 class User extends Storable {
 
-  // 👤 It all starts with a user
   late String name; // name
   late String token; // authentication token
 

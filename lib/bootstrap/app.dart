@@ -1,15 +1,13 @@
-import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:nylo_support/localization/app_localization.dart';
+import 'package:nylo_framework/nylo_framework.dart';
 
 // ignore: must_be_immutable
 class AppBuild extends StatelessWidget {
   String? initialRoute;
-  Brightness? defaultBrightness;
-  ThemeData themeData;
+  ThemeData? themeData;
   ThemeData? darkTheme;
+  ThemeData? lightTheme;
   Locale locale;
   String? title;
   bool debugShowCheckedModeBanner;
@@ -36,9 +34,8 @@ class AppBuild extends StatelessWidget {
     Key? key,
     this.initialRoute,
     this.title,
-    this.defaultBrightness,
     required this.locale,
-    required this.themeData,
+    this.themeData,
     required this.onGenerateRoute,
     this.navigatorKey,
     this.onGenerateInitialRoutes,
@@ -47,6 +44,7 @@ class AppBuild extends StatelessWidget {
     this.builder,
     this.onGenerateTitle,
     this.color,
+    this.lightTheme,
     this.darkTheme,
     this.themeMode = ThemeMode.system,
     this.supportedLocales = const <Locale>[Locale('en', 'US')],
@@ -62,47 +60,51 @@ class AppBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveTheme(
-        light: themeData,
-        dark: darkTheme,
-        initial: AdaptiveThemeMode.light,
-        builder: (theme, darkTheme) => ValueListenableBuilder(
-          valueListenable: ValueNotifier(locale),
-          builder: (context, Locale locale, _) => MaterialApp(
-            navigatorKey: navigatorKey,
-            themeMode: themeMode,
-            onGenerateTitle: onGenerateTitle,
-            onGenerateInitialRoutes: onGenerateInitialRoutes,
-            onUnknownRoute: onUnknownRoute,
-            builder: builder,
-            navigatorObservers: navigatorObservers,
-            color: color,
-            supportedLocales: supportedLocales,
-            debugShowMaterialGrid: debugShowMaterialGrid,
-            showPerformanceOverlay: showPerformanceOverlay,
-            checkerboardRasterCacheImages: checkerboardRasterCacheImages,
-            checkerboardOffscreenLayers: checkerboardOffscreenLayers,
-            showSemanticsDebugger: showSemanticsDebugger,
-            debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-            shortcuts: shortcuts,
-            actions: actions,
-            title: title ?? "",
-            darkTheme: darkTheme,
-            initialRoute: initialRoute,
-            onGenerateRoute: this.onGenerateRoute,
-            locale: locale,
-            theme: theme,
-            localizationsDelegates: [
-              AppLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-              GlobalMaterialLocalizations.delegate
-            ],
-            localeResolutionCallback:
-                (Locale? locale, Iterable<Locale> supportedLocales) {
-              return locale;
-            },
+    return ThemeProvider(
+      themes: [
+        AppTheme(id: "default_light_theme", data: this.lightTheme ?? ThemeData.fallback(), description: 'Light theme'),
+        AppTheme(id: "default_dark_theme", data: this.darkTheme ?? ThemeData.fallback(), description: 'Dark theme'),
+      ],
+      child: ThemeConsumer(
+        child: Builder (builder: (themeContext) => ValueListenableBuilder(
+            valueListenable: ValueNotifier(locale),
+            builder: (context, Locale locale, _) => MaterialApp(
+              navigatorKey: navigatorKey,
+              themeMode: themeMode,
+              onGenerateTitle: onGenerateTitle,
+              onGenerateInitialRoutes: onGenerateInitialRoutes,
+              onUnknownRoute: onUnknownRoute,
+              builder: builder,
+              navigatorObservers: navigatorObservers,
+              color: color,
+              supportedLocales: supportedLocales,
+              debugShowMaterialGrid: debugShowMaterialGrid,
+              showPerformanceOverlay: showPerformanceOverlay,
+              checkerboardRasterCacheImages: checkerboardRasterCacheImages,
+              checkerboardOffscreenLayers: checkerboardOffscreenLayers,
+              showSemanticsDebugger: showSemanticsDebugger,
+              debugShowCheckedModeBanner: debugShowCheckedModeBanner,
+              shortcuts: shortcuts,
+              actions: actions,
+              title: title ?? "",
+              darkTheme: darkTheme,
+              initialRoute: initialRoute,
+              onGenerateRoute: this.onGenerateRoute,
+              locale: locale,
+              theme: themeData ?? ThemeProvider.themeOf(themeContext).data,
+              localizationsDelegates: [
+                AppLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalMaterialLocalizations.delegate
+              ],
+              localeResolutionCallback:
+                  (Locale? locale, Iterable<Locale> supportedLocales) {
+                return locale;
+              },
+            ),
           ),
-        )
-      );
+        ),
+      ),
+    );
   }
 }
