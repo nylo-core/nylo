@@ -20,7 +20,7 @@ dependencies:
   analyzer: ^2.2.0
   intl: ^0.17.0
   page_transition: ^2.0.2
-  nylo_framework: ^2.0.0
+  nylo_framework: ^2.0.1
   flutter:
     sdk: flutter
   flutter_localizations:

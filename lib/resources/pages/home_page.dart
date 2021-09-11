@@ -57,6 +57,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                 children: <Widget>[
                   Divider(),
                   Container(
+                    height: 170,
                     width: double.infinity,
                     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),

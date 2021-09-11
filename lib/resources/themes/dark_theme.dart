@@ -18,7 +18,7 @@ ThemeData darkTheme() {
   return ThemeData(
     primaryColor: NyColors.light.primaryContent,
     backgroundColor: NyColors.dark.background,
-    colorScheme: ColorScheme.light(),
+    colorScheme: ColorScheme.dark(),
     primaryColorLight: NyColors.light.primaryAccent,
     primaryColorDark: NyColors.dark.primaryContent,
     focusColor: NyColors.dark.primaryContent,
@@ -32,15 +32,29 @@ ThemeData darkTheme() {
         elevation: 1.0,
         systemOverlayStyle: SystemUiOverlayStyle.light),
     buttonTheme: ButtonThemeData(
-        buttonColor: NyColors.dark.primaryAccent,
-        colorScheme:
-            ColorScheme.light(primary: NyColors.dark.buttonBackground)),
+      buttonColor: NyColors.dark.primaryAccent,
+      colorScheme: ColorScheme.light(primary: NyColors.dark.buttonBackground),
+    ),
     textButtonTheme: TextButtonThemeData(
-        style: TextButton.styleFrom(primary: NyColors.dark.primaryContent)),
+      style: TextButton.styleFrom(primary: NyColors.dark.primaryContent),
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
-        style: TextButton.styleFrom(
-            primary: NyColors.dark.buttonPrimaryContent,
-            backgroundColor: NyColors.dark.buttonBackground)),
+      style: TextButton.styleFrom(
+          primary: NyColors.dark.buttonPrimaryContent,
+          backgroundColor: NyColors.dark.buttonBackground),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: NyColors.dark.bottomTabBarBackground,
+      unselectedIconTheme:
+          IconThemeData(color: NyColors.dark.bottomTabBarIconUnselected),
+      selectedIconTheme:
+          IconThemeData(color: NyColors.dark.bottomTabBarIconSelected),
+      unselectedLabelStyle:
+          TextStyle(color: NyColors.dark.bottomTabBarLabelUnselected),
+      selectedLabelStyle:
+          TextStyle(color: NyColors.dark.bottomTabBarLabelSelected),
+      selectedItemColor: NyColors.dark.bottomTabBarLabelSelected,
+    ),
     textTheme: darkTheme,
   );
 }
@@ -52,45 +66,46 @@ ThemeData darkTheme() {
 */
 
 TextTheme _darkTextTheme() {
+  final Color darkPrimaryContent = NyColors.dark.primaryContent;
   return TextTheme(
+    headline6: TextStyle(
+      color: darkPrimaryContent.withOpacity(0.8),
+    ),
     headline5: TextStyle(
-      color: NyColors.light.primaryContent,
+      color: darkPrimaryContent,
     ),
     headline4: TextStyle(
-      color: NyColors.light.primaryContent,
+      color: darkPrimaryContent,
     ),
     headline3: TextStyle(
-      color: NyColors.light.primaryContent,
+      color: darkPrimaryContent,
     ),
     headline2: TextStyle(
-      color: NyColors.dark.primaryContent,
+      color: darkPrimaryContent,
     ),
     headline1: TextStyle(
-      color: NyColors.light.primaryContent,
+      color: darkPrimaryContent,
     ),
     subtitle2: TextStyle(
-      color: NyColors.light.primaryContent,
+      color: darkPrimaryContent,
     ),
     subtitle1: TextStyle(
-      color: NyColors.light.primaryContent,
+      color: darkPrimaryContent,
     ),
     overline: TextStyle(
-      color: NyColors.light.primaryContent,
+      color: darkPrimaryContent,
     ),
     button: TextStyle(
-      color: NyColors.dark.primaryContent,
-    ),
-    headline6: TextStyle(
-      color: NyColors.dark.primaryContent,
+      color: darkPrimaryContent.withOpacity(0.8),
     ),
     bodyText2: TextStyle(
-      color: NyColors.dark.primaryContent,
+      color: darkPrimaryContent.withOpacity(0.8),
     ),
     bodyText1: TextStyle(
       color: NyColors.light.primaryContent,
     ),
     caption: TextStyle(
-      color: NyColors.dark.primaryContent,
+      color: darkPrimaryContent.withOpacity(0.8),
     ),
   );
 }

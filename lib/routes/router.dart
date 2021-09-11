@@ -1,6 +1,5 @@
 import 'package:flutter_app/resources/pages/home_page.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import 'package:page_transition/page_transition.dart';
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +17,7 @@ buildRouter() => nyRoutes((router) {
       router.route("/", (context) => MyHomePage(title: "Hello World"));
 
       // Add your routes here
+
       // router.route("/new-page", (context) => NewPage(), transition: PageTransitionType.fade);
 
     });

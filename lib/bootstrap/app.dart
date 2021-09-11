@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/config/app_theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -63,52 +64,50 @@ class AppBuild extends StatelessWidget {
     return ThemeProvider(
       themes: [
         AppTheme(
-            id: "default_light_theme",
+            id: ThemeConfig.lightThemeId(),
             data: this.lightTheme ?? ThemeData.fallback(),
             description: 'Light theme'),
         AppTheme(
-            id: "default_dark_theme",
+            id: ThemeConfig.darkThemeId(),
             data: this.darkTheme ?? ThemeData.fallback(),
             description: 'Dark theme'),
       ],
       child: ThemeConsumer(
-        child: Builder(
-          builder: (themeContext) => ValueListenableBuilder(
-            valueListenable: ValueNotifier(locale),
-            builder: (context, Locale locale, _) => MaterialApp(
-              navigatorKey: navigatorKey,
-              themeMode: themeMode,
-              onGenerateTitle: onGenerateTitle,
-              onGenerateInitialRoutes: onGenerateInitialRoutes,
-              onUnknownRoute: onUnknownRoute,
-              builder: builder,
-              navigatorObservers: navigatorObservers,
-              color: color,
-              supportedLocales: supportedLocales,
-              debugShowMaterialGrid: debugShowMaterialGrid,
-              showPerformanceOverlay: showPerformanceOverlay,
-              checkerboardRasterCacheImages: checkerboardRasterCacheImages,
-              checkerboardOffscreenLayers: checkerboardOffscreenLayers,
-              showSemanticsDebugger: showSemanticsDebugger,
-              debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-              shortcuts: shortcuts,
-              actions: actions,
-              title: title ?? "",
-              darkTheme: darkTheme,
-              initialRoute: initialRoute,
-              onGenerateRoute: this.onGenerateRoute,
-              locale: locale,
-              theme: themeData ?? ThemeProvider.themeOf(themeContext).data,
-              localizationsDelegates: [
-                AppLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalMaterialLocalizations.delegate
-              ],
-              localeResolutionCallback:
-                  (Locale? locale, Iterable<Locale> supportedLocales) {
-                return locale;
-              },
-            ),
+        child: ValueListenableBuilder(
+          valueListenable: ValueNotifier(locale),
+          builder: (context, Locale locale, _) => MaterialApp(
+            navigatorKey: navigatorKey,
+            themeMode: themeMode,
+            onGenerateTitle: onGenerateTitle,
+            onGenerateInitialRoutes: onGenerateInitialRoutes,
+            onUnknownRoute: onUnknownRoute,
+            builder: builder,
+            navigatorObservers: navigatorObservers,
+            color: color,
+            supportedLocales: supportedLocales,
+            debugShowMaterialGrid: debugShowMaterialGrid,
+            showPerformanceOverlay: showPerformanceOverlay,
+            checkerboardRasterCacheImages: checkerboardRasterCacheImages,
+            checkerboardOffscreenLayers: checkerboardOffscreenLayers,
+            showSemanticsDebugger: showSemanticsDebugger,
+            debugShowCheckedModeBanner: debugShowCheckedModeBanner,
+            shortcuts: shortcuts,
+            actions: actions,
+            title: title ?? "",
+            darkTheme: darkTheme,
+            initialRoute: initialRoute,
+            onGenerateRoute: this.onGenerateRoute,
+            locale: locale,
+            theme: themeData ?? ThemeProvider.themeOf(context).data,
+            localizationsDelegates: [
+              AppLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate
+            ],
+            localeResolutionCallback:
+                (Locale? locale, Iterable<Locale> supportedLocales) {
+              return locale;
+            },
           ),
         ),
       ),
