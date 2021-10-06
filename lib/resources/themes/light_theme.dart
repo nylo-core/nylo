@@ -33,7 +33,7 @@ ThemeData lightTheme() {
           .copyWith(color: NyColors.light.appBarPrimaryContent),
       iconTheme: IconThemeData(color: NyColors.light.appBarPrimaryContent),
       elevation: 1.0,
-      systemOverlayStyle: SystemUiOverlayStyle.light,
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
     ),
     buttonTheme: ButtonThemeData(
       buttonColor: NyColors.light.buttonPrimaryContent,
