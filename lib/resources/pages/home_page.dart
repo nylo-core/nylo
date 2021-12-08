@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/controllers/home_controller.dart';
-import 'package:flutter_app/config/app_theme.dart';
+import 'package:flutter_app/bootstrap/helpers.dart';
 import 'package:flutter_app/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
+import 'package:nylo_framework/theme/helper/ny_theme.dart';
 
 class MyHomePage extends NyStatefulWidget {
   final HomeController controller = HomeController();
@@ -15,8 +16,13 @@ class MyHomePage extends NyStatefulWidget {
 }
 
 class _MyHomePageState extends NyState<MyHomePage> {
+
+  bool _darkMode = false;
+
   @override
-  widgetDidLoad() async {}
+  widgetDidLoad() async {
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +48,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
               ),
               Text(
                 "Micro-framework for Flutter",
-                style: textTheme.subtitle1!
-                    .copyWith(color: NyColors.light.primaryAccent),
+                style: textTheme.subtitle1!.setColor(context, (color) => color.primaryAccent),
                 textAlign: TextAlign.center,
               ),
               Text(
@@ -62,7 +67,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     decoration: BoxDecoration(
-                        color: Colors.white70,
+                        color: ThemeColor.get(context).surfaceBackground,
                         borderRadius: BorderRadius.circular(8),
                         boxShadow: [
                           BoxShadow(
@@ -77,8 +82,8 @@ class _MyHomePageState extends NyState<MyHomePage> {
                       children: [
                         MaterialButton(
                           child: Text(
-                            trans(context, "documentation")!.capitalize(),
-                            style: Theme.of(context).textTheme.bodyText1,
+                            "documentation".tr().capitalize(),
+                            style: Theme.of(context).textTheme.bodyText1!.setColor(context, (color) => color.surfaceContent),
                           ),
                           onPressed: widget.controller.onTapDocumentation,
                         ),
@@ -88,7 +93,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                         MaterialButton(
                           child: Text(
                             "GitHub",
-                            style: textTheme.bodyText1,
+                            style: textTheme.bodyText1!.setColor(context, (color) => color.surfaceContent),
                           ),
                           onPressed: widget.controller.onTapGithub,
                         ),
@@ -97,8 +102,8 @@ class _MyHomePageState extends NyState<MyHomePage> {
                         ),
                         MaterialButton(
                           child: Text(
-                            trans(context, "changelog")!.capitalize(),
-                            style: Theme.of(context).textTheme.bodyText1,
+                            "changelog".tr().capitalize(),
+                            style: Theme.of(context).textTheme.bodyText1!.setColor(context, (color) => color.surfaceContent),
                           ),
                           onPressed: widget.controller.onTapChangeLog,
                         ),
@@ -109,6 +114,12 @@ class _MyHomePageState extends NyState<MyHomePage> {
                     nyloVersion,
                     style: textTheme.bodyText2!.copyWith(color: Colors.grey),
                   ),
+                  Switch(value: _darkMode, onChanged: (value) {
+                    _darkMode = value;
+                    NyTheme.set(context, id: (_darkMode == true ? 'default_dark_theme' : 'default_light_theme'));
+                    setState(() {});
+                  }),
+                  Text("${_darkMode == true ? "Dark": "Light"} Mode"),
                 ],
               ),
             ],

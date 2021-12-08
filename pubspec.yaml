@@ -15,12 +15,13 @@ environment:
   sdk: '>=2.14.0 <3.0.0'
 
 dependencies:
-  url_launcher: ^6.0.10
+  url_launcher: ^6.0.17
   google_fonts: ^2.1.0
-  analyzer: ^2.2.0
+  analyzer: ^2.8.0
+  dio: ^4.0.4
   intl: ^0.17.0
-  page_transition: ^2.0.2
-  nylo_framework: ^2.0.4
+  page_transition: ^2.0.4
+  nylo_framework: ^2.1.0
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -28,7 +29,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.3
+  cupertino_icons: ^1.0.4
 
 dev_dependencies:
   flutter_test:
@@ -51,7 +52,7 @@ flutter:
   assets:
     - public/assets/fonts/
     - public/assets/images/nylo_logo.png
-    - lang/en.json
+    - lang/
     - .env
   #   - images/a_dot_ham.jpeg
 

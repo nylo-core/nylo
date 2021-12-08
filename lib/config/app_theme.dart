@@ -1,47 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_app/bootstrap/base_theme_config.dart';
+import 'package:flutter_app/resources/themes/dark_theme.dart';
+import 'package:flutter_app/resources/themes/light_theme.dart';
+import 'package:flutter_app/resources/themes/styles/base_styles.dart';
 import 'package:flutter_app/resources/themes/styles/dark_theme_colors.dart';
 import 'package:flutter_app/resources/themes/styles/light_theme_colors.dart';
-import 'package:flutter_app/resources/themes/styles/base_styles.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:nylo_framework/nylo_framework.dart';
-
-/*
-|--------------------------------------------------------------------------
-| Theme Font
-|
-| Uses Google Fonts - https://pub.dev/packages/google_fonts
-|
-| e.g. updating the font from "montserrat" to "lato"
-| before: final TextStyle appThemeFont = GoogleFonts.montserrat();
-| after:  final TextStyle appThemeFont = GoogleFonts.lato();
-|--------------------------------------------------------------------------
-*/
-
-final TextStyle appThemeFont = GoogleFonts.montserrat();
-
-// e.g. custom font in pubspec.yaml - https://flutter.dev/docs/cookbook/design/fonts
-// final TextStyle appThemeFont = TextStyle(fontFamily: "ZenTokyoZoo");
-
-/*
-|--------------------------------------------------------------------------
-| Theme Colors
-|
-| Customize your light and dark themes: /lib/resources/themes/styles/
-|--------------------------------------------------------------------------
-*/
-
-class NyColors {
-  // Light Colors
-  static LightThemeColors light = LightThemeColors();
-
-  // Dark Colors
-  static DarkThemeColors dark = DarkThemeColors();
-
-  /// helper to find correct theme from the [context].
-  static BaseStyles of(BuildContext context) {
-    return ((Theme.of(context).brightness == Brightness.light) ? light : dark);
-  }
-}
 
 /*
 |--------------------------------------------------------------------------
@@ -49,8 +11,74 @@ class NyColors {
 |--------------------------------------------------------------------------
 */
 
-class ThemeConfig {
-  static lightThemeId() => getEnv('LIGHT_THEME_ID', defaultValue: 'default_light_theme');
+// App Themes
+final appThemes = [
 
-  static darkThemeId() => getEnv('DARK_THEME_ID', defaultValue: 'default_dark_theme');
+  ThemeConfig.light(),
+
+  ThemeConfig.dark(),
+];
+
+/*
+|--------------------------------------------------------------------------
+| Theme Colors
+|--------------------------------------------------------------------------
+*/
+
+// Light Colors
+BaseColorStyles lightColors = LightThemeColors();
+
+// Dark Colors
+BaseColorStyles darkColors = DarkThemeColors();
+
+/*
+|--------------------------------------------------------------------------
+| Themes
+|--------------------------------------------------------------------------
+*/
+
+// Preset Themes
+class ThemeConfig {
+
+  // LIGHT
+  static BaseThemeConfig light() => BaseThemeConfig(
+    id: "default_light_theme",
+    description: "Light theme",
+    theme: lightTheme(lightColors),
+    colors: lightColors,
+  );
+
+  // DARK
+  static BaseThemeConfig dark() => BaseThemeConfig(
+    id: "default_dark_theme",
+    description: "Dark theme",
+    theme: darkTheme(darkColors),
+    colors: darkColors,
+  );
+
+  // E.G. CUSTOM THEME
+  /// Run: "flutter pub run nylo_framework:main make:theme bright_theme" // example bright_theme
+  // Creates a basic theme in /resources/themes/bright_theme.dart
+  // Creates the themes colors in /resources/themes/styles/bright_theme_colors.dart
+
+  // First add the colors which was created into the above section like the following:
+  // Bright Colors
+  /// BaseColorStyles brightColors = BrightThemeColors();
+
+  // Next, uncomment the below:
+  /// static BaseThemeConfig bright() => BaseThemeConfig(
+  ///  id: "default_bright_theme",
+  ///  description: "Bright theme",
+  ///  theme: brightTheme(brightColors),
+  ///  colors: brightColors,
+  /// );
+
+  // To then use this theme, add it to the [appThemes] above like the following:
+  // final appThemes = [
+  ///   ThemeConfig.bright(), // new theme
+  //
+  //   ThemeConfig.light(),
+  //
+  //   ThemeConfig.dark(),
+  // ];
 }

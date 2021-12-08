@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/config/app_theme.dart';
+import 'package:flutter_app/config/app_font.dart';
+import 'package:flutter_app/resources/themes/styles/base_styles.dart';
 import 'package:flutter_app/resources/themes/text_theme/default_text_theme.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -12,52 +13,49 @@ import 'package:nylo_framework/nylo_framework.dart';
 |--------------------------------------------------------------------------
 */
 
-ThemeData lightTheme() {
+ThemeData lightTheme(BaseColorStyles lightColors) {
   TextTheme lightTheme =
-      getAppTextTheme(appThemeFont, defaultTextTheme.merge(_lightTextTheme()));
-  final Color lightPrimaryContent = NyColors.light.primaryContent;
-  final Color darkPrimaryContent = NyColors.dark.primaryContent;
+  getAppTextTheme(appFont, defaultTextTheme.merge(_lightTextTheme(lightColors)));
 
   return ThemeData(
-    primaryColor: lightPrimaryContent,
-    backgroundColor: NyColors.light.background,
+    primaryColor: lightColors.primaryContent,
+    backgroundColor: lightColors.background,
     colorScheme: ColorScheme.light(),
-    primaryColorLight: NyColors.light.primaryAccent,
-    primaryColorDark: darkPrimaryContent,
-    focusColor: lightPrimaryContent,
-    scaffoldBackgroundColor: NyColors.light.background,
-    hintColor: NyColors.light.primaryAccent,
+    primaryColorLight: lightColors.primaryAccent,
+    focusColor: lightColors.primaryContent,
+    scaffoldBackgroundColor: lightColors.background,
+    hintColor: lightColors.primaryAccent,
     appBarTheme: AppBarTheme(
-      backgroundColor: NyColors.light.appBarBackground,
+      backgroundColor: lightColors.appBarBackground,
       titleTextStyle: lightTheme.headline6!
-          .copyWith(color: NyColors.light.appBarPrimaryContent),
-      iconTheme: IconThemeData(color: NyColors.light.appBarPrimaryContent),
+          .copyWith(color: lightColors.appBarPrimaryContent),
+      iconTheme: IconThemeData(color: lightColors.appBarPrimaryContent),
       elevation: 1.0,
       systemOverlayStyle: SystemUiOverlayStyle.dark,
     ),
     buttonTheme: ButtonThemeData(
-      buttonColor: NyColors.light.buttonPrimaryContent,
-      colorScheme: ColorScheme.light(primary: NyColors.light.buttonBackground),
+      buttonColor: lightColors.buttonPrimaryContent,
+      colorScheme: ColorScheme.light(primary: lightColors.buttonBackground),
     ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(primary: lightPrimaryContent),
+      style: TextButton.styleFrom(primary: lightColors.primaryContent),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: TextButton.styleFrom(
-          primary: NyColors.light.buttonPrimaryContent,
-          backgroundColor: NyColors.light.buttonBackground),
+          primary: lightColors.buttonPrimaryContent,
+          backgroundColor: lightColors.buttonBackground),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: NyColors.light.bottomTabBarBackground,
+      backgroundColor: lightColors.bottomTabBarBackground,
       unselectedIconTheme:
-          IconThemeData(color: NyColors.light.bottomTabBarIconUnselected),
+          IconThemeData(color: lightColors.bottomTabBarIconUnselected),
       selectedIconTheme:
-          IconThemeData(color: NyColors.light.bottomTabBarIconSelected),
+          IconThemeData(color: lightColors.bottomTabBarIconSelected),
       unselectedLabelStyle:
-          TextStyle(color: NyColors.light.bottomTabBarLabelUnselected),
+          TextStyle(color: lightColors.bottomTabBarLabelUnselected),
       selectedLabelStyle:
-          TextStyle(color: NyColors.light.bottomTabBarLabelSelected),
-      selectedItemColor: NyColors.light.bottomTabBarLabelSelected,
+          TextStyle(color: lightColors.bottomTabBarLabelSelected),
+      selectedItemColor: lightColors.bottomTabBarLabelSelected,
     ),
     textTheme: lightTheme,
   );
@@ -69,8 +67,8 @@ ThemeData lightTheme() {
 |--------------------------------------------------------------------------
 */
 
-TextTheme _lightTextTheme() {
-  final Color lightPrimaryContent = NyColors.light.primaryContent;
+TextTheme _lightTextTheme(BaseColorStyles lightColors) {
+  Color lightPrimaryContent = lightColors.primaryContent;
   return TextTheme(
     headline6: TextStyle(
       color: lightPrimaryContent,

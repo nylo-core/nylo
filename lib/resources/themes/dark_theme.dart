@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/config/app_theme.dart';
+import 'package:flutter_app/config/app_font.dart';
+import 'package:flutter_app/resources/themes/styles/base_styles.dart';
 import 'package:flutter_app/resources/themes/text_theme/default_text_theme.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -12,48 +13,46 @@ import 'package:nylo_framework/nylo_framework.dart';
 |--------------------------------------------------------------------------
 */
 
-ThemeData darkTheme() {
+ThemeData darkTheme(BaseColorStyles darkColors) {
   TextTheme darkTheme =
-      getAppTextTheme(appThemeFont, defaultTextTheme.merge(_darkTextTheme()));
+      getAppTextTheme(appFont, defaultTextTheme.merge(_darkTextTheme(darkColors)));
   return ThemeData(
-    primaryColor: NyColors.light.primaryContent,
-    backgroundColor: NyColors.dark.background,
+    primaryColor: darkColors.primaryContent,
+    backgroundColor: darkColors.background,
     colorScheme: ColorScheme.dark(),
-    primaryColorLight: NyColors.light.primaryAccent,
-    primaryColorDark: NyColors.dark.primaryContent,
-    focusColor: NyColors.dark.primaryContent,
-    scaffoldBackgroundColor: NyColors.dark.background,
-    hintColor: NyColors.light.primaryAccent,
+    primaryColorDark: darkColors.primaryContent,
+    focusColor: darkColors.primaryContent,
+    scaffoldBackgroundColor: darkColors.background,
     appBarTheme: AppBarTheme(
-        backgroundColor: NyColors.dark.appBarBackground,
+        backgroundColor: darkColors.appBarBackground,
         titleTextStyle: darkTheme.headline6!
-            .copyWith(color: NyColors.dark.appBarPrimaryContent),
-        iconTheme: IconThemeData(color: NyColors.light.appBarPrimaryContent),
+            .copyWith(color: darkColors.appBarPrimaryContent),
+        iconTheme: IconThemeData(color: darkColors.appBarPrimaryContent),
         elevation: 1.0,
         systemOverlayStyle: SystemUiOverlayStyle.light),
     buttonTheme: ButtonThemeData(
-      buttonColor: NyColors.dark.primaryAccent,
-      colorScheme: ColorScheme.light(primary: NyColors.dark.buttonBackground),
+      buttonColor: darkColors.primaryAccent,
+      colorScheme: ColorScheme.light(primary: darkColors.buttonBackground),
     ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(primary: NyColors.dark.primaryContent),
+      style: TextButton.styleFrom(primary: darkColors.primaryContent),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: TextButton.styleFrom(
-          primary: NyColors.dark.buttonPrimaryContent,
-          backgroundColor: NyColors.dark.buttonBackground),
+          primary: darkColors.buttonPrimaryContent,
+          backgroundColor: darkColors.buttonBackground),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: NyColors.dark.bottomTabBarBackground,
+      backgroundColor: darkColors.bottomTabBarBackground,
       unselectedIconTheme:
-          IconThemeData(color: NyColors.dark.bottomTabBarIconUnselected),
+          IconThemeData(color: darkColors.bottomTabBarIconUnselected),
       selectedIconTheme:
-          IconThemeData(color: NyColors.dark.bottomTabBarIconSelected),
+          IconThemeData(color: darkColors.bottomTabBarIconSelected),
       unselectedLabelStyle:
-          TextStyle(color: NyColors.dark.bottomTabBarLabelUnselected),
+          TextStyle(color: darkColors.bottomTabBarLabelUnselected),
       selectedLabelStyle:
-          TextStyle(color: NyColors.dark.bottomTabBarLabelSelected),
-      selectedItemColor: NyColors.dark.bottomTabBarLabelSelected,
+          TextStyle(color: darkColors.bottomTabBarLabelSelected),
+      selectedItemColor: darkColors.bottomTabBarLabelSelected,
     ),
     textTheme: darkTheme,
   );
@@ -65,8 +64,8 @@ ThemeData darkTheme() {
 |--------------------------------------------------------------------------
 */
 
-TextTheme _darkTextTheme() {
-  final Color darkPrimaryContent = NyColors.dark.primaryContent;
+TextTheme _darkTextTheme(BaseColorStyles dark) {
+  final Color darkPrimaryContent = dark.primaryContent;
   return TextTheme(
     headline6: TextStyle(
       color: darkPrimaryContent.withOpacity(0.8),
@@ -102,7 +101,7 @@ TextTheme _darkTextTheme() {
       color: darkPrimaryContent.withOpacity(0.8),
     ),
     bodyText1: TextStyle(
-      color: NyColors.light.primaryContent,
+      color: darkPrimaryContent,
     ),
     caption: TextStyle(
       color: darkPrimaryContent.withOpacity(0.8),
