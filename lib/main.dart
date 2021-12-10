@@ -13,7 +13,7 @@ void main() async {
     AppBuild(
       navigatorKey: nylo.router!.navigatorKey,
       onGenerateRoute: nylo.router!.generator(),
-      locale: Locale(getEnv('DEFAULT_LOCALE')),
+      debugShowCheckedModeBanner: false,
     ),
   );
 }

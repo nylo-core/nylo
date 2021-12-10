@@ -8,7 +8,7 @@ class AppBuild extends StatelessWidget {
   ThemeData? themeData;
   ThemeData? darkTheme;
   ThemeData? lightTheme;
-  Locale locale;
+  Locale? locale;
   String? title;
   bool debugShowCheckedModeBanner;
   bool debugShowMaterialGrid;
@@ -33,7 +33,7 @@ class AppBuild extends StatelessWidget {
     Key? key,
     this.initialRoute,
     this.title,
-    required this.locale,
+    this.locale,
     this.themeData,
     required this.onGenerateRoute,
     this.navigatorKey,
@@ -64,7 +64,7 @@ class AppBuild extends StatelessWidget {
           themes: appThemes.map((appTheme) => appTheme.toAppTheme(defaultTheme: appTheme.theme.brightness == Brightness.light ? lightTheme : darkTheme)).toList(),
           child: ThemeConsumer(
             child: ValueListenableBuilder(
-              valueListenable: ValueNotifier(locale),
+              valueListenable: ValueNotifier(locale ?? NyLocalization.instance.locale),
               builder: (context, Locale locale, _) => MaterialApp(
                 navigatorKey: navigatorKey,
                 themeMode: themeMode,
@@ -92,7 +92,7 @@ class AppBuild extends StatelessWidget {
                   return locale;
                 },
                 localizationsDelegates: NyLocalization.instance.delegates,
-                locale: NyLocalization.instance.locale,
+                locale: locale,
                 supportedLocales: supportedLocales ?? NyLocalization.instance.locals(),
               ),
             ),
