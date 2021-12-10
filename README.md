@@ -23,7 +23,7 @@ Some core features available
 * Project structure for widgets, assets, controllers + more
 
 ## Requirements
-* Dart >=2.14.0 <3.0.0
+* Dart >=2.15.0 <3.0.0
 * Flutter >= 2.5.0
 
 ## Getting Started
