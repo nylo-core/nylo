@@ -30,11 +30,11 @@ class BaseDioApiService {
     api = Dio(baseOptions);
 
     if (useInterceptor == true) {
-      addInterceptor();
+      _addInterceptor();
     }
   }
 
-  addInterceptor() {
+  _addInterceptor() {
     api.interceptors.add(InterceptorsWrapper(
         onRequest:(options, handler){
           // Do something before request is sent
