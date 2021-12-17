@@ -6,18 +6,19 @@ class HomeController extends Controller {
 
   @override
   construct(BuildContext context) {
+    super.construct(context);
 
   }
 
-  onTapDocumentation() {
-    launch("https://nylo.dev/docs");
+  onTapDocumentation() async {
+    await launch("https://nylo.dev/docs");
   }
 
-  onTapGithub() {
-    launch("https://github.com/nylo-core/nylo");
+  onTapGithub() async {
+    await launch("https://github.com/nylo-core/nylo");
   }
 
-  onTapChangeLog() {
-    launch("https://github.com/nylo-core/framework/blob/0.x/CHANGELOG.md");
+  onTapChangeLog() async {
+    await launch("https://github.com/nylo-core/framework/blob/2.x/CHANGELOG.md");
   }
 }

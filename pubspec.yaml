@@ -17,11 +17,11 @@ environment:
 dependencies:
   url_launcher: ^6.0.17
   google_fonts: ^2.1.0
-  analyzer: ^2.8.0
+  analyzer: ^3.0.0
   dio: ^4.0.4
   intl: ^0.17.0
   page_transition: ^2.0.4
-  nylo_framework: ^2.1.2
+  nylo_framework: ^2.1.3
   flutter:
     sdk: flutter
   flutter_localizations:
