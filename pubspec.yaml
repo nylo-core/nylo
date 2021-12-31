@@ -51,7 +51,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - public/assets/fonts/
-    - public/assets/images/nylo_logo.png
+    - public/assets/images/
+    - public/assets/app_icon/
     - lang/
     - .env
   #   - images/a_dot_ham.jpeg
