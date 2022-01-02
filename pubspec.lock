@@ -147,7 +147,7 @@ packages:
     source: hosted
     version: "5.0.2"
   flutter_launcher_icons:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: flutter_launcher_icons
       url: "https://pub.dartlang.org"
@@ -293,7 +293,7 @@ packages:
       name: nylo_framework
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.3"
+    version: "2.1.4"
   nylo_support:
     dependency: transitive
     description:

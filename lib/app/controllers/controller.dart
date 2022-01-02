@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 /// Base Controller for the Nylo
@@ -6,9 +5,4 @@ import 'package:nylo_framework/nylo_framework.dart';
 class Controller extends BaseController {
   Controller();
 
-  @override
-  construct(BuildContext context) {
-    super.construct(context);
-
-  }
 }
