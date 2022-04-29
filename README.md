@@ -38,7 +38,7 @@ git clone https://github.com/nylo-core/nylo.git
 View our [docs](https://nylo.dev/docs) and visit [nylo.dev](https://nylo.dev)
 
 ## Changelog
-Please see [CHANGELOG](https://github.com/nylo-core/framework/blob/0.x/CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](https://github.com/nylo-core/framework/blob/3.x/CHANGELOG.md) for more information what has changed recently.
 
 ## Social
 * [Twitter](https://twitter.com/nylo_dev)
