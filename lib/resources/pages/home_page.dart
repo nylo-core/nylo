@@ -16,11 +16,10 @@ class MyHomePage extends NyStatefulWidget {
 }
 
 class _MyHomePageState extends NyState<MyHomePage> {
-
   bool _darkMode = false;
 
   @override
-  widgetDidLoad() async {
+  init() async {
 
   }
 
@@ -48,7 +47,8 @@ class _MyHomePageState extends NyState<MyHomePage> {
               ),
               Text(
                 "Micro-framework for Flutter",
-                style: textTheme.subtitle1!.setColor(context, (color) => color.primaryAccent),
+                style: textTheme.subtitle1!
+                    .setColor(context, (color) => color.primaryAccent),
                 textAlign: TextAlign.center,
               ),
               Text(
@@ -83,7 +83,11 @@ class _MyHomePageState extends NyState<MyHomePage> {
                         MaterialButton(
                           child: Text(
                             "documentation".tr().capitalize(),
-                            style: Theme.of(context).textTheme.bodyText1!.setColor(context, (color) => color.surfaceContent),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText1!
+                                .setColor(
+                                    context, (color) => color.surfaceContent),
                           ),
                           onPressed: widget.controller.onTapDocumentation,
                         ),
@@ -93,7 +97,8 @@ class _MyHomePageState extends NyState<MyHomePage> {
                         MaterialButton(
                           child: Text(
                             "GitHub",
-                            style: textTheme.bodyText1!.setColor(context, (color) => color.surfaceContent),
+                            style: textTheme.bodyText1!.setColor(
+                                context, (color) => color.surfaceContent),
                           ),
                           onPressed: widget.controller.onTapGithub,
                         ),
@@ -103,7 +108,11 @@ class _MyHomePageState extends NyState<MyHomePage> {
                         MaterialButton(
                           child: Text(
                             "changelog".tr().capitalize(),
-                            style: Theme.of(context).textTheme.bodyText1!.setColor(context, (color) => color.surfaceContent),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText1!
+                                .setColor(
+                                    context, (color) => color.surfaceContent),
                           ),
                           onPressed: widget.controller.onTapChangeLog,
                         ),
@@ -114,12 +123,17 @@ class _MyHomePageState extends NyState<MyHomePage> {
                     nyloVersion,
                     style: textTheme.bodyText2!.copyWith(color: Colors.grey),
                   ),
-                  Switch(value: _darkMode, onChanged: (value) {
-                    _darkMode = value;
-                    NyTheme.set(context, id: (_darkMode == true ? 'default_dark_theme' : 'default_light_theme'));
-                    setState(() {});
-                  }),
-                  Text("${_darkMode == true ? "Dark": "Light"} Mode"),
+                  Switch(
+                      value: _darkMode,
+                      onChanged: (value) {
+                        _darkMode = value;
+                        NyTheme.set(context,
+                            id: (_darkMode == true
+                                ? 'default_dark_theme'
+                                : 'default_light_theme'));
+                        setState(() {});
+                      }),
+                  Text("${_darkMode == true ? "Dark" : "Light"} Mode"),
                 ],
               ),
             ],

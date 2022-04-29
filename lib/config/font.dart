@@ -15,5 +15,5 @@ import 'package:google_fonts/google_fonts.dart';
 
 final TextStyle appFont = GoogleFonts.montserrat();
 
-// e.g. custom font in pubspec.yaml - https://flutter.dev/docs/cookbook/design/fonts
-// final TextStyle appThemeFont = TextStyle(fontFamily: "ZenTokyoZoo");
+// e.g. using a custom font in pubspec.yaml - https://flutter.dev/docs/cookbook/design/fonts
+// final TextStyle appFont = TextStyle(fontFamily: "ZenTokyoZoo");

@@ -21,7 +21,7 @@ dependencies:
   dio: ^4.0.5
   intl: ^0.17.0
   page_transition: ^2.0.4
-  nylo_framework: ^2.2.0
+  nylo_framework: ^3.0.0
   flutter:
     sdk: flutter
   flutter_localizations:

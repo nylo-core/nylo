@@ -1,14 +1,7 @@
-import 'package:flutter_app/config/app_localization.dart';
+import 'package:flutter_app/config/providers.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-Future<void> boot() async {
-  /// NyLocalization
-  await NyLocalization.instance.init(
-      localeType: localeType,
-      languageCode: languageCode,
-      languagesList: languagesList,
-      assetsDirectory: assetsDirectory,
-      valuesAsMap: valuesAsMap
-  );
-  /// ...
+class Boot {
+  static Future<Nylo> nylo() async => await bootApplication(providers);
+  static Future<void> finished(Nylo nylo) async => await bootFinished(nylo);
 }

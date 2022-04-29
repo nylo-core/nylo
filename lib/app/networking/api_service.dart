@@ -1,30 +1,31 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/networking/base_api_service.dart';
+import 'package:flutter_app/app/networking/dio/base_api_service.dart';
+import 'package:flutter_app/app/networking/dio/interceptors/logging_interceptor.dart';
+import 'package:nylo_framework/nylo_framework.dart';
 
 /*
 |--------------------------------------------------------------------------
 | ApiService
 | -------------------------------------------------------------------------
-| Uses Dio https://pub.dev/packages/dio
+| Define your API endpoints
+| Learn more https://nylo.dev/docs/3.x/networking
 |--------------------------------------------------------------------------
 */
 
-class ApiService extends BaseDioApiService implements HasApiOperations {
+class ApiService extends BaseApiService {
   ApiService({BuildContext? buildContext}) : super(buildContext);
 
   @override
-  String get baseUrl => "https://myapi.com";
+  String get baseUrl => getEnv('API_BASE_URL');
 
-  // @override
-  // BaseOptions get baseOptions => BaseOptions();
+  @override
+  final interceptors = {
+    LoggingInterceptor: LoggingInterceptor()
+  };
 
-  // @override
-  // bool get useInterceptor => true;
-
-  Future<Response> fetchTestData() async {
-    Response response = await api.get('/users');
-    print(response.data.toString());
-    return response;
+  Future<dynamic> fetchTestData() async {
+    return await network(
+        request: (request) => request.get("/endpoint-path"),
+    );
   }
 }

@@ -9,11 +9,16 @@ class BaseThemeConfig {
   final BaseColorStyles colors;
   final dynamic meta;
 
-  BaseThemeConfig({required this.id, required this.description, required this.theme, required this.colors, this.meta = const {}});
+  BaseThemeConfig(
+      {required this.id,
+      required this.description,
+      required this.theme,
+      required this.colors,
+      this.meta = const {}});
 
   AppTheme toAppTheme({ThemeData? defaultTheme}) => AppTheme(
-    id: this.id,
-    data: defaultTheme == null ? this.theme : defaultTheme,
-    description: this.description,
-  );
+        id: this.id,
+        data: defaultTheme == null ? this.theme : defaultTheme,
+        description: this.description,
+      );
 }

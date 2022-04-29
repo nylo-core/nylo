@@ -13,15 +13,13 @@ import 'package:flutter_app/resources/themes/styles/light_theme_colors.dart';
 
 // App Themes
 final appThemes = [
-
   ThemeConfig.light(),
-
   ThemeConfig.dark(),
 ];
 
 /*
 |--------------------------------------------------------------------------
-| Theme Colors
+| Colors
 |--------------------------------------------------------------------------
 */
 
@@ -39,22 +37,21 @@ BaseColorStyles darkColors = DarkThemeColors();
 
 // Preset Themes
 class ThemeConfig {
-
   // LIGHT
   static BaseThemeConfig light() => BaseThemeConfig(
-    id: "default_light_theme",
-    description: "Light theme",
-    theme: lightTheme(lightColors),
-    colors: lightColors,
-  );
+        id: "default_light_theme",
+        description: "Light theme",
+        theme: lightTheme(lightColors),
+        colors: lightColors,
+      );
 
   // DARK
   static BaseThemeConfig dark() => BaseThemeConfig(
-    id: "default_dark_theme",
-    description: "Dark theme",
-    theme: darkTheme(darkColors),
-    colors: darkColors,
-  );
+        id: "default_dark_theme",
+        description: "Dark theme",
+        theme: darkTheme(darkColors),
+        colors: darkColors,
+      );
 
   // E.G. CUSTOM THEME
   /// Run: "flutter pub run nylo_framework:main make:theme bright_theme" // example bright_theme

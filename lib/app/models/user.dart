@@ -1,18 +1,15 @@
-import 'package:nylo_framework/nylo_framework.dart';
 
-class User extends Storable {
-  late String name; // name
-  late String token; // authentication token
+class User {
+  late String name;
+  late String email;
 
-  @override
-  toStorage() => {
-    "name": this.name,
-    "token": this.token
-  };
-
-  @override
-  fromStorage(dynamic data) {
+  User.fromJson(dynamic data) {
     this.name = data['name'];
-    this.token = data['token'];
+    this.email = data['email'];
   }
+
+  toJson()  => {
+    "name": this.name,
+    "email": this.email
+  };
 }
