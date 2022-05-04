@@ -9,6 +9,6 @@ class LoginEvent implements NyEvent {
 
 class DefaultListener extends NyListener {
   handle(dynamic event) async {
-
+    // handle the payload from event
   }
 }

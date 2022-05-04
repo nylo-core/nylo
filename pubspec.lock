@@ -100,7 +100,7 @@ packages:
     source: hosted
     version: "1.0.4"
   dio:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: dio
       url: "https://pub.dartlang.org"
@@ -293,14 +293,14 @@ packages:
       name: nylo_framework
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "3.1.0"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "3.0.1"
   package_config:
     dependency: transitive
     description:
