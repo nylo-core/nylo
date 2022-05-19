@@ -7,7 +7,10 @@ import 'package:flutter_app/resources/themes/styles/light_theme_colors.dart';
 
 /*
 |--------------------------------------------------------------------------
-| Theme Config
+| Themes
+| Manage your Flutter application's themes.
+|
+| Learn more: https://nylo.dev/docs/3.x/themes
 |--------------------------------------------------------------------------
 */
 

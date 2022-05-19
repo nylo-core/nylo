@@ -89,11 +89,9 @@ class AppBuild extends StatelessWidget {
               shortcuts: shortcuts,
               actions: actions,
               title: title ?? "",
-              darkTheme: this.darkTheme == null
-                  ? ThemeConfig.dark().theme
-                  : this.darkTheme,
+              darkTheme: darkTheme ?? ThemeConfig.dark().theme,
               initialRoute: initialRoute,
-              onGenerateRoute: this.onGenerateRoute,
+              onGenerateRoute: onGenerateRoute,
               theme: themeData ?? ThemeProvider.themeOf(context).data,
               localeResolutionCallback:
                   (Locale? locale, Iterable<Locale> supportedLocales) {

@@ -10,6 +10,8 @@ import 'package:google_fonts/google_fonts.dart';
 | e.g. updating the font from "montserrat" to "lato"
 | before: final TextStyle appThemeFont = GoogleFonts.montserrat();
 | after:  final TextStyle appThemeFont = GoogleFonts.lato();
+|
+| Learn more: https://nylo.dev/docs/3.x/themes#fonts
 |--------------------------------------------------------------------------
 */
 

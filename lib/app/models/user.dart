@@ -4,12 +4,12 @@ class User {
   late String email;
 
   User.fromJson(dynamic data) {
-    this.name = data['name'];
-    this.email = data['email'];
+    name = data['name'];
+    email = data['email'];
   }
 
   toJson()  => {
-    "name": this.name,
-    "email": this.email
+    "name": name,
+    "email": email
   };
 }

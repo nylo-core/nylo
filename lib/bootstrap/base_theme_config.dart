@@ -17,8 +17,8 @@ class BaseThemeConfig {
       this.meta = const {}});
 
   AppTheme toAppTheme({ThemeData? defaultTheme}) => AppTheme(
-        id: this.id,
-        data: defaultTheme == null ? this.theme : defaultTheme,
-        description: this.description,
+        id: id,
+        data: defaultTheme ?? theme,
+        description: description,
       );
 }

@@ -1,6 +1,4 @@
 import 'dart:developer';
-
-import 'package:dio/dio.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class LoggingInterceptor extends Interceptor {

@@ -120,7 +120,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                     ),
                   ),
                   Text(
-                    nyloVersion,
+                    "Framework Version: $nyloVersion",
                     style: textTheme.bodyText2!.copyWith(color: Colors.grey),
                   ),
                   Switch(

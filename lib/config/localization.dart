@@ -2,13 +2,12 @@ import 'package:nylo_framework/nylo_framework.dart';
 
 /*
 |--------------------------------------------------------------------------
-| localeType
-| -------------------------------------------------------------------------
-| Define if you want the application to read the locale from the users
-| device settings or as you've defined in the [languageCode].
+| Localization
+| Manage your Flutter application's localization.
+|
+| Learn more: https://nylo.dev/docs/3.x/localization
 |--------------------------------------------------------------------------
 */
-final LocaleType? localeType = LocaleType.asDefined; // device, asDefined
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +17,17 @@ final LocaleType? localeType = LocaleType.asDefined; // device, asDefined
 | The language code should match the name of the file i.e /lang/es.json
 |--------------------------------------------------------------------------
 */
-final String? languageCode = getEnv('DEFAULT_LOCALE', defaultValue: "en");
+final String languageCode = getEnv('DEFAULT_LOCALE', defaultValue: "en");
+
+/*
+|--------------------------------------------------------------------------
+| localeType
+| -------------------------------------------------------------------------
+| Define if you want the application to read the locale from the users
+| device settings or as you've defined in the [languageCode].
+|--------------------------------------------------------------------------
+*/
+final LocaleType localeType = LocaleType.asDefined; // device, asDefined
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +45,7 @@ final List<String> languagesList = const ['en'];
 | Asset directory for your languages.
 |--------------------------------------------------------------------------
 */
-final String? assetsDirectory = 'lang/';
+final String assetsDirectory = 'lang/';
 
 /*
 |--------------------------------------------------------------------------
@@ -46,4 +55,4 @@ final String? assetsDirectory = 'lang/';
 | the asset json files.
 |--------------------------------------------------------------------------
 */
-final Map<String, String>? valuesAsMap = {};
+final Map<String, String> valuesAsMap = {};

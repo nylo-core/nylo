@@ -21,7 +21,7 @@ class ThemeColor {
 extension ColorsHelper on TextStyle {
   TextStyle? setColor(
       BuildContext context, Color Function(BaseColorStyles color) newColor) {
-    return this.copyWith(color: newColor(ThemeColor.get(context)));
+    return copyWith(color: newColor(ThemeColor.get(context)));
   }
 }
 
