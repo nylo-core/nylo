@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/config/font.dart';
-import 'package:flutter_app/resources/themes/styles/base_styles.dart';
-import 'package:flutter_app/resources/themes/text_theme/default_text_theme.dart';
+import '../../config/font.dart';
+import '../../resources/themes/styles/base_styles.dart';
+import '../../resources/themes/text_theme/default_text_theme.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 /*

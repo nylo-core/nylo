@@ -1,5 +1,5 @@
 import 'package:nylo_framework/nylo_framework.dart';
-import 'package:flutter_app/config/localization.dart';
+import '../../config/localization.dart';
 
 class AppProvider implements NyProvider {
 

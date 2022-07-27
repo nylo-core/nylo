@@ -1,5 +1,5 @@
-import 'package:flutter_app/app/models/user.dart';
-import 'package:flutter_app/app/networking/api_service.dart';
+import '../app/models/user.dart';
+import '../app/networking/api_service.dart';
 
 /*
 |--------------------------------------------------------------------------

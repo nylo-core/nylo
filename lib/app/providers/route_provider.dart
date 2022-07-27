@@ -1,4 +1,4 @@
-import 'package:flutter_app/routes/router.dart';
+import '../../routes/router.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class RouteProvider implements NyProvider {

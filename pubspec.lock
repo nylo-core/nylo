@@ -293,14 +293,14 @@ packages:
       name: nylo_framework
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.4"
+    version: "3.2.0"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.2.0"
+    version: "3.3.0"
   package_config:
     dependency: transitive
     description:

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/config/decoders.dart';
-import 'package:flutter_app/config/events.dart';
-import 'package:flutter_app/config/theme.dart';
-import 'package:flutter_app/resources/themes/styles/base_styles.dart';
+import '../config/decoders.dart';
+import '../config/events.dart';
+import '../config/theme.dart';
+import '../resources/themes/styles/base_styles.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 // Add your helper methods here

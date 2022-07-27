@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/networking/dio/base_api_service.dart';
+import '../../app/models/user.dart';
+import '../../app/networking/dio/base_api_service.dart';
 import 'package:flutter_app/app/networking/dio/interceptors/logging_interceptor.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -24,7 +25,7 @@ class ApiService extends BaseApiService {
     LoggingInterceptor: LoggingInterceptor()
   };
 
-  Future<dynamic> fetchTestData() async {
+  Future<User> fetchTestData() async {
     return await network(
         request: (request) => request.get("/endpoint-path"),
     );

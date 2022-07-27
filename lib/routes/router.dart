@@ -1,4 +1,4 @@
-import 'package:flutter_app/resources/pages/home_page.dart';
+import '../../resources/pages/home_page.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 /*

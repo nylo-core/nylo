@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/networking/dio/interceptors/logging_interceptor.dart';
-import 'package:flutter_app/config/decoders.dart';
+import 'interceptors/logging_interceptor.dart';
+import '../../../config/decoders.dart';
 import 'package:nylo_framework/networking/ny_base_networking.dart';
 
 class BaseApiService extends NyBaseApiService {

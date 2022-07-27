@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/resources/themes/styles/base_styles.dart';
+import '../resources/themes/styles/base_styles.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class BaseThemeConfig {
