@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/resources/themes/styles/color_styles.dart';
 import '../config/decoders.dart';
 import '../config/events.dart';
 import 'package:nylo_framework/nylo_framework.dart';
@@ -8,13 +9,13 @@ import 'package:nylo_framework/nylo_framework.dart';
 
 /// helper to find correct color from the [context].
 class ThemeColor {
-  static BaseColorStyles get(BuildContext context, {String? themeId}) {
+  static ColorStyles get(BuildContext context, {String? themeId}) {
 
     Nylo nylo = Backpack.instance.read('nylo');
     List<BaseThemeConfig> appThemes = nylo.appThemes;
 
     if (themeId == null) {
-      BaseThemeConfig themeFound = appThemes
+      dynamic themeFound = appThemes
           .firstWhere(
               (theme) => theme.id == getEnv(Theme.of(context).brightness == Brightness.light ? 'LIGHT_THEME_ID' : 'DARK_THEME_ID'),
           orElse: () => appThemes.first
@@ -22,7 +23,7 @@ class ThemeColor {
       return themeFound.colors;
     }
 
-    BaseThemeConfig baseThemeConfig = appThemes.firstWhere((theme) => theme.id == themeId, orElse: () => appThemes.first);
+    dynamic baseThemeConfig = appThemes.firstWhere((theme) => theme.id == themeId, orElse: () => appThemes.first);
     return baseThemeConfig.colors;
   }
 }
