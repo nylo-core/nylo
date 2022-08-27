@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app/resources/themes/styles/color_styles.dart';
 import '../../config/font.dart';
-import '../../resources/themes/styles/base_styles.dart';
 import '../../resources/themes/text_theme/default_text_theme.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -13,7 +13,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 |--------------------------------------------------------------------------
 */
 
-ThemeData lightTheme(BaseColorStyles lightColors) {
+ThemeData lightTheme(ColorStyles lightColors) {
   TextTheme lightTheme = getAppTextTheme(
       appFont, defaultTextTheme.merge(_lightTextTheme(lightColors)));
 
@@ -67,7 +67,7 @@ ThemeData lightTheme(BaseColorStyles lightColors) {
 |--------------------------------------------------------------------------
 */
 
-TextTheme _lightTextTheme(BaseColorStyles lightColors) {
+TextTheme _lightTextTheme(ColorStyles lightColors) {
   Color lightPrimaryContent = lightColors.primaryContent;
   return TextTheme(
     headline6: TextStyle(

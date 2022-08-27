@@ -1,3 +1,4 @@
+import 'package:flutter_app/config/theme.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import '../../config/localization.dart';
 
@@ -10,6 +11,8 @@ class AppProvider implements NyProvider {
         languagesList: languagesList,
         assetsDirectory: assetsDirectory,
         valuesAsMap: valuesAsMap);
+
+    nylo.appThemes = appThemes;
 
     return nylo;
   }

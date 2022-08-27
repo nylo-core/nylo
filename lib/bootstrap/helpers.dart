@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../config/decoders.dart';
 import '../config/events.dart';
-import '../config/theme.dart';
-import '../resources/themes/styles/base_styles.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 // Add your helper methods here
@@ -10,18 +8,30 @@ import 'package:nylo_framework/nylo_framework.dart';
 
 /// helper to find correct color from the [context].
 class ThemeColor {
-  static BaseColorStyles get(BuildContext context) {
-    return ((Theme.of(context).brightness == Brightness.light)
-        ? ThemeConfig.light().colors
-        : ThemeConfig.dark().colors);
+  static BaseColorStyles get(BuildContext context, {String? themeId}) {
+
+    Nylo nylo = Backpack.instance.read('nylo');
+    List<BaseThemeConfig> appThemes = nylo.appThemes;
+
+    if (themeId == null) {
+      BaseThemeConfig themeFound = appThemes
+          .firstWhere(
+              (theme) => theme.id == getEnv(Theme.of(context).brightness == Brightness.light ? 'LIGHT_THEME_ID' : 'DARK_THEME_ID'),
+          orElse: () => appThemes.first
+      );
+      return themeFound.colors;
+    }
+
+    BaseThemeConfig baseThemeConfig = appThemes.firstWhere((theme) => theme.id == themeId, orElse: () => appThemes.first);
+    return baseThemeConfig.colors;
   }
 }
 
 /// helper to set colors on TextStyle
 extension ColorsHelper on TextStyle {
   TextStyle? setColor(
-      BuildContext context, Color Function(BaseColorStyles color) newColor) {
-    return copyWith(color: newColor(ThemeColor.get(context)));
+      BuildContext context, Color Function(BaseColorStyles color) newColor, {String? themeId}) {
+    return copyWith(color: newColor(ThemeColor.get(context, themeId: themeId)));
   }
 }
 

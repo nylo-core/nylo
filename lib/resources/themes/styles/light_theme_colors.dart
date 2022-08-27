@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'base_styles.dart';
+import 'color_styles.dart';
 
 /*
 |--------------------------------------------------------------------------
@@ -7,7 +7,7 @@ import 'base_styles.dart';
 |--------------------------------------------------------------------------
 */
 
-class LightThemeColors implements BaseColorStyles {
+class LightThemeColors implements ColorStyles {
   // general
   Color get background => const Color(0xFFFFFFFF);
 

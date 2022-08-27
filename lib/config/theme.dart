@@ -1,7 +1,8 @@
-import '../../bootstrap/base_theme_config.dart';
+import 'package:nylo_framework/nylo_framework.dart';
+
 import '../../resources/themes/dark_theme.dart';
 import '../../resources/themes/light_theme.dart';
-import '../../resources/themes/styles/base_styles.dart';
+import '../../resources/themes/styles/color_styles.dart';
 import '../../resources/themes/styles/dark_theme_colors.dart';
 import '../../resources/themes/styles/light_theme_colors.dart';
 
@@ -15,7 +16,7 @@ import '../../resources/themes/styles/light_theme_colors.dart';
 */
 
 // App Themes
-final appThemes = [
+final List<BaseThemeConfig> appThemes = [
   ThemeConfig.light(),
   ThemeConfig.dark(),
 ];
@@ -27,10 +28,10 @@ final appThemes = [
 */
 
 // Light Colors
-BaseColorStyles lightColors = LightThemeColors();
+ColorStyles lightColors = LightThemeColors();
 
 // Dark Colors
-BaseColorStyles darkColors = DarkThemeColors();
+ColorStyles darkColors = DarkThemeColors();
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,7 @@ BaseColorStyles darkColors = DarkThemeColors();
 class ThemeConfig {
   // LIGHT
   static BaseThemeConfig light() => BaseThemeConfig(
-        id: "default_light_theme",
+        id: getEnv('LIGHT_THEME_ID'),
         description: "Light theme",
         theme: lightTheme(lightColors),
         colors: lightColors,
@@ -50,7 +51,7 @@ class ThemeConfig {
 
   // DARK
   static BaseThemeConfig dark() => BaseThemeConfig(
-        id: "default_dark_theme",
+        id: getEnv('DARK_THEME_ID'),
         description: "Dark theme",
         theme: darkTheme(darkColors),
         colors: darkColors,

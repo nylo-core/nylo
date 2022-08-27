@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../config/font.dart';
-import '../../resources/themes/styles/base_styles.dart';
+import '../../resources/themes/styles/color_styles.dart';
 import '../../resources/themes/text_theme/default_text_theme.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -13,7 +13,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 |--------------------------------------------------------------------------
 */
 
-ThemeData darkTheme(BaseColorStyles darkColors) {
+ThemeData darkTheme(ColorStyles darkColors) {
   TextTheme darkTheme = getAppTextTheme(
       appFont, defaultTextTheme.merge(_darkTextTheme(darkColors)));
   return ThemeData(
@@ -64,7 +64,7 @@ ThemeData darkTheme(BaseColorStyles darkColors) {
 |--------------------------------------------------------------------------
 */
 
-TextTheme _darkTextTheme(BaseColorStyles dark) {
+TextTheme _darkTextTheme(ColorStyles dark) {
   final Color darkPrimaryContent = dark.primaryContent;
   return TextTheme(
     headline6: TextStyle(

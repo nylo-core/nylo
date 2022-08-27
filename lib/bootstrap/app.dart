@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../config/theme.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 // ignore: must_be_immutable
@@ -59,14 +58,11 @@ class AppBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Nylo nylo = Backpack.instance.read('nylo');
+    List<AppTheme> appThemes = nylo.appThemes.map((appTheme) => appTheme.toAppTheme()).toList();
     return LocalizedApp(
       child: ThemeProvider(
-        themes: appThemes
-            .map((appTheme) => appTheme.toAppTheme(
-                defaultTheme: appTheme.theme.brightness == Brightness.light
-                    ? lightTheme
-                    : darkTheme))
-            .toList(),
+        themes: appThemes,
         child: ThemeConsumer(
           child: ValueListenableBuilder(
             valueListenable:
@@ -89,7 +85,7 @@ class AppBuild extends StatelessWidget {
               shortcuts: shortcuts,
               actions: actions,
               title: title ?? "",
-              darkTheme: darkTheme ?? ThemeConfig.dark().theme,
+              darkTheme: darkTheme ?? appThemes.firstWhere((theme) => theme.id == getEnv('DARK_THEME_ID'), orElse: () => appThemes.first).data,
               initialRoute: initialRoute,
               onGenerateRoute: onGenerateRoute,
               theme: themeData ?? ThemeProvider.themeOf(context).data,

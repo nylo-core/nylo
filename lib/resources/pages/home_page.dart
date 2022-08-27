@@ -128,9 +128,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                       onChanged: (value) {
                         _darkMode = value;
                         NyTheme.set(context,
-                            id: (_darkMode == true
-                                ? 'default_dark_theme'
-                                : 'default_light_theme'));
+                            id: getEnv(_darkMode == true ? 'DARK_THEME_ID' : 'LIGHT_THEME_ID'));
                         setState(() {});
                       }),
                   Text("${_darkMode == true ? "Dark" : "Light"} Mode"),
