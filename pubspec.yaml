@@ -17,10 +17,10 @@ environment:
 dependencies:
   url_launcher: ^6.1.5
   google_fonts: ^3.0.1
-  analyzer: ^4.1.0
+  analyzer: ^5.0.0
   intl: ^0.17.0
-  page_transition: ^2.0.9
-  nylo_framework: ^3.3.0
+  nylo_framework: ^3.4.0
+  pretty_dio_logger: ^1.2.0-beta-1
   flutter:
     sdk: flutter
   flutter_localizations:
