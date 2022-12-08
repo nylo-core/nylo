@@ -41,15 +41,3 @@ api<T>(dynamic Function(T request) request, {BuildContext? context}) async => aw
 
 /// Event helper
 event<T>({Map? data}) async => nyEvent<T>(params: data, events: events);
-
-abstract class Model implements JsonOperations {
-
-  // Model.fromJson(dynamic data) {
-  //
-  // }
-  //
-  // toJson()  => {
-  //
-  // };
-
-}
