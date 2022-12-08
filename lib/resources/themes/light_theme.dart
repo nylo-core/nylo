@@ -38,11 +38,11 @@ ThemeData lightTheme(ColorStyles lightColors) {
       colorScheme: ColorScheme.light(primary: lightColors.buttonBackground),
     ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(primary: lightColors.primaryContent),
+      style: TextButton.styleFrom(foregroundColor: lightColors.primaryContent),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: TextButton.styleFrom(
-          primary: lightColors.buttonPrimaryContent,
+          foregroundColor: lightColors.buttonPrimaryContent,
           backgroundColor: lightColors.buttonBackground),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(

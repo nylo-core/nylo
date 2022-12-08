@@ -35,11 +35,11 @@ ThemeData darkTheme(ColorStyles darkColors) {
       colorScheme: ColorScheme.light(primary: darkColors.buttonBackground),
     ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(primary: darkColors.primaryContent),
+      style: TextButton.styleFrom(foregroundColor: darkColors.primaryContent),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: TextButton.styleFrom(
-          primary: darkColors.buttonPrimaryContent,
+          foregroundColor: darkColors.buttonPrimaryContent,
           backgroundColor: darkColors.buttonBackground),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(

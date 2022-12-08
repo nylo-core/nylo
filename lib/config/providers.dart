@@ -1,3 +1,4 @@
+import 'package:nylo_framework/nylo_framework.dart';
 import '../app/providers/app_provider.dart';
 import '../app/providers/event_provider.dart';
 import '../app/providers/route_provider.dart';
@@ -12,8 +13,9 @@ import '../app/providers/route_provider.dart';
 |--------------------------------------------------------------------------
 */
 
-final providers = {
+final Map<Type, NyProvider> providers = {
   AppProvider: AppProvider(),
   RouteProvider: RouteProvider(),
   EventProvider: EventProvider(),
 };
+  

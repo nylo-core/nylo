@@ -37,7 +37,19 @@ extension ColorsHelper on TextStyle {
 }
 
 /// API helper
-api<T>(dynamic Function(T) request, {BuildContext? context}) async => await nyApi<T>(request: request, apiDecoders: apiDecoders, context: context);
+api<T>(dynamic Function(T request) request, {BuildContext? context}) async => await nyApi<T>(request: request, apiDecoders: apiDecoders, context: context);
 
 /// Event helper
 event<T>({Map? data}) async => nyEvent<T>(params: data, events: events);
+
+abstract class Model implements JsonOperations {
+
+  // Model.fromJson(dynamic data) {
+  //
+  // }
+  //
+  // toJson()  => {
+  //
+  // };
+
+}
