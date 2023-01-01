@@ -9,7 +9,7 @@ import '../app/providers/route_provider.dart';
 | Add your "app/providers" here.
 | Providers are booted when your application start.
 |
-| Learn more: https://nylo.dev/docs/3.x/providers
+| Learn more: https://nylo.dev/docs/4.x/providers
 |--------------------------------------------------------------------------
 */
 

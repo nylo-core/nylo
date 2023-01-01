@@ -5,7 +5,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 | Localization
 | Manage your Flutter application's localization.
 |
-| Learn more: https://nylo.dev/docs/3.x/localization
+| Learn more: https://nylo.dev/docs/4.x/localization
 |--------------------------------------------------------------------------
 */
 

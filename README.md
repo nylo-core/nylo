@@ -6,7 +6,7 @@
   <a href="#"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nylo-core/nylo?style=plastic"></a>
 </p>
 
-## Nylo (v3.3.0)
+## Nylo (v4.0.0)
 
 Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple boilerplate and MVC pattern to help you build apps easier. 
 
@@ -16,14 +16,14 @@ This project is open source and MIT-licenced, we welcome any contributions. You 
 
 ## Features
 Some core features available
-* [Routing](https://nylo.dev/docs/3.x/router).
-* [Light and dark themes](https://nylo.dev/docs/3.x/themes).
-* [Localization](https://nylo.dev/docs/3.x/localization).
-* [CLI for generating project files](https://nylo.dev/docs/3.x/metro).
-* [Elegant API Services for Networking](https://nylo.dev/docs/3.x/networking).
-* [Creating App Icons](https://nylo.dev/docs/3.x/app-icons).
-* [Project Configuration](https://nylo.dev/docs/3.x/configuration).
-* [Streamlined Project Structure](https://nylo.dev/docs/3.x/directory-structure).
+* [Routing](https://nylo.dev/docs/4.x/router).
+* [Light and dark themes](https://nylo.dev/docs/4.x/themes).
+* [Localization](https://nylo.dev/docs/4.x/localization).
+* [CLI for generating project files](https://nylo.dev/docs/4.x/metro).
+* [Elegant API Services for Networking](https://nylo.dev/docs/4.x/networking).
+* [Creating App Icons](https://nylo.dev/docs/4.x/app-icons).
+* [Project Configuration](https://nylo.dev/docs/4.x/configuration).
+* [Streamlined Project Structure](https://nylo.dev/docs/4.x/directory-structure).
 
 ## Requirements
 * Dart >= 2.17.0
@@ -39,7 +39,7 @@ git clone https://github.com/nylo-core/nylo.git
 View our [docs](https://nylo.dev/docs) and visit [nylo.dev](https://nylo.dev)
 
 ## Changelog
-Please see [CHANGELOG](https://github.com/nylo-core/framework/blob/3.x/CHANGELOG.md) for more information what has changed recently.
+Please see [CHANGELOG](https://github.com/nylo-core/framework/blob/4.x/CHANGELOG.md) for more information what has changed recently.
 
 ## Social
 * [Twitter](https://twitter.com/nylo_dev)

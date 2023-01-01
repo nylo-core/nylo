@@ -11,7 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 | before: final TextStyle appThemeFont = GoogleFonts.montserrat();
 | after:  final TextStyle appThemeFont = GoogleFonts.lato();
 |
-| Learn more: https://nylo.dev/docs/3.x/themes#fonts
+| Learn more: https://nylo.dev/docs/4.x/themes#fonts
 |--------------------------------------------------------------------------
 */
 

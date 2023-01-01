@@ -8,7 +8,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 | Add your "app/events" here.
 | Events can be fired using: event<MyEvent>();
 |
-| Learn more: https://nylo.dev/docs/3.x/events
+| Learn more: https://nylo.dev/docs/4.x/events
 |--------------------------------------------------------------------------
 */
 

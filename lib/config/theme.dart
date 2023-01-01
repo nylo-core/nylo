@@ -11,7 +11,7 @@ import '../../resources/themes/styles/light_theme_colors.dart';
 | Themes
 | Manage your Flutter application's themes.
 |
-| Learn more: https://nylo.dev/docs/3.x/themes
+| Learn more: https://nylo.dev/docs/4.x/themes
 |--------------------------------------------------------------------------
 */
 

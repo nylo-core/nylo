@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import '../../app/models/user.dart';
 import '../../app/networking/dio/base_api_service.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -10,7 +9,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 | -------------------------------------------------------------------------
 | Define your API endpoints
 
-| Learn more https://nylo.dev/docs/3.x/networking
+| Learn more https://nylo.dev/docs/4.x/networking
 |--------------------------------------------------------------------------
 */
 
@@ -26,7 +25,7 @@ class ApiService extends BaseApiService {
     PrettyDioLogger: PrettyDioLogger()
   };
 
-  Future<User> fetchTestData() async {
+  Future fetchTestData() async {
     return await network(
         request: (request) => request.get("/endpoint-path"),
     );

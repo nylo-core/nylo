@@ -1,4 +1,5 @@
 {
-'BASE_URL': "Nylo",
-'API_VERSION': "local"
+  "global": {
+    "BASE_URL": "https://nylo.dev"
+  }
 }

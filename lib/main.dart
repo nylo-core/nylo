@@ -12,6 +12,7 @@ void main() async {
       navigatorKey: NyNavigator.instance.router.navigatorKey,
       onGenerateRoute: nylo.router!.generator(),
       debugShowCheckedModeBanner: false,
+      initialRoute: nylo.initialRoute,
     ),
   );
 }

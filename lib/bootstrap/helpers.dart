@@ -37,7 +37,15 @@ extension ColorsHelper on TextStyle {
 }
 
 /// API helper
-api<T>(dynamic Function(T request) request, {BuildContext? context}) async => await nyApi<T>(request: request, apiDecoders: apiDecoders, context: context);
+api<T>(dynamic Function(T request) request, {
+  BuildContext? context,
+  Map<String, dynamic> headers = const {},
+  String? bearerToken}) async => await nyApi<T>(
+    request: request,
+    apiDecoders: apiDecoders,
+    context: context,
+    headers: headers, bearerToken: bearerToken,
+);
 
 /// Event helper
 event<T>({Map? data}) async => nyEvent<T>(params: data, events: events);
