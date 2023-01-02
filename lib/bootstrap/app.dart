@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
+import 'package:flutter_app/config/constants.dart';
 
 // ignore: must_be_immutable
 class AppBuild extends StatelessWidget {
@@ -85,7 +86,7 @@ class AppBuild extends StatelessWidget {
               shortcuts: shortcuts,
               actions: actions,
               title: title ?? "",
-              darkTheme: darkTheme ?? appThemes.firstWhere((theme) => theme.id == getEnv('DARK_THEME_ID'), orElse: () => appThemes.first).data,
+              darkTheme: darkTheme ?? appThemes.firstWhere((theme) => theme.id == Constants.DARK_THEME_ID, orElse: () => appThemes.first).data,
               initialRoute: initialRoute,
               onGenerateRoute: onGenerateRoute,
               theme: themeData ?? ThemeProvider.themeOf(context).data,

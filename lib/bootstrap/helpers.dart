@@ -3,6 +3,7 @@ import 'package:flutter_app/resources/themes/styles/color_styles.dart';
 import '../config/decoders.dart';
 import '../config/events.dart';
 import 'package:nylo_framework/nylo_framework.dart';
+import 'package:flutter_app/config/constants.dart';
 
 // Add your helper methods here
 // ...
@@ -15,11 +16,13 @@ class ThemeColor {
     List<BaseThemeConfig> appThemes = nylo.appThemes;
 
     if (themeId == null) {
-      dynamic themeFound = appThemes
-          .firstWhere(
-              (theme) => theme.id == getEnv(Theme.of(context).brightness == Brightness.light ? 'LIGHT_THEME_ID' : 'DARK_THEME_ID'),
-          orElse: () => appThemes.first
-      );
+      dynamic themeFound = appThemes.firstWhere(
+          (theme) =>
+              theme.id ==
+              (Theme.of(context).brightness == Brightness.light
+                  ? Constants.LIGHT_THEME_ID
+                  : Constants.DARK_THEME_ID),
+          orElse: () => appThemes.first);
       return themeFound.colors;
     }
 

@@ -1,4 +1,5 @@
 import 'package:nylo_framework/nylo_framework.dart';
+import 'package:flutter_app/config/constants.dart';
 
 import '../../resources/themes/dark_theme.dart';
 import '../../resources/themes/light_theme.dart';
@@ -43,7 +44,7 @@ ColorStyles darkColors = DarkThemeColors();
 class ThemeConfig {
   // LIGHT
   static BaseThemeConfig light() => BaseThemeConfig(
-        id: getEnv('LIGHT_THEME_ID'),
+        id: Constants.LIGHT_THEME_ID,
         description: "Light theme",
         theme: lightTheme(lightColors),
         colors: lightColors,
@@ -51,7 +52,7 @@ class ThemeConfig {
 
   // DARK
   static BaseThemeConfig dark() => BaseThemeConfig(
-        id: getEnv('DARK_THEME_ID'),
+        id: Constants.DARK_THEME_ID,
         description: "Dark theme",
         theme: darkTheme(darkColors),
         colors: darkColors,

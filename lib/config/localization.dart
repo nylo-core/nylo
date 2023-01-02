@@ -1,4 +1,5 @@
 import 'package:nylo_framework/nylo_framework.dart';
+import 'package:flutter_app/config/constants.dart';
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 | The language code should match the name of the file i.e /lang/es.json
 |--------------------------------------------------------------------------
 */
-final String languageCode = getEnv('DEFAULT_LOCALE', defaultValue: "en");
+final String languageCode = Constants.DEFAULT_LOCALE;
 
 /*
 |--------------------------------------------------------------------------

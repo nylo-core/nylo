@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/config/constants.dart';
 import '../../app/controllers/home_controller.dart';
 import '../../bootstrap/helpers.dart';
 import '../../resources/widgets/safearea_widget.dart';
@@ -41,8 +42,8 @@ class _MyHomePageState extends NyState<MyHomePage> {
                 height: 100,
                 width: 100,
               ),
-              Text(
-                getEnv("APP_NAME"),
+               Text(
+                Constants.APP_NAME,
                 style: textTheme.headline2,
               ),
               Text(
@@ -127,8 +128,10 @@ class _MyHomePageState extends NyState<MyHomePage> {
                       value: _darkMode,
                       onChanged: (value) {
                         _darkMode = value;
-                        NyTheme.set(context,
-                            id: getEnv(_darkMode == true ? 'DARK_THEME_ID' : 'LIGHT_THEME_ID'));
+                         NyTheme.set(context,
+                            id: (_darkMode == true
+                                ? Constants.DARK_THEME_ID
+                                : Constants.LIGHT_THEME_ID));
                         setState(() {});
                       }),
                   Text("${_darkMode == true ? "Dark" : "Light"} Mode"),
