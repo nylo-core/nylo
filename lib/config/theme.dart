@@ -1,10 +1,10 @@
 import 'package:nylo_framework/nylo_framework.dart';
 
-import '../../resources/themes/dark_theme.dart';
-import '../../resources/themes/light_theme.dart';
-import '../../resources/themes/styles/color_styles.dart';
-import '../../resources/themes/styles/dark_theme_colors.dart';
-import '../../resources/themes/styles/light_theme_colors.dart';
+import '/resources/themes/dark_theme.dart';
+import '/resources/themes/light_theme.dart';
+import '/resources/themes/styles/color_styles.dart';
+import '/resources/themes/styles/dark_theme_colors.dart';
+import '/resources/themes/styles/light_theme_colors.dart';
 
 /*
 |--------------------------------------------------------------------------

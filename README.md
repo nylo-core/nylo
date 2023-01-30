@@ -6,7 +6,7 @@
   <a href="#"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nylo-core/nylo?style=plastic"></a>
 </p>
 
-## Nylo (v4.0.0)
+## Nylo (v4.1.0)
 
 Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple boilerplate and MVC pattern to help you build apps easier. 
 
@@ -26,8 +26,8 @@ Some core features available
 * [Streamlined Project Structure](https://nylo.dev/docs/4.x/directory-structure).
 
 ## Requirements
-* Dart >= 2.17.0
-* Flutter >= 3.0.0
+* Dart >= 2.19.0
+* Flutter >= 3.7.0
 
 ## Getting Started
 
@@ -53,6 +53,7 @@ If you discover any security related issues, please email support@nylo.dev inste
 * [Abdulrasheed1729](https://github.com/Abdulrasheed1729)
 * [Rashid-Khabeer](https://github.com/Rashid-Khabeer)
 * [youssefKadaouiAbbassi](https://github.com/youssefKadaouiAbbassi)
+* [jeremyhalin](https://github.com/jeremyhalin)
 
 ## Licence
 

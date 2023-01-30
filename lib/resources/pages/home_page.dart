@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../app/controllers/home_controller.dart';
-import '../../bootstrap/helpers.dart';
-import '../../resources/widgets/safearea_widget.dart';
+import 'package:flutter_app/resources/widgets/logo_widget.dart';
+import '/app/controllers/home_controller.dart';
+import '/bootstrap/helpers.dart';
+import '/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:nylo_framework/theme/helper/ny_theme.dart';
 
@@ -20,6 +21,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
 
   @override
   init() async {
+    super.init();
 
   }
 
@@ -36,11 +38,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
-                getImageAsset("nylo_logo.png"),
-                height: 100,
-                width: 100,
-              ),
+              Logo(),
               Text(
                 getEnv("APP_NAME"),
                 style: textTheme.headline2,

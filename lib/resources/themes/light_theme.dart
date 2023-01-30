@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/resources/themes/styles/color_styles.dart';
-import '../../config/font.dart';
-import '../../resources/themes/text_theme/default_text_theme.dart';
+import '/config/font.dart';
+import '/resources/themes/styles/color_styles.dart';
+import '/resources/themes/text_theme/default_text_theme.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 /*
@@ -13,51 +13,52 @@ import 'package:nylo_framework/nylo_framework.dart';
 |--------------------------------------------------------------------------
 */
 
-ThemeData lightTheme(ColorStyles lightColors) {
+ThemeData lightTheme(ColorStyles color) {
   TextTheme lightTheme = getAppTextTheme(
-      appFont, defaultTextTheme.merge(_lightTextTheme(lightColors)));
+      appFont, defaultTextTheme.merge(_textTheme(color)));
 
   return ThemeData(
-    primaryColor: lightColors.primaryContent,
-    backgroundColor: lightColors.background,
-    colorScheme: ColorScheme.light(),
-    primaryColorLight: lightColors.primaryAccent,
-    focusColor: lightColors.primaryContent,
-    scaffoldBackgroundColor: lightColors.background,
-    hintColor: lightColors.primaryAccent,
+    primaryColor: color.primaryContent,
+    primaryColorLight: color.primaryAccent,
+    focusColor: color.primaryContent,
+    scaffoldBackgroundColor: color.background,
+    hintColor: color.primaryAccent,
     appBarTheme: AppBarTheme(
-      backgroundColor: lightColors.appBarBackground,
-      titleTextStyle: lightTheme.headline6!
-          .copyWith(color: lightColors.appBarPrimaryContent),
-      iconTheme: IconThemeData(color: lightColors.appBarPrimaryContent),
+      backgroundColor: color.appBarBackground,
+      titleTextStyle: lightTheme.titleLarge!
+          .copyWith(color: color.appBarPrimaryContent),
+      iconTheme: IconThemeData(color: color.appBarPrimaryContent),
       elevation: 1.0,
       systemOverlayStyle: SystemUiOverlayStyle.dark,
     ),
     buttonTheme: ButtonThemeData(
-      buttonColor: lightColors.buttonPrimaryContent,
-      colorScheme: ColorScheme.light(primary: lightColors.buttonBackground),
+      buttonColor: color.buttonPrimaryContent,
+      colorScheme: ColorScheme.light(primary: color.buttonBackground),
     ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(foregroundColor: lightColors.primaryContent),
+      style: TextButton.styleFrom(foregroundColor: color.primaryContent),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: TextButton.styleFrom(
-          foregroundColor: lightColors.buttonPrimaryContent,
-          backgroundColor: lightColors.buttonBackground),
+          foregroundColor: color.buttonPrimaryContent,
+          backgroundColor: color.buttonBackground),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: lightColors.bottomTabBarBackground,
+      backgroundColor: color.bottomTabBarBackground,
       unselectedIconTheme:
-          IconThemeData(color: lightColors.bottomTabBarIconUnselected),
+          IconThemeData(color: color.bottomTabBarIconUnselected),
       selectedIconTheme:
-          IconThemeData(color: lightColors.bottomTabBarIconSelected),
+          IconThemeData(color: color.bottomTabBarIconSelected),
       unselectedLabelStyle:
-          TextStyle(color: lightColors.bottomTabBarLabelUnselected),
+          TextStyle(color: color.bottomTabBarLabelUnselected),
       selectedLabelStyle:
-          TextStyle(color: lightColors.bottomTabBarLabelSelected),
-      selectedItemColor: lightColors.bottomTabBarLabelSelected,
+          TextStyle(color: color.bottomTabBarLabelSelected),
+      selectedItemColor: color.bottomTabBarLabelSelected,
     ),
     textTheme: lightTheme,
+    colorScheme: ColorScheme.light(
+      background: color.background
+    ),
   );
 }
 
@@ -67,47 +68,10 @@ ThemeData lightTheme(ColorStyles lightColors) {
 |--------------------------------------------------------------------------
 */
 
-TextTheme _lightTextTheme(ColorStyles lightColors) {
-  Color lightPrimaryContent = lightColors.primaryContent;
-  return TextTheme(
-    headline6: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    headline5: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    headline4: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    headline3: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    headline2: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    headline1: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    subtitle2: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    subtitle1: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    overline: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    button: TextStyle(
-      color: lightPrimaryContent.withOpacity(0.8),
-    ),
-    bodyText2: TextStyle(
-      color: lightPrimaryContent.withOpacity(0.8),
-    ),
-    bodyText1: TextStyle(
-      color: lightPrimaryContent,
-    ),
-    caption: TextStyle(
-      color: lightPrimaryContent,
-    ),
+TextTheme _textTheme(ColorStyles colors) {
+  Color primaryContent = colors.primaryContent;
+  TextTheme textTheme = TextTheme().apply(displayColor: primaryContent);
+  return textTheme.copyWith(
+      labelLarge: TextStyle(color: primaryContent.withOpacity(0.8))
   );
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../bootstrap/app.dart';
+import '/bootstrap/app.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'bootstrap/boot.dart';
 

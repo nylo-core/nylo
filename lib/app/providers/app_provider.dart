@@ -15,6 +15,7 @@ class AppProvider implements NyProvider {
 
     nylo.initialRoute = "/";
     nylo.appLoader = loader;
+    nylo.appLogo = logo;
     nylo.appThemes = appThemes;
 
     return nylo;

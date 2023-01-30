@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../../config/font.dart';
-import '../../resources/themes/styles/color_styles.dart';
-import '../../resources/themes/text_theme/default_text_theme.dart';
+import '/config/font.dart';
+import '/resources/themes/styles/color_styles.dart';
+import '/resources/themes/text_theme/default_text_theme.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 /*
@@ -13,48 +13,49 @@ import 'package:nylo_framework/nylo_framework.dart';
 |--------------------------------------------------------------------------
 */
 
-ThemeData darkTheme(ColorStyles darkColors) {
+ThemeData darkTheme(ColorStyles color) {
   TextTheme darkTheme = getAppTextTheme(
-      appFont, defaultTextTheme.merge(_darkTextTheme(darkColors)));
+      appFont, defaultTextTheme.merge(_textTheme(color)));
   return ThemeData(
-    primaryColor: darkColors.primaryContent,
-    backgroundColor: darkColors.background,
-    colorScheme: ColorScheme.dark(),
-    primaryColorDark: darkColors.primaryContent,
-    focusColor: darkColors.primaryContent,
-    scaffoldBackgroundColor: darkColors.background,
+    primaryColor: color.primaryContent,
+    primaryColorDark: color.primaryContent,
+    focusColor: color.primaryContent,
+    scaffoldBackgroundColor: color.background,
     appBarTheme: AppBarTheme(
-        backgroundColor: darkColors.appBarBackground,
-        titleTextStyle: darkTheme.headline6!
-            .copyWith(color: darkColors.appBarPrimaryContent),
-        iconTheme: IconThemeData(color: darkColors.appBarPrimaryContent),
+        backgroundColor: color.appBarBackground,
+        titleTextStyle: darkTheme.titleLarge!
+            .copyWith(color: color.appBarPrimaryContent),
+        iconTheme: IconThemeData(color: color.appBarPrimaryContent),
         elevation: 1.0,
         systemOverlayStyle: SystemUiOverlayStyle.light),
     buttonTheme: ButtonThemeData(
-      buttonColor: darkColors.primaryAccent,
-      colorScheme: ColorScheme.light(primary: darkColors.buttonBackground),
+      buttonColor: color.primaryAccent,
+      colorScheme: ColorScheme.light(primary: color.buttonBackground),
     ),
     textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(foregroundColor: darkColors.primaryContent),
+      style: TextButton.styleFrom(foregroundColor: color.primaryContent),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: TextButton.styleFrom(
-          foregroundColor: darkColors.buttonPrimaryContent,
-          backgroundColor: darkColors.buttonBackground),
+          foregroundColor: color.buttonPrimaryContent,
+          backgroundColor: color.buttonBackground),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: darkColors.bottomTabBarBackground,
+      backgroundColor: color.bottomTabBarBackground,
       unselectedIconTheme:
-          IconThemeData(color: darkColors.bottomTabBarIconUnselected),
+          IconThemeData(color: color.bottomTabBarIconUnselected),
       selectedIconTheme:
-          IconThemeData(color: darkColors.bottomTabBarIconSelected),
+          IconThemeData(color: color.bottomTabBarIconSelected),
       unselectedLabelStyle:
-          TextStyle(color: darkColors.bottomTabBarLabelUnselected),
+          TextStyle(color: color.bottomTabBarLabelUnselected),
       selectedLabelStyle:
-          TextStyle(color: darkColors.bottomTabBarLabelSelected),
-      selectedItemColor: darkColors.bottomTabBarLabelSelected,
+          TextStyle(color: color.bottomTabBarLabelSelected),
+      selectedItemColor: color.bottomTabBarLabelSelected,
     ),
     textTheme: darkTheme,
+    colorScheme: ColorScheme.dark(
+        background: color.background
+    ),
   );
 }
 
@@ -64,47 +65,13 @@ ThemeData darkTheme(ColorStyles darkColors) {
 |--------------------------------------------------------------------------
 */
 
-TextTheme _darkTextTheme(ColorStyles dark) {
-  final Color darkPrimaryContent = dark.primaryContent;
-  return TextTheme(
-    headline6: TextStyle(
-      color: darkPrimaryContent.withOpacity(0.8),
-    ),
-    headline5: TextStyle(
-      color: darkPrimaryContent,
-    ),
-    headline4: TextStyle(
-      color: darkPrimaryContent,
-    ),
-    headline3: TextStyle(
-      color: darkPrimaryContent,
-    ),
-    headline2: TextStyle(
-      color: darkPrimaryContent,
-    ),
-    headline1: TextStyle(
-      color: darkPrimaryContent,
-    ),
-    subtitle2: TextStyle(
-      color: darkPrimaryContent,
-    ),
-    subtitle1: TextStyle(
-      color: darkPrimaryContent,
-    ),
-    overline: TextStyle(
-      color: darkPrimaryContent,
-    ),
-    button: TextStyle(
-      color: darkPrimaryContent.withOpacity(0.8),
-    ),
-    bodyText2: TextStyle(
-      color: darkPrimaryContent.withOpacity(0.8),
-    ),
-    bodyText1: TextStyle(
-      color: darkPrimaryContent,
-    ),
-    caption: TextStyle(
-      color: darkPrimaryContent.withOpacity(0.8),
-    ),
+TextTheme _textTheme(ColorStyles colors) {
+  Color primaryContent = colors.primaryContent;
+  TextTheme textTheme = TextTheme().apply(displayColor: primaryContent);
+  return textTheme.copyWith(
+      titleLarge: TextStyle(color: primaryContent.withOpacity(0.8)),
+      labelLarge: TextStyle(color: primaryContent.withOpacity(0.8)),
+      bodySmall: TextStyle(color: primaryContent.withOpacity(0.8)),
+      bodyMedium: TextStyle(color: primaryContent.withOpacity(0.8))
   );
 }

@@ -1,5 +1,5 @@
+import '/resources/pages/home_page.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import '../../resources/pages/home_page.dart';
 
 /*
 |--------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import '../../../config/decoders.dart';
+import '/config/decoders.dart';
 import 'package:nylo_framework/networking/ny_base_networking.dart';
 
 class BaseApiService extends NyBaseApiService {

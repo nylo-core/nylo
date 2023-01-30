@@ -1,7 +1,7 @@
 import 'package:nylo_framework/nylo_framework.dart';
-import '../app/providers/app_provider.dart';
-import '../app/providers/event_provider.dart';
-import '../app/providers/route_provider.dart';
+import '/app/providers/app_provider.dart';
+import '/app/providers/event_provider.dart';
+import '/app/providers/route_provider.dart';
 
 /*
 |--------------------------------------------------------------------------

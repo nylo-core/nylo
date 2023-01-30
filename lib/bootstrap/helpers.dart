@@ -40,12 +40,21 @@ extension ColorsHelper on TextStyle {
 api<T>(dynamic Function(T request) request, {
   BuildContext? context,
   Map<String, dynamic> headers = const {},
-  String? bearerToken}) async => await nyApi<T>(
+  String? bearerToken,
+  String? baseUrl}) async => await nyApi<T>(
     request: request,
     apiDecoders: apiDecoders,
     context: context,
     headers: headers, bearerToken: bearerToken,
+    baseUrl: baseUrl
 );
 
 /// Event helper
 event<T>({Map? data}) async => nyEvent<T>(params: data, events: events);
+
+/// Return an object from your modelDecoders using [data].
+T dataToModel<T>({required dynamic data}) {
+  assert(T != dynamic, "You must provide a Type from your modelDecoders from within your config/decoders.dart file");
+  assert(modelDecoders.containsKey(T), "Your modelDecoders variable inside config/decoders.dart must contain a decoder for Type: $T");
+  return modelDecoders[T](data);
+}
