@@ -6,17 +6,17 @@ import '/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:nylo_framework/theme/helper/ny_theme.dart';
 
-class MyHomePage extends NyStatefulWidget {
+class HomePage extends NyStatefulWidget {
   final HomeController controller = HomeController();
   final String title;
 
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  HomePage({Key? key, required this.title}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends NyState<MyHomePage> {
+class _HomePageState extends NyState<HomePage> {
   bool _darkMode = false;
 
   @override
@@ -41,17 +41,17 @@ class _MyHomePageState extends NyState<MyHomePage> {
               Logo(),
               Text(
                 getEnv("APP_NAME"),
-                style: textTheme.headline2,
+                style: textTheme.displayMedium,
               ),
               Text(
                 "Micro-framework for Flutter",
-                style: textTheme.subtitle1!
+                style: textTheme.titleMedium!
                     .setColor(context, (color) => color.primaryAccent),
                 textAlign: TextAlign.center,
               ),
               Text(
                 "Build something amazing 💡️",
-                style: textTheme.bodyText2,
+                style: textTheme.bodyMedium,
                 textAlign: TextAlign.center,
               ),
               Column(
@@ -83,7 +83,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                             "documentation".tr().capitalize(),
                             style: Theme.of(context)
                                 .textTheme
-                                .bodyText1!
+                                .bodyLarge!
                                 .setColor(
                                     context, (color) => color.surfaceContent),
                           ),
@@ -95,7 +95,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                         MaterialButton(
                           child: Text(
                             "GitHub",
-                            style: textTheme.bodyText1!.setColor(
+                            style: textTheme.bodyLarge!.setColor(
                                 context, (color) => color.surfaceContent),
                           ),
                           onPressed: widget.controller.onTapGithub,
@@ -108,7 +108,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                             "changelog".tr().capitalize(),
                             style: Theme.of(context)
                                 .textTheme
-                                .bodyText1!
+                                .bodyLarge!
                                 .setColor(
                                     context, (color) => color.surfaceContent),
                           ),
@@ -119,7 +119,7 @@ class _MyHomePageState extends NyState<MyHomePage> {
                   ),
                   Text(
                     "Framework Version: $nyloVersion",
-                    style: textTheme.bodyText2!.copyWith(color: Colors.grey),
+                    style: textTheme.bodyMedium!.copyWith(color: Colors.grey),
                   ),
                   Switch(
                       value: _darkMode,

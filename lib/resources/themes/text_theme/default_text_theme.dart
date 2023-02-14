@@ -7,49 +7,49 @@ import 'package:flutter/material.dart';
 */
 
 const TextTheme defaultTextTheme = TextTheme(
-  headline6: TextStyle(
+  titleLarge: TextStyle(
     fontSize: 20.0,
     fontWeight: FontWeight.w600,
   ),
-  headline5: TextStyle(
+  headlineSmall: TextStyle(
     fontSize: 22.0,
   ),
-  headline4: TextStyle(
+  headlineMedium: TextStyle(
     fontSize: 24.0,
     fontWeight: FontWeight.w600,
   ),
-  headline3: TextStyle(
+  displaySmall: TextStyle(
     fontSize: 26.0,
     fontWeight: FontWeight.w700,
   ),
-  headline2: TextStyle(
+  displayMedium: TextStyle(
     fontSize: 28.0,
     fontWeight: FontWeight.w600,
   ),
-  headline1: TextStyle(
+  displayLarge: TextStyle(
     fontSize: 36.0,
     fontWeight: FontWeight.w300,
   ),
-  subtitle2: TextStyle(
+  titleSmall: TextStyle(
     fontSize: 14.0,
     fontWeight: FontWeight.w500,
   ),
-  subtitle1: TextStyle(
+  titleMedium: TextStyle(
     fontSize: 16.0,
     fontWeight: FontWeight.w500,
   ),
-  overline: TextStyle(
+  labelSmall: TextStyle(
     fontSize: 10.0,
     fontWeight: FontWeight.w400,
   ),
-  button: TextStyle(),
-  bodyText2: TextStyle(
+  labelLarge: TextStyle(),
+  bodyMedium: TextStyle(
     fontSize: 14.0,
   ),
-  bodyText1: TextStyle(
+  bodyLarge: TextStyle(
     fontSize: 16.0,
   ),
-  caption: TextStyle(
+  bodySmall: TextStyle(
     fontSize: 16.0,
   ),
 );
