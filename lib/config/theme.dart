@@ -16,7 +16,7 @@ import '/resources/themes/styles/light_theme_colors.dart';
 */
 
 // App Themes
-final List<BaseThemeConfig> appThemes = [
+final List<BaseThemeConfig<ColorStyles>> appThemes = [
   ThemeConfig.light(),
   ThemeConfig.dark(),
 ];
@@ -42,7 +42,7 @@ ColorStyles darkColors = DarkThemeColors();
 // Preset Themes
 class ThemeConfig {
   // LIGHT
-  static BaseThemeConfig light() => BaseThemeConfig(
+  static BaseThemeConfig<ColorStyles> light() => BaseThemeConfig<ColorStyles>(
         id: getEnv('LIGHT_THEME_ID'),
         description: "Light theme",
         theme: lightTheme(lightColors),
@@ -50,7 +50,7 @@ class ThemeConfig {
       );
 
   // DARK
-  static BaseThemeConfig dark() => BaseThemeConfig(
+  static BaseThemeConfig<ColorStyles> dark() => BaseThemeConfig<ColorStyles>(
         id: getEnv('DARK_THEME_ID'),
         description: "Dark theme",
         theme: darkTheme(darkColors),
@@ -64,10 +64,10 @@ class ThemeConfig {
 
   // First add the colors which was created into the above section like the following:
   // Bright Colors
-  /// BaseColorStyles brightColors = BrightThemeColors();
+  /// ColorStyles brightColors = BrightThemeColors();
 
   // Next, uncomment the below:
-  /// static BaseThemeConfig bright() => BaseThemeConfig(
+  /// static BaseThemeConfig<ColorStyles> bright() => BaseThemeConfig(
   ///  id: "default_bright_theme",
   ///  description: "Bright theme",
   ///  theme: brightTheme(brightColors),

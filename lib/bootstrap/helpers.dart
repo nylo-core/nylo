@@ -12,10 +12,10 @@ class ThemeColor {
   static ColorStyles get(BuildContext context, {String? themeId}) {
 
     Nylo nylo = Backpack.instance.read('nylo');
-    List<BaseThemeConfig> appThemes = nylo.appThemes;
+    List<BaseThemeConfig<ColorStyles>> appThemes = nylo.appThemes as List<BaseThemeConfig<ColorStyles>>;
 
     if (themeId == null) {
-      dynamic themeFound = appThemes
+      BaseThemeConfig<ColorStyles> themeFound = appThemes
           .firstWhere(
               (theme) => theme.id == getEnv(Theme.of(context).brightness == Brightness.light ? 'LIGHT_THEME_ID' : 'DARK_THEME_ID'),
           orElse: () => appThemes.first
@@ -23,7 +23,7 @@ class ThemeColor {
       return themeFound.colors;
     }
 
-    dynamic baseThemeConfig = appThemes.firstWhere((theme) => theme.id == themeId, orElse: () => appThemes.first);
+    BaseThemeConfig<ColorStyles> baseThemeConfig = appThemes.firstWhere((theme) => theme.id == themeId, orElse: () => appThemes.first);
     return baseThemeConfig.colors;
   }
 }
@@ -31,7 +31,7 @@ class ThemeColor {
 /// helper to set colors on TextStyle
 extension ColorsHelper on TextStyle {
   TextStyle? setColor(
-      BuildContext context, Color Function(BaseColorStyles color) newColor, {String? themeId}) {
+      BuildContext context, Color Function(ColorStyles color) newColor, {String? themeId}) {
     return copyWith(color: newColor(ThemeColor.get(context, themeId: themeId)));
   }
 }
