@@ -15,11 +15,11 @@ environment:
   sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
-  url_launcher: ^6.1.9
+  url_launcher: ^6.1.10
   google_fonts: ^4.0.3
   analyzer: ^5.2.0
   intl: ^0.17.0
-  nylo_framework: ^4.1.3
+  nylo_framework: ^4.1.4
   pretty_dio_logger: ^1.3.1
   flutter:
     sdk: flutter
@@ -31,7 +31,7 @@ dependencies:
   cupertino_icons: ^1.0.5
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.11.0
+  flutter_launcher_icons: ^0.12.0
 #  lints: ^2.0.0
   flutter_test:
     sdk: flutter

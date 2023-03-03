@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/bootstrap/extensions.dart';
 import 'package:flutter_app/resources/widgets/logo_widget.dart';
 import '/app/controllers/home_controller.dart';
 import '/bootstrap/helpers.dart';
@@ -41,19 +42,16 @@ class _HomePageState extends NyState<HomePage> {
               Logo(),
               Text(
                 getEnv("APP_NAME"),
-                style: textTheme.displayMedium,
-              ),
+              ).displayMedium(context),
               Text(
                 "Micro-framework for Flutter",
-                style: textTheme.titleMedium!
-                    .setColor(context, (color) => color.primaryAccent),
-                textAlign: TextAlign.center,
-              ),
+                textAlign: TextAlign.center
+              ).titleMedium(context)
+                  .setColor(context, (color) => color.primaryAccent),
               Text(
                 "Build something amazing 💡️",
-                style: textTheme.bodyMedium,
-                textAlign: TextAlign.center,
-              ),
+              ).medium(context)
+                  .alignCenter(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -81,12 +79,8 @@ class _HomePageState extends NyState<HomePage> {
                         MaterialButton(
                           child: Text(
                             "documentation".tr().capitalize(),
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyLarge!
-                                .setColor(
-                                    context, (color) => color.surfaceContent),
-                          ),
+                          ).large(context)
+                              .setColor(context, (color) => color.surfaceContent),
                           onPressed: widget.controller.onTapDocumentation,
                         ),
                         Divider(
@@ -95,9 +89,9 @@ class _HomePageState extends NyState<HomePage> {
                         MaterialButton(
                           child: Text(
                             "GitHub",
-                            style: textTheme.bodyLarge!.setColor(
-                                context, (color) => color.surfaceContent),
-                          ),
+                          ).large(context)
+                              .setColor(
+                              context, (color) => color.surfaceContent),
                           onPressed: widget.controller.onTapGithub,
                         ),
                         Divider(
@@ -106,12 +100,9 @@ class _HomePageState extends NyState<HomePage> {
                         MaterialButton(
                           child: Text(
                             "changelog".tr().capitalize(),
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyLarge!
-                                .setColor(
-                                    context, (color) => color.surfaceContent),
-                          ),
+                          ).large(context)
+                              .setColor(
+                              context, (color) => color.surfaceContent),
                           onPressed: widget.controller.onTapChangeLog,
                         ),
                       ],
@@ -119,8 +110,8 @@ class _HomePageState extends NyState<HomePage> {
                   ),
                   Text(
                     "Framework Version: $nyloVersion",
-                    style: textTheme.bodyMedium!.copyWith(color: Colors.grey),
-                  ),
+                  ).medium(context)
+                      .setColor(context, (color) => Colors.grey),
                   Switch(
                       value: _darkMode,
                       onChanged: (value) {
