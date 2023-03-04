@@ -65,12 +65,12 @@ extension NyText on Text {
 
   /// Make the font bold.
   Text fontWeightBold() {
-    return this.setStyle(style!.copyWith(fontWeight: FontWeight.bold));
+    return copyWith(style: TextStyle(fontWeight: FontWeight.bold));
   }
 
   /// Make the font light.
   Text fontWeightLight() {
-    return this.setStyle(style!.copyWith(fontWeight: FontWeight.w300));
+    return copyWith(style: TextStyle(fontWeight: FontWeight.w300));
   }
 
   /// Change the [style].
@@ -79,7 +79,7 @@ extension NyText on Text {
   /// Sets the color from your [ColorStyles] or [Color].
   Text setColor(
       BuildContext context, Color Function(ColorStyles color) newColor, {String? themeId}) {
-    return setStyle(this.style!.copyWith(color: newColor(ThemeColor.get(context, themeId: themeId))));
+    return copyWith(style: TextStyle(color: newColor(ThemeColor.get(context, themeId: themeId))));
   }
 
   /// Aligns text to the left.
