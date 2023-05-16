@@ -6,7 +6,7 @@
   <a href="#"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nylo-core/nylo?style=plastic"></a>
 </p>
 
-## Nylo (v4.3.1)
+## Nylo (v5.0.0)
 
 Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple boilerplate and MVC pattern to help you build apps easier. 
 
@@ -16,18 +16,18 @@ This project is open source and MIT-licenced, we welcome any contributions. You 
 
 ## Features
 Some core features available
-* [Routing](https://nylo.dev/docs/4.x/router).
-* [Light and dark themes](https://nylo.dev/docs/4.x/themes).
-* [Localization](https://nylo.dev/docs/4.x/localization).
-* [CLI for generating project files](https://nylo.dev/docs/4.x/metro).
-* [Elegant API Services for Networking](https://nylo.dev/docs/4.x/networking).
-* [Creating App Icons](https://nylo.dev/docs/4.x/app-icons).
-* [Project Configuration](https://nylo.dev/docs/4.x/configuration).
-* [Streamlined Project Structure](https://nylo.dev/docs/4.x/directory-structure).
+* [Routing](https://nylo.dev/docs/5.x/router).
+* [Light and dark themes](https://nylo.dev/docs/5.x/themes).
+* [Localization](https://nylo.dev/docs/5.x/localization).
+* [CLI for generating project files](https://nylo.dev/docs/5.x/metro).
+* [Elegant API Services for Networking](https://nylo.dev/docs/5.x/networking).
+* [Creating App Icons](https://nylo.dev/docs/5.x/app-icons).
+* [Project Configuration](https://nylo.dev/docs/5.x/configuration).
+* [Streamlined Project Structure](https://nylo.dev/docs/5.x/directory-structure).
 
 ## Requirements
-* Dart >= 2.19.0
-* Flutter >= 3.7.0
+* Dart >= 3.0.0
+* Flutter >= 3.10.0
 
 ## Getting Started
 

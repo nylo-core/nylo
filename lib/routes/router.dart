@@ -7,16 +7,14 @@ import 'package:nylo_framework/nylo_framework.dart';
 |
 | * [Tip] Create pages faster 🚀
 | Run the below in the terminal to create new a page.
-| "flutter pub run nylo_framework:main make:page profile_page"
-| Learn more https://nylo.dev/docs/4.x/router
+| "dart run nylo_framework:main make:page profile_page"
+| Learn more https://nylo.dev/docs/5.x/router
 |--------------------------------------------------------------------------
 */
 
 appRouter() => nyRoutes((router) {
-
-  router.route("/", (context) => HomePage(title: "Hello World"));
-
+  router.route(HomePage.path, (context) => HomePage());
   // Add your routes here
 
-  // router.route("/new-page", (context) => NewPage(), transition: PageTransitionType.fade);
+  // router.route(NewPage.path, (context) => NewPage(), transition: PageTransitionType.fade);
 });

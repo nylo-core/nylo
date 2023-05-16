@@ -1,10 +1,10 @@
-import '/config/events.dart';
+import 'package:flutter_app/bootstrap/helpers.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-class EventProvider implements NyProvider {
+class AuthProvider implements NyProvider {
   @override
   boot(Nylo nylo) async {
-    nylo.addEvents(events);
+    await event<SyncAuthToBackpackEvent>();
 
     return nylo;
   }

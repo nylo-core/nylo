@@ -8,10 +8,12 @@ import 'package:nylo_framework/nylo_framework.dart';
 import 'package:nylo_framework/theme/helper/ny_theme.dart';
 
 class HomePage extends NyStatefulWidget {
+  @override
   final HomeController controller = HomeController();
-  final String title;
 
-  HomePage({Key? key, required this.title}) : super(key: key);
+  static const path = '/';
+
+  HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -30,8 +32,14 @@ class _HomePageState extends NyState<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("Hello World".tr()),
         centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: widget.controller.showAbout,
+            icon: Icon(Icons.info_outline),
+          ),
+        ],
       ),
       body: SafeAreaWidget(
         child: Center(
@@ -43,22 +51,19 @@ class _HomePageState extends NyState<HomePage> {
               Text(
                 getEnv("APP_NAME"),
               ).displayMedium(context),
-              Text(
-                "Micro-framework for Flutter",
-                textAlign: TextAlign.center
-              ).titleMedium(context)
+              Text("Micro-framework for Flutter", textAlign: TextAlign.center)
+                  .titleMedium(context)
                   .setColor(context, (color) => color.primaryAccent),
               Text(
-                "Build something amazing 💡️",
-              ).medium(context)
-                  .alignCenter(),
+                "Build something amazing 💡",
+              ).bodyMedium(context).alignCenter(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Divider(),
                   Container(
-                    height: 170,
+                    height: 250,
                     width: double.infinity,
                     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
@@ -73,51 +78,65 @@ class _HomePageState extends NyState<HomePage> {
                             offset: Offset(0, 3), // changes position of shadow
                           ),
                         ]),
-                    child: ListView(
-                      shrinkWrap: true,
-                      children: [
-                        MaterialButton(
-                          child: Text(
-                            "documentation".tr().capitalize(),
-                          ).large(context)
-                              .setColor(context, (color) => color.surfaceContent),
-                          onPressed: widget.controller.onTapDocumentation,
-                        ),
-                        Divider(
-                          height: 0,
-                        ),
-                        MaterialButton(
-                          child: Text(
-                            "GitHub",
-                          ).large(context)
-                              .setColor(
-                              context, (color) => color.surfaceContent),
-                          onPressed: widget.controller.onTapGithub,
-                        ),
-                        Divider(
-                          height: 0,
-                        ),
-                        MaterialButton(
-                          child: Text(
-                            "changelog".tr().capitalize(),
-                          ).large(context)
-                              .setColor(
-                              context, (color) => color.surfaceContent),
-                          onPressed: widget.controller.onTapChangeLog,
-                        ),
-                      ],
+                    child: Center(
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        children: [
+                          MaterialButton(
+                            child: Text(
+                              "documentation".tr().capitalize(),
+                            ).bodyLarge(context).setColor(
+                                context, (color) => color.surfaceContent),
+                            onPressed: widget.controller.onTapDocumentation,
+                          ),
+                          Divider(
+                            height: 0,
+                          ),
+                          MaterialButton(
+                            child: Text(
+                              "GitHub",
+                            ).bodyLarge(context).setColor(
+                                context, (color) => color.surfaceContent),
+                            onPressed: widget.controller.onTapGithub,
+                          ),
+                          Divider(
+                            height: 0,
+                          ),
+                          MaterialButton(
+                            child: Text(
+                              "changelog".tr().capitalize(),
+                            ).bodyLarge(context).setColor(
+                                context, (color) => color.surfaceContent),
+                            onPressed: widget.controller.onTapChangeLog,
+                          ),
+                          Divider(
+                            height: 0,
+                          ),
+                          MaterialButton(
+                            child: Text(
+                              "YouTube Channel".tr().capitalize(),
+                            ).bodyLarge(context).setColor(
+                                context, (color) => color.surfaceContent),
+                            onPressed: widget.controller.onTapYouTube,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Text(
                     "Framework Version: $nyloVersion",
-                  ).medium(context)
+                  )
+                      .bodyMedium(context)
                       .setColor(context, (color) => Colors.grey),
                   Switch(
                       value: _darkMode,
                       onChanged: (value) {
                         _darkMode = value;
                         NyTheme.set(context,
-                            id: getEnv(_darkMode == true ? 'DARK_THEME_ID' : 'LIGHT_THEME_ID'));
+                            id: getEnv(_darkMode == true
+                                ? 'DARK_THEME_ID'
+                                : 'LIGHT_THEME_ID'));
                         setState(() {});
                       }),
                   Text("${_darkMode == true ? "Dark" : "Light"} Mode"),

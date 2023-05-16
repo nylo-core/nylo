@@ -7,7 +7,7 @@ import 'package:flutter_app/resources/widgets/logo_widget.dart';
 | Design
 | Contains widgets used in the Nylo framework.
 |
-| Learn more: https://nylo.dev/docs/4.x/themes#design
+| Learn more: https://nylo.dev/docs/5.x/themes#design
 |--------------------------------------------------------------------------
 */
 

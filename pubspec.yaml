@@ -12,14 +12,14 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.0 <3.0.0'
+  sdk: '>=2.14.0 <4.0.0'
 
 dependencies:
   url_launcher: ^6.1.10
-  google_fonts: ^4.0.3
-  analyzer: ^5.2.0
-  intl: ^0.17.0
-  nylo_framework: ^4.1.4
+  google_fonts: ^4.0.4
+  analyzer: ^5.7.1
+  intl: ^0.18.0
+  nylo_framework: ^5.0.0
   pretty_dio_logger: ^1.3.1
   flutter:
     sdk: flutter
@@ -31,14 +31,14 @@ dependencies:
   cupertino_icons: ^1.0.5
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.12.0
+  flutter_launcher_icons: ^0.13.1
 #  lints: ^2.0.0
   flutter_test:
     sdk: flutter
 
 # APP ICON - public/assets/app_icon/icon.png
 # Build icons: "flutter pub run flutter_launcher_icons:main"
-flutter_icons:
+flutter_launcher_icons:
   android: true
   ios: true
   image_path: "public/assets/app_icon/icon.png"

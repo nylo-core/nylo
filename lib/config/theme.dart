@@ -11,7 +11,7 @@ import '/resources/themes/styles/light_theme_colors.dart';
 | Themes
 | Manage your Flutter application's themes.
 |
-| Learn more: https://nylo.dev/docs/4.x/themes
+| Learn more: https://nylo.dev/docs/5.x/themes
 |--------------------------------------------------------------------------
 */
 
@@ -58,7 +58,7 @@ class ThemeConfig {
       );
 
   // E.G. CUSTOM THEME
-  /// Run: "flutter pub run nylo_framework:main make:theme bright_theme" // example bright_theme
+  /// Run: "dart run nylo_framework:main make:theme bright_theme" // example bright_theme
   // Creates a basic theme in /resources/themes/bright_theme.dart
   // Creates the themes colors in /resources/themes/styles/bright_theme_colors.dart
 

@@ -9,7 +9,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 | -------------------------------------------------------------------------
 | Define your API endpoints
 
-| Learn more https://nylo.dev/docs/4.x/networking
+| Learn more https://nylo.dev/docs/5.x/networking
 |--------------------------------------------------------------------------
 */
 
