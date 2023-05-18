@@ -12,10 +12,10 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.14.0 <4.0.0'
+  sdk: '>=2.15.0 <4.0.0'
 
 dependencies:
-  url_launcher: ^6.1.10
+  url_launcher: ^6.1.11
   google_fonts: ^4.0.4
   analyzer: ^5.7.1
   intl: ^0.18.0

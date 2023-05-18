@@ -325,14 +325,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0+1"
-  logging:
-    dependency: transitive
-    description:
-      name: logging
-      sha256: "04094f2eb032cbb06c6f6e8d3607edcfcb0455e2bb6cbc010cb01171dcb64e6d"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.1"
   matcher:
     dependency: transitive
     description:
@@ -357,27 +349,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
-  ny_auth_slate:
-    dependency: "direct main"
-    description:
-      path: "/Users/anthony/StudioProjects/lo_auth"
-      relative: false
-    source: path
-    version: "0.0.2"
   nylo_framework:
     dependency: "direct main"
     description:
-      path: "/Users/anthony/StudioProjects/framework"
-      relative: false
-    source: path
-    version: "4.1.4"
+      name: nylo_framework
+      sha256: "89cd06e70cd5e402e16174385bcbe24cb4954fc4ce2e6de30e774e5a19fd6b56"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.0"
   nylo_support:
     dependency: transitive
     description:
-      path: "/Users/anthony/StudioProjects/support"
-      relative: false
-    source: path
-    version: "4.3.1"
+      name: nylo_support
+      sha256: "72228f50a1e37bc2e3c27dfe28ce72b7f72aa120829fb83b8c0d15f6f15c074b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.0"
   package_config:
     dependency: transitive
     description:
@@ -570,14 +557,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.3"
-  simple_logger:
-    dependency: transitive
-    description:
-      name: simple_logger
-      sha256: "0b0006199015a81c30041390b91e4c9561079d631541ffc317f76fd1181c9cc7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.9.0+2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -651,10 +630,10 @@ packages:
     dependency: "direct main"
     description:
       name: url_launcher
-      sha256: "75f2846facd11168d007529d6cd8fcb2b750186bea046af9711f10b907e1587e"
+      sha256: eb1e00ab44303d50dd487aab67ebc575456c146c6af44422f9c13889984c00f3
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.10"
+    version: "6.1.11"
   url_launcher_android:
     dependency: transitive
     description:
@@ -769,4 +748,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=3.0.0-0 <4.0.0"
-  flutter: ">=3.0.0"
+  flutter: ">=3.3.0"
