@@ -265,18 +265,18 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: "6b6f10f0ce3c42f6552d1c70d2c28d764cf22bb487f50f66cca31dcd5194f4d6"
+      sha256: "2776c66b3e97c6cdd58d1bd3281548b074b64f1fd5c8f82391f7456e38849567"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.4"
+    version: "4.0.5"
   http:
     dependency: transitive
     description:
       name: http
-      sha256: "6aa2946395183537c8b880962d935877325d6a09a2867c3970c05c0fed6ac482"
+      sha256: "4c3f04bfb64d3efd508d06b41b825542f08122d30bda4933fb95c069d22a4fa3"
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.5"
+    version: "1.0.0"
   http_parser:
     dependency: transitive
     description:
@@ -353,18 +353,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "89cd06e70cd5e402e16174385bcbe24cb4954fc4ce2e6de30e774e5a19fd6b56"
+      sha256: dd0e9546753675155162daea6e28ea8de5d0f11998bed7e0d81abfcb19e5241e
       url: "https://pub.dev"
     source: hosted
-    version: "5.0.0"
+    version: "5.0.1"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "72228f50a1e37bc2e3c27dfe28ce72b7f72aa120829fb83b8c0d15f6f15c074b"
+      sha256: "71bf7f168b41cba176a3bdd3997ab5578e8042567826d09026db736027634fd6"
       url: "https://pub.dev"
     source: hosted
-    version: "5.0.0"
+    version: "5.1.1"
   package_config:
     dependency: transitive
     description:
@@ -747,5 +747,5 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=3.0.0-0 <4.0.0"
+  dart: ">=3.0.0 <4.0.0"
   flutter: ">=3.3.0"
