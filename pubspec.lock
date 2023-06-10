@@ -325,13 +325,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0+1"
-  laravel_auth_slate:
-    dependency: "direct main"
-    description:
-      path: "/Users/anthony/StudioProjects/slate_template_laravel_auth"
-      relative: false
-    source: path
-    version: "0.0.1"
   matcher:
     dependency: transitive
     description:
@@ -755,4 +748,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=3.0.0 <4.0.0"
-  flutter: ">=3.10.0"
+  flutter: ">=3.3.0"
