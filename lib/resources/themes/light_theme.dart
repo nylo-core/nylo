@@ -57,7 +57,7 @@ ThemeData lightTheme(ColorStyles color) {
     ),
     textTheme: lightTheme,
     colorScheme: ColorScheme.light(
-        background: color.background, primary: lightColors.background),
+        background: color.background, primary: lightColors.primaryAccent),
   );
 }
 
