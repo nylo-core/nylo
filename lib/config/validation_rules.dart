@@ -7,9 +7,9 @@
 |--------------------------------------------------------------------------
 */
 
-final Map<Type, dynamic> validationRules = {
+final Map<String, dynamic> validationRules = {
   /// Example
-  // SimplePassword: (attribute) => SimplePassword(attribute),
+  // "simple_password": (attribute) => SimplePassword(attribute),
 };
 
 /// Example validation class

@@ -110,7 +110,7 @@ class BaseApiService extends NyBaseApiService {
   }
 
   @override
-  displayError(DioError dioError, BuildContext context) {
+  displayError(DioException dioError, BuildContext context) {
     NyLogger.error(dioError.message ?? "");
     showToastNotification(context, title: "Oops!", description: "Something went wrong", style: ToastNotificationStyleType.DANGER);
   }

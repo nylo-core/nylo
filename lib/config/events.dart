@@ -20,4 +20,4 @@ final Map<Type, NyEvent> events = {
   SyncAuthToBackpackEvent: SyncAuthToBackpackEvent<User>(),
 
 };
-  
+
