@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/config/theme.dart';
 import '/config/font.dart';
 import '/resources/themes/styles/color_styles.dart';
 import '/resources/themes/text_theme/default_text_theme.dart';
@@ -57,7 +56,7 @@ ThemeData lightTheme(ColorStyles color) {
     ),
     textTheme: lightTheme,
     colorScheme: ColorScheme.light(
-        background: color.background, primary: lightColors.primaryAccent),
+        background: color.background, primary: color.primaryAccent),
   );
 }
 

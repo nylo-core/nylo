@@ -265,10 +265,10 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: db5efba8106bd784a92c96cfd81716f4e06baab54e37de858488e9a00a764cad
+      sha256: e20ff62b158b96f392bfc8afe29dee1503c94fbea2cbe8186fd59b756b8ae982
       url: "https://pub.dev"
     source: hosted
-    version: "5.0.0"
+    version: "5.1.0"
   http:
     dependency: transitive
     description:
@@ -353,18 +353,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "905f0f013413ab07433b37aeab2ac05865dea0dc7c2cf93336b881cd5eeb32e4"
+      sha256: a10e1ea240e04aa64a90a6170bc2eebd585b9c0f85b1557e323c5a49312add2b
       url: "https://pub.dev"
     source: hosted
-    version: "5.1.0"
+    version: "5.1.1"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "7324d3fccb315619a28ce292d15f8ac1150aa6111faddbf1de991305fdf80479"
+      sha256: "09c5eace0c4fa4cef5148b3b7820fd0a8b24154c964c34c1396372315ef815d6"
       url: "https://pub.dev"
     source: hosted
-    version: "5.3.0"
+    version: "5.3.1"
   package_config:
     dependency: transitive
     description:
