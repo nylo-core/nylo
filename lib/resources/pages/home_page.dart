@@ -11,7 +11,7 @@ class HomePage extends NyStatefulWidget {
   @override
   final HomeController controller = HomeController();
 
-  static const path = '/';
+  static const path = '/home-page';
 
   HomePage({Key? key}) : super(key: key);
 

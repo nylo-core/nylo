@@ -5,11 +5,12 @@ class RouteProvider implements NyProvider {
   @override
   boot(Nylo nylo) async {
     nylo.addRouter(appRouter());
+
     return nylo;
   }
 
   @override
   afterBoot(Nylo nylo) async {
-    nylo.setInitialRoute(NyRouter.getInitialRoute());
+    nylo.initRoutes();
   }
 }
