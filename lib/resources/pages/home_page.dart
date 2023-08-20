@@ -25,7 +25,6 @@ class _HomePageState extends NyState<HomePage> {
   @override
   init() async {
     super.init();
-
   }
 
   @override
@@ -61,14 +60,15 @@ class _HomePageState extends NyState<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Divider(),
                   Container(
                     height: 250,
                     width: double.infinity,
                     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     decoration: BoxDecoration(
-                        color: ThemeColor.get(context).surfaceBackground,
+                        color: ThemeColor.get(context)
+                            .appBarBackground
+                            .withOpacity(0.1),
                         borderRadius: BorderRadius.circular(8),
                         boxShadow: [
                           BoxShadow(
@@ -86,38 +86,25 @@ class _HomePageState extends NyState<HomePage> {
                           MaterialButton(
                             child: Text(
                               "documentation".tr().capitalize(),
-                            ).bodyLarge(context).setColor(
-                                context, (color) => color.surfaceContent),
+                            ).bodyLarge(context),
                             onPressed: widget.controller.onTapDocumentation,
-                          ),
-                          Divider(
-                            height: 0,
                           ),
                           MaterialButton(
                             child: Text(
                               "GitHub",
-                            ).bodyLarge(context).setColor(
-                                context, (color) => color.surfaceContent),
+                            ).bodyLarge(context),
                             onPressed: widget.controller.onTapGithub,
-                          ),
-                          Divider(
-                            height: 0,
                           ),
                           MaterialButton(
                             child: Text(
                               "changelog".tr().capitalize(),
-                            ).bodyLarge(context).setColor(
-                                context, (color) => color.surfaceContent),
+                            ).bodyLarge(context),
                             onPressed: widget.controller.onTapChangeLog,
-                          ),
-                          Divider(
-                            height: 0,
                           ),
                           MaterialButton(
                             child: Text(
                               "YouTube Channel".tr().capitalize(),
-                            ).bodyLarge(context).setColor(
-                                context, (color) => color.surfaceContent),
+                            ).bodyLarge(context),
                             onPressed: widget.controller.onTapYouTube,
                           ),
                         ],
