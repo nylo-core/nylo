@@ -12,10 +12,14 @@ import 'package:nylo_framework/nylo_framework.dart';
 |--------------------------------------------------------------------------
 */
 
+class App {
+  static const String home = '/home-page';
+}
+
 appRouter() => nyRoutes((router) {
-  router.route(HomePage.path, (context) => HomePage(), initialRoute: true);
-  // Add your routes here
+      router.route(App.home, (context) => HomePage(), initialRoute: true);
+      // Add your routes here
 
-  // router.route(NewPage.path, (context) => NewPage(), transition: PageTransitionType.fade);
+      // router.route(NewPage.path, (context) => NewPage(), transition: PageTransitionType.fade);
 
-});
+    });

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/resources/pages/home_page.dart';
 import 'package:nylo_framework/nylo_framework.dart';
+import '../router.dart';
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +21,6 @@ class AuthRouteGuard extends NyRouteGuard {
 
   @override
   redirectTo(BuildContext? context, NyArgument? data) async {
-    await routeTo(HomePage.path);
+    await routeTo(App.home);
   }
 }
