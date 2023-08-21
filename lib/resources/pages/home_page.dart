@@ -75,23 +75,22 @@ class _HomePageState extends NyState<HomePage> {
                             color: Colors.grey.withOpacity(0.1),
                             spreadRadius: 1,
                             blurRadius: 9,
-                            offset: Offset(0, 3), // changes position of shadow
+                            offset: Offset(0, 3),
                           ),
                         ]),
                     child: Center(
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
-                        children: [
+                        children: ListTile.divideTiles(
+                            context: context,
+                            tiles: [
                           MaterialButton(
                             child: Text(
                               "documentation".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
                             onPressed: widget.controller.onTapDocumentation,
-                          ),
-                          Divider(
-                            height: 0,
                           ),
                           MaterialButton(
                             child: Text(
@@ -100,18 +99,12 @@ class _HomePageState extends NyState<HomePage> {
                                 context, (color) => color.surfaceContent),
                             onPressed: widget.controller.onTapGithub,
                           ),
-                          Divider(
-                            height: 0,
-                          ),
                           MaterialButton(
                             child: Text(
                               "changelog".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
                             onPressed: widget.controller.onTapChangeLog,
-                          ),
-                          Divider(
-                            height: 0,
                           ),
                           MaterialButton(
                             child: Text(
@@ -120,7 +113,7 @@ class _HomePageState extends NyState<HomePage> {
                                 context, (color) => color.surfaceContent),
                             onPressed: widget.controller.onTapYouTube,
                           ),
-                        ],
+                        ]).toList(),
                       ),
                     ),
                   ),

@@ -3,7 +3,7 @@ import 'package:flutter_app/config/design.dart';
 import 'package:flutter_app/config/theme.dart';
 import 'package:flutter_app/config/validation_rules.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import '../../config/localization.dart';
+import '/config/localization.dart';
 
 class AppProvider implements NyProvider {
   @override
@@ -13,7 +13,8 @@ class AppProvider implements NyProvider {
         languageCode: languageCode,
         languagesList: languagesList,
         assetsDirectory: assetsDirectory,
-        valuesAsMap: valuesAsMap);
+        valuesAsMap: valuesAsMap,
+    );
 
     nylo.appLoader = loader;
     nylo.appLogo = logo;

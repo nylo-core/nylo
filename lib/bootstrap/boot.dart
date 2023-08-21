@@ -1,4 +1,4 @@
-import '../config/providers.dart';
+import '/config/providers.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 /// Boot methods for Nylo.

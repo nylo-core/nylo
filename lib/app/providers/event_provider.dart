@@ -11,6 +11,6 @@ class EventProvider implements NyProvider {
 
   @override
   afterBoot(Nylo nylo) async {
-
+    nylo.addEventBus();
   }
 }
