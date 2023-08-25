@@ -19,6 +19,7 @@ class AppProvider implements NyProvider {
     nylo.appLoader = loader;
     nylo.appLogo = logo;
     nylo.appThemes = appThemes;
+    nylo.toastNotification = getToastNotificationWidget;
     nylo.addValidationRules(validationRules);
     nylo.addModelDecoders(modelDecoders);
 

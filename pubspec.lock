@@ -18,7 +18,7 @@ packages:
     source: hosted
     version: "5.13.0"
   animate_do:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: animate_do
       sha256: "9aeacc1a7238f971c039bdf45d13c628be554a242e0251c4ddda09d19a1a923f"
@@ -361,18 +361,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: ae926f9f08838397bc8c19d32dc2355f49ac5849ced5e704cc925f6d35d2b888
+      sha256: "9d2a58759f7a8732753c963824fdb8477bcefaeb972d16ea5399f7913444be1c"
       url: "https://pub.dev"
     source: hosted
-    version: "5.2.1"
+    version: "5.3.0"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: c036f49f235fa06e42f0d7615f98d522762f428b8f912d2ce819b2d99c3ae780
+      sha256: "51429eb2535d9ea0b02dd590945a4928ac10fa2bf1d1ba47360ad8bcaa91a0e9"
       url: "https://pub.dev"
     source: hosted
-    version: "5.5.0"
+    version: "5.6.0"
   package_config:
     dependency: transitive
     description:
