@@ -32,6 +32,7 @@ class HomeController extends Controller {
         context: context!,
         applicationName: getEnv('APP_NAME'),
         applicationIcon: Logo(),
-        applicationVersion: nyloVersion);
+        applicationVersion: nyloVersion,
+    );
   }
 }
