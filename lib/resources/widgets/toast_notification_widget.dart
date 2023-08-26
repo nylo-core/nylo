@@ -50,7 +50,7 @@ class ToastNotification extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      _toastMeta.title,
+                      _toastMeta.title.tr(),
                       style: Theme.of(context)
                           .textTheme
                           .headlineSmall!
