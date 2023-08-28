@@ -22,13 +22,13 @@ class NyToastNotificationStyleMetaHelper extends ToastNotificationStyleMetaHelpe
     return ToastMeta.danger();
   }
 
-  // Example custom notification
-  // onCustom() {
-  //   return ToastMeta.custom(
-  //     title: "",
-  //     description: "",
+  // Example customizing a notification
+  // onSuccess() {
+  //   return ToastMeta.success(
+  //     title: "Hello",
+  //     description: "World",
   //     action: () {},
-  //     backgroundColor: Colors.green
+  //     backgroundColor: Colors.Yellow
   //   );
   // }
 }
