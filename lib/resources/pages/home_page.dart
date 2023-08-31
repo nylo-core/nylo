@@ -20,7 +20,6 @@ class HomePage extends NyStatefulWidget {
 }
 
 class _HomePageState extends NyState<HomePage> {
-  bool _darkMode = false;
 
   @override
   init() async {
@@ -122,17 +121,17 @@ class _HomePageState extends NyState<HomePage> {
                   )
                       .bodyMedium(context)
                       .setColor(context, (color) => Colors.grey),
+                  if (!context.isDarkMode)
                   Switch(
-                      value: _darkMode,
-                      onChanged: (value) {
-                        _darkMode = value;
+                      value: isThemeDark,
+                      onChanged: (_) {
                         NyTheme.set(context,
-                            id: getEnv(_darkMode == true
+                            id: getEnv(isThemeDark != true
                                 ? 'DARK_THEME_ID'
                                 : 'LIGHT_THEME_ID'));
-                        setState(() {});
                       }),
-                  Text("${_darkMode == true ? "Dark" : "Light"} Mode"),
+                  if (!context.isDarkMode)
+                  Text("${isThemeDark ? "Dark" : "Light"} Mode"),
                 ],
               ),
             ],
@@ -141,4 +140,6 @@ class _HomePageState extends NyState<HomePage> {
       ),
     );
   }
+
+  bool get isThemeDark => ThemeProvider.controllerOf(context).currentThemeId == getEnv('DARK_THEME_ID');
 }
