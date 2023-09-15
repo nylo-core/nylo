@@ -21,10 +21,10 @@ packages:
     dependency: "direct main"
     description:
       name: animate_do
-      sha256: "9aeacc1a7238f971c039bdf45d13c628be554a242e0251c4ddda09d19a1a923f"
+      sha256: "91b3e0306ba2096c7a7e1ee1ba96f491e25e92034c215f4bf8de6a7251c4bef1"
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.2"
+    version: "3.1.2"
   archive:
     dependency: transitive
     description:
@@ -361,18 +361,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: da979ea122d567c6ee30818258b9975342012ff73da34ef52afa43b1a00adcfe
+      sha256: "5d962e4695f73c2bb3ac8ece91f7fbfc22bf52f7165cf4de8cdc554071e32eb8"
       url: "https://pub.dev"
     source: hosted
-    version: "5.3.5"
+    version: "5.3.6"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "45cf84bec9cbeb9b28fe9429a179cd752df7844c0125051c684d6f38ae83e6e6"
+      sha256: e976dbc728ea5d730be4b598863f7b1a076a471a7bf81116c5acdf845fe9044a
       url: "https://pub.dev"
     source: hosted
-    version: "5.8.2"
+    version: "5.9.0"
   package_config:
     dependency: transitive
     description:
@@ -385,10 +385,10 @@ packages:
     dependency: transitive
     description:
       name: page_transition
-      sha256: a7694bc120b7064a7f57c336914bb8885acf4f70bb3772c30c2fcfe6a85e43ff
+      sha256: dee976b1f23de9bbef5cd512fe567e9f6278caee11f5eaca9a2115c19dc49ef6
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.9"
+    version: "2.1.0"
   path:
     dependency: transitive
     description:
@@ -779,5 +779,5 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=3.1.0-185.0.dev <4.0.0"
+  dart: ">=3.1.0 <4.0.0"
   flutter: ">=3.10.0"
