@@ -5,18 +5,18 @@ packages:
     dependency: transitive
     description:
       name: _fe_analyzer_shared
-      sha256: ae92f5d747aee634b87f89d9946000c2de774be1d6ac3e58268224348cd0101a
+      sha256: eb376e9acf6938204f90eb3b1f00b578640d3188b4c8a8ec054f9f479af8d051
       url: "https://pub.dev"
     source: hosted
-    version: "61.0.0"
+    version: "64.0.0"
   analyzer:
     dependency: "direct main"
     description:
       name: analyzer
-      sha256: ea3d8652bda62982addfd92fdc2d0214e5f82e43325104990d4f4c4a2a313562
+      sha256: "69f54f967773f6c26c7dcb13e93d7ccee8b17a641689da39e878d5cf13b06893"
       url: "https://pub.dev"
     source: hosted
-    version: "5.13.0"
+    version: "6.2.0"
   animate_do:
     dependency: "direct main"
     description:
@@ -125,10 +125,10 @@ packages:
     dependency: transitive
     description:
       name: dio
-      sha256: a9d76e72985d7087eb7c5e7903224ae52b337131518d127c554b9405936752b8
+      sha256: "417e2a6f9d83ab396ec38ff4ea5da6c254da71e4db765ad737a42af6930140b7"
       url: "https://pub.dev"
     source: hosted
-    version: "5.2.1+1"
+    version: "5.3.3"
   equatable:
     dependency: transitive
     description:
@@ -273,10 +273,10 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: e20ff62b158b96f392bfc8afe29dee1503c94fbea2cbe8186fd59b756b8ae982
+      sha256: f0b8d115a13ecf827013ec9fc883390ccc0e87a96ed5347a3114cac177ef18e8
       url: "https://pub.dev"
     source: hosted
-    version: "5.1.0"
+    version: "6.1.0"
   http:
     dependency: transitive
     description:
@@ -361,18 +361,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "5d962e4695f73c2bb3ac8ece91f7fbfc22bf52f7165cf4de8cdc554071e32eb8"
+      sha256: fd4d3f63079882ad85b472e587f3001a8b333d6b98ad2a2258e2e1678c64f093
       url: "https://pub.dev"
     source: hosted
-    version: "5.3.6"
+    version: "5.3.7"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: e976dbc728ea5d730be4b598863f7b1a076a471a7bf81116c5acdf845fe9044a
+      sha256: "232be435d62d2840c4b7639408e3fd5b6985bb7ccb76abce30246846badfb50c"
       url: "https://pub.dev"
     source: hosted
-    version: "5.9.0"
+    version: "5.9.1"
   package_config:
     dependency: transitive
     description:
@@ -505,10 +505,10 @@ packages:
     dependency: transitive
     description:
       name: pull_to_refresh_flutter3
-      sha256: "223a6241067162dc15cf8c46c05af998ce7aa85e0703d8f696101eb1b5629d76"
+      sha256: "37a88d901cca9a46dbdd46523de8e7b35a3e58634a0e775b1a5904981f69b353"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.1"
+    version: "2.0.2"
   recase:
     dependency: transitive
     description:

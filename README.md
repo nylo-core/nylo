@@ -17,7 +17,7 @@ This project is open source and MIT-licenced, we welcome any contributions. You 
 ## Features
 Some core features available
 * [Routing](https://nylo.dev/docs/5.x/router).
-* [Light and dark themes](https://nylo.dev/docs/5.x/themes).
+* [Themes and styling](https://nylo.dev/docs/5.x/themes-and-styling).
 * [Localization](https://nylo.dev/docs/5.x/localization).
 * [CLI for generating project files](https://nylo.dev/docs/5.x/metro).
 * [Elegant API Services for Networking](https://nylo.dev/docs/5.x/networking).
