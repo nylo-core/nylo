@@ -38,7 +38,7 @@ dev_dependencies:
     sdk: flutter
 
 # APP ICON - public/assets/app_icon/icon.png
-# Build icons: "flutter pub run flutter_launcher_icons:main"
+# Build icons: "dart run flutter_launcher_icons"
 flutter_launcher_icons:
   android: true
   ios: true
