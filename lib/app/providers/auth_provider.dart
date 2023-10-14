@@ -1,4 +1,4 @@
-import 'package:flutter_app/bootstrap/helpers.dart';
+import '../../bootstrap/helpers.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class AuthProvider implements NyProvider {
@@ -10,7 +10,5 @@ class AuthProvider implements NyProvider {
   }
 
   @override
-  afterBoot(Nylo nylo) async {
-
-  }
+  afterBoot(Nylo nylo) async {}
 }

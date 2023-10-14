@@ -10,6 +10,6 @@ class User extends Model {
     name = data['name'];
     email = data['email'];
   }
-
+  @override
   toJson() => {"name": name, "email": email};
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/resources/themes/styles/color_styles.dart';
+import '../resources/themes/styles/color_styles.dart';
 import '/config/decoders.dart';
 import '/config/events.dart';
 import 'package:nylo_framework/nylo_framework.dart';
@@ -21,10 +21,10 @@ api<T>(dynamic Function(T request) request,
         Map<String, dynamic> headers = const {},
         String? bearerToken,
         String? baseUrl,
-          int? page,
-          String? queryNamePage,
-          String? queryNamePerPage,
-          int? perPage,
+        int? page,
+        String? queryNamePage,
+        String? queryNamePerPage,
+        int? perPage,
         List<Type> events = const []}) async =>
     await nyApi<T>(
         request: request,
@@ -35,10 +35,9 @@ api<T>(dynamic Function(T request) request,
         baseUrl: baseUrl,
         events: events,
         page: page,
-      perPage: perPage,
-      queryParamPage: queryNamePage ?? "page",
-      queryParamPerPage: queryNamePerPage
-    );
+        perPage: perPage,
+        queryParamPage: queryNamePage ?? "page",
+        queryParamPerPage: queryNamePerPage);
 
 /// Event helper
 event<T>({Map? data}) async => await nyEvent<T>(params: data, events: events);
