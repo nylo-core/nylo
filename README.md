@@ -27,7 +27,7 @@ Some core features available
 
 ## Requirements
 * Dart >= 3.0.0
-* Flutter >= 3.10.0
+* Flutter >= 3.13.7
 
 ## Getting Started
 
