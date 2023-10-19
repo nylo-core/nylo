@@ -18,7 +18,7 @@ packages:
     source: hosted
     version: "6.2.0"
   animate_do:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: animate_do
       sha256: "91b3e0306ba2096c7a7e1ee1ba96f491e25e92034c215f4bf8de6a7251c4bef1"
@@ -345,18 +345,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "1414df741dd79083cc65a910083522b8721ef91ff2c5eed15ddc98ba15011434"
+      sha256: cb8d4064ed414dcf6b06a7ea26475465d36f1f6628bb1629ee8bb8b8385bdc9b
       url: "https://pub.dev"
     source: hosted
-    version: "5.4.1"
+    version: "5.6.0"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: ad896cf9cba4868340b012a0353b56721badbac03221cb75fb21b82a4760b079
+      sha256: efc8458b50dde332fb98a6bb6aec7e06bbfeb3f279f868b570669732e5ef1b54
       url: "https://pub.dev"
     source: hosted
-    version: "5.10.1"
+    version: "5.12.0"
   package_config:
     dependency: transitive
     description:
@@ -763,5 +763,5 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=3.1.0 <4.0.0"
+  dart: ">=3.1.3 <4.0.0"
   flutter: ">=3.10.0"

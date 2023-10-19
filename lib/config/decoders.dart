@@ -1,5 +1,7 @@
-import 'package:flutter_app/app/models/user.dart';
-import 'package:flutter_app/app/networking/dio/base_api_service.dart';
+import '/app/controllers/home_controller.dart';
+import '/app/models/user.dart';
+import '/app/networking/dio/base_api_service.dart';
+import 'package:nylo_framework/nylo_framework.dart';
 import '/app/networking/api_service.dart';
 
 /*
@@ -37,3 +39,22 @@ final Map<Type, BaseApiService> apiDecoders = {
 
   // ...
 };
+
+
+/*
+|--------------------------------------------------------------------------
+| Controller Decoders
+| -------------------------------------------------------------------------
+| Controller are used in pages.
+| E.g. NyPage<MyController>
+|
+| Learn more https://nylo.dev/docs/5.x/controllers#using-controllers-with-ny-page
+|--------------------------------------------------------------------------
+*/
+final Map<Type, BaseController> controllers = {
+  HomeController: HomeController(),
+
+  // ...
+
+};
+

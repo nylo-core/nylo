@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/resources/themes/styles/color_styles.dart';
+import '/resources/themes/styles/color_styles.dart';
 import '/config/decoders.dart';
 import '/config/events.dart';
 import 'package:nylo_framework/nylo_framework.dart';

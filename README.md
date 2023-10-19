@@ -26,8 +26,7 @@ Some core features available
 * [Streamlined Project Structure](https://nylo.dev/docs/5.x/directory-structure).
 
 ## Requirements
-* Dart >= 3.0.0
-* Flutter >= 3.10.0
+* Dart >= 3.1.3
 
 ## Getting Started
 

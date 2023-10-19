@@ -1,7 +1,7 @@
-import 'package:flutter_app/config/decoders.dart';
-import 'package:flutter_app/config/design.dart';
-import 'package:flutter_app/config/theme.dart';
-import 'package:flutter_app/config/validation_rules.dart';
+import '/config/decoders.dart';
+import '/config/design.dart';
+import '/config/theme.dart';
+import '/config/validation_rules.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import '/config/localization.dart';
 
@@ -22,6 +22,7 @@ class AppProvider implements NyProvider {
     nylo.toastNotification = getToastNotificationWidget;
     nylo.addValidationRules(validationRules);
     nylo.addModelDecoders(modelDecoders);
+    nylo.addControllers(controllers);
 
     return nylo;
   }
