@@ -29,10 +29,10 @@ class HomeController extends Controller {
 
   showAbout() {
     showAboutDialog(
-        context: context!,
-        applicationName: getEnv('APP_NAME'),
-        applicationIcon: Logo(),
-        applicationVersion: nyloVersion,
+      context: context!,
+      applicationName: getEnv('APP_NAME'),
+      applicationIcon: Logo(),
+      applicationVersion: nyloVersion,
     );
   }
 }

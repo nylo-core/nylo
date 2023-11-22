@@ -1,6 +1,5 @@
 import '/app/controllers/home_controller.dart';
 import '/app/models/user.dart';
-import '/app/networking/dio/base_api_service.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import '/app/networking/api_service.dart';
 
@@ -34,7 +33,7 @@ final Map<Type, dynamic> modelDecoders = {
 |--------------------------------------------------------------------------
 */
 
-final Map<Type, BaseApiService> apiDecoders = {
+final Map<Type, NyApiService> apiDecoders = {
   ApiService: ApiService(),
 
   // ...

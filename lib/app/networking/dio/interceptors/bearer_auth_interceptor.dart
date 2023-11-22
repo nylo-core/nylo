@@ -17,7 +17,7 @@ class BearerAuthInterceptor extends Interceptor {
   }
 
   @override
-  void onError(DioException err, ErrorInterceptorHandler handler) {
-    handler.next(err);
+  void onError(DioException dioException, ErrorInterceptorHandler handler) {
+    handler.next(dioException);
   }
 }

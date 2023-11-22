@@ -7,9 +7,13 @@ import '/resources/widgets/safearea_widget.dart';
 import '/bootstrap/helpers.dart';
 import '/app/controllers/home_controller.dart';
 
-class HomePage extends NyPage<HomeController> {
+class HomePage extends NyStatefulWidget<HomeController> {
+  static const path = '/home';
 
-  static String path = '/home';
+  HomePage() : super(path, child: _HomePageState());
+}
+
+class _HomePageState extends NyState<HomePage> {
 
   @override
   init() async {
@@ -24,7 +28,7 @@ class HomePage extends NyPage<HomeController> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: controller?.showAbout,
+            onPressed: widget.controller?.showAbout,
             icon: Icon(Icons.info_outline),
           ),
         ],
@@ -77,28 +81,28 @@ class HomePage extends NyPage<HomeController> {
                               "documentation".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: controller?.onTapDocumentation,
+                            onPressed: widget.controller?.onTapDocumentation,
                           ),
                           MaterialButton(
                             child: Text(
                               "GitHub",
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: controller?.onTapGithub,
+                            onPressed: widget.controller?.onTapGithub,
                           ),
                           MaterialButton(
                             child: Text(
                               "changelog".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: controller?.onTapChangeLog,
+                            onPressed: widget.controller?.onTapChangeLog,
                           ),
                           MaterialButton(
                             child: Text(
                               "YouTube Channel".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: controller?.onTapYouTube,
+                            onPressed: widget.controller?.onTapYouTube,
                           ),
                         ]).toList(),
                       ),
