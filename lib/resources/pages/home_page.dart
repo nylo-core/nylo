@@ -16,11 +16,6 @@ class HomePage extends NyStatefulWidget<HomeController> {
 class _HomePageState extends NyState<HomePage> {
 
   @override
-  init() async {
-
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -28,7 +23,7 @@ class _HomePageState extends NyState<HomePage> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: widget.controller?.showAbout,
+            onPressed: widget.controller.showAbout,
             icon: Icon(Icons.info_outline),
           ),
         ],
@@ -81,28 +76,28 @@ class _HomePageState extends NyState<HomePage> {
                               "documentation".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: widget.controller?.onTapDocumentation,
+                            onPressed: widget.controller.onTapDocumentation,
                           ),
                           MaterialButton(
                             child: Text(
                               "GitHub",
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: widget.controller?.onTapGithub,
+                            onPressed: widget.controller.onTapGithub,
                           ),
                           MaterialButton(
                             child: Text(
                               "changelog".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: widget.controller?.onTapChangeLog,
+                            onPressed: widget.controller.onTapChangeLog,
                           ),
                           MaterialButton(
                             child: Text(
                               "YouTube Channel".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: widget.controller?.onTapYouTube,
+                            onPressed: widget.controller.onTapYouTube,
                           ),
                         ]).toList(),
                       ),
