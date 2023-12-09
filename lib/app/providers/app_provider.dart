@@ -16,13 +16,14 @@ class AppProvider implements NyProvider {
       valuesAsMap: valuesAsMap,
     );
 
-    nylo.appLoader = loader;
-    nylo.appLogo = logo;
-    nylo.appThemes = appThemes;
-    nylo.toastNotification = getToastNotificationWidget;
+    nylo.addLoader(loader);
+    nylo.addLogo(logo);
+    nylo.addThemes(appThemes);
+    nylo.addToastNotification(getToastNotificationWidget);
     nylo.addValidationRules(validationRules);
     nylo.addModelDecoders(modelDecoders);
     nylo.addControllers(controllers);
+    nylo.addApiDecoders(apiDecoders);
 
     return nylo;
   }

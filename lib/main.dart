@@ -13,6 +13,7 @@ void main() async {
       onGenerateRoute: nylo.router!.generator(),
       debugShowCheckedModeBanner: false,
       initialRoute: nylo.getInitialRoute(),
+      navigatorObservers: nylo.getNavigatorObservers(),
     ),
   );
 }

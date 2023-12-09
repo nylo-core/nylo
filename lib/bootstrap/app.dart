@@ -58,9 +58,7 @@ class AppBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Nylo nylo = Backpack.instance.nylo();
-    List<AppTheme> appThemes =
-        nylo.appThemes.map((appTheme) => appTheme.toAppTheme()).toList();
+    List<AppTheme> appThemes = Nylo.getAppThemes();
     return LocalizedApp(
       child: ThemeProvider(
         themes: appThemes,
