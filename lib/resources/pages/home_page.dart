@@ -33,7 +33,7 @@ class _HomePageState extends NyState<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: [
               Logo(),
               Text(
                 getEnv("APP_NAME"),

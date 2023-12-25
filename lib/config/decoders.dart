@@ -50,8 +50,8 @@ final Map<Type, NyApiService> apiDecoders = {
 | Learn more https://nylo.dev/docs/5.x/controllers#using-controllers-with-ny-page
 |--------------------------------------------------------------------------
 */
-final Map<Type, BaseController> controllers = {
-  HomeController: HomeController(),
+final Map<Type, BaseController Function()> controllers = {
+  HomeController: () => HomeController(),
 
   // ...
 
