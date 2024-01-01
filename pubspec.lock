@@ -73,6 +73,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
+  cli_dialog:
+    dependency: transitive
+    description:
+      name: cli_dialog
+      sha256: "47530e1c4a6190662954cefce196d35143c4ed2675ea697d6e542790bdef5641"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.0"
   cli_util:
     dependency: transitive
     description:
@@ -121,6 +129,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  dart_console:
+    dependency: transitive
+    description:
+      name: dart_console
+      sha256: dfa4b63eb4382325ff975fdb6b7a0db8303bb5809ee5cb4516b44153844742ed
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
   dio:
     dependency: transitive
     description:
@@ -345,18 +361,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "93c5159eade10ed4e38db5ce127e12a62dd2621b411e2ae221e41fb61c77d5ca"
+      sha256: "7c5dfe4dc33405c620b897f070fdf73ae82ec1c5e5eecb8dd408a97579fe030c"
       url: "https://pub.dev"
     source: hosted
-    version: "5.16.0"
+    version: "5.17.0"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "8860d620bc0de49b5f0fee22d7391a6ad240fe4bc5737f1a9287bcd5d82d3e71"
+      sha256: "3bb7b0c16cc477d4f85217d6dae881f17f671c5d45f62063f48b5634162610ba"
       url: "https://pub.dev"
     source: hosted
-    version: "5.23.0"
+    version: "5.24.0"
   package_config:
     dependency: transitive
     description:
