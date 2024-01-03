@@ -23,6 +23,7 @@ ThemeData darkTheme(ColorStyles color) {
     focusColor: color.primaryContent,
     scaffoldBackgroundColor: color.background,
     appBarTheme: AppBarTheme(
+        surfaceTintColor: Colors.transparent,
         backgroundColor: color.appBarBackground,
         titleTextStyle:
             darkTheme.titleLarge!.copyWith(color: color.appBarPrimaryContent),

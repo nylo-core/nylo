@@ -26,6 +26,7 @@ ThemeData lightTheme(ColorStyles color) {
     hintColor: color.primaryAccent,
     dividerTheme: DividerThemeData(color: Colors.grey[100]),
     appBarTheme: AppBarTheme(
+      surfaceTintColor: Colors.transparent,
       backgroundColor: color.appBarBackground,
       titleTextStyle:
           lightTheme.titleLarge!.copyWith(color: color.appBarPrimaryContent),
