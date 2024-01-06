@@ -14,11 +14,35 @@ import 'package:nylo_framework/nylo_framework.dart';
 |--------------------------------------------------------------------------
 */
 
+/* App Logo
+|--------------------------------------------------------------------------
+| This is the logo for your application.
+| Use the Logo() widget or Nylo.getAppLogo() display your logo
+| File: resources/widgets/logo_widget.dart
+| --------------------------------------------------------------------------
+*/
+
 Widget logo = Logo();
-// resources/widgets/logo_widget.dart
+
+
+/* Loader
+|--------------------------------------------------------------------------
+| This is the loading widget for your application.
+| Use the Loader() widget or Nylo.getAppLoader() display your loader
+| File: resources/widgets/loader_widget.dart
+| --------------------------------------------------------------------------
+*/
 
 Widget loader = Loader();
-// resources/widgets/loader_widget.dart
+
+
+/* Toast Notification
+|--------------------------------------------------------------------------
+| This is the toast notification widget for your application.
+| Here you can handle the toast notification style.
+| File: resources/widgets/toast_notification.dart
+| --------------------------------------------------------------------------
+*/
 
 Widget getToastNotificationWidget({
   required ToastNotificationStyleType style,
@@ -28,5 +52,4 @@ Widget getToastNotificationWidget({
   ToastMeta toastMeta = toastNotificationStyleMeta(NyToastNotificationStyleMetaHelper(style));
 
   return ToastNotification(toastMeta, onDismiss: onDismiss);
-  // resources/widgets/toast_notification.dart
 }

@@ -28,7 +28,10 @@ class NyToastNotificationStyleMetaHelper extends ToastNotificationStyleMetaHelpe
   //     title: "Hello",
   //     description: "World",
   //     action: () {},
-  //     backgroundColor: Colors.Yellow
+  //     backgroundColor: Colors.Yellow,
+  //     metaData: {
+  //       "add_extra": "meta_data"
+  //     }
   //   );
   // }
 }
