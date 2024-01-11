@@ -361,18 +361,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: c9c42e08fc62fcee2c227a1c8fc3a5beaa26100842cc31ea5bf39ea1f7b5e20b
+      sha256: eb616dfe23d5f9e03afbe45d4470c1b28014dea00ea3f9e8b3afc814d6a8e9f4
       url: "https://pub.dev"
     source: hosted
-    version: "5.18.4"
+    version: "5.18.7"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "0931447bd85e85451ae7326f3a70b42bb61a9384352d32e4cae28d241e11f6a6"
+      sha256: cab3c3108ab617b6a43f30e83e5d69020ce0730611bb880e8f896025a9543728
       url: "https://pub.dev"
     source: hosted
-    version: "5.28.0"
+    version: "5.29.0"
   package_config:
     dependency: transitive
     description:
@@ -646,10 +646,10 @@ packages:
     dependency: "direct main"
     description:
       name: url_launcher
-      sha256: e9aa5ea75c84cf46b3db4eea212523591211c3cf2e13099ee4ec147f54201c86
+      sha256: d25bb0ca00432a5e1ee40e69c36c85863addf7cc45e433769d61bed3fe81fd96
       url: "https://pub.dev"
     source: hosted
-    version: "6.2.2"
+    version: "6.2.3"
   url_launcher_android:
     dependency: transitive
     description:
