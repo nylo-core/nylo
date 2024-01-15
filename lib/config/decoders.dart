@@ -1,6 +1,5 @@
 import '/app/controllers/home_controller.dart';
 import '/app/models/user.dart';
-import 'package:nylo_framework/nylo_framework.dart';
 import '/app/networking/api_service.dart';
 
 /*
@@ -33,7 +32,7 @@ final Map<Type, dynamic> modelDecoders = {
 |--------------------------------------------------------------------------
 */
 
-final Map<Type, NyApiService> apiDecoders = {
+final Map<Type, dynamic> apiDecoders = {
   ApiService: ApiService(),
 
   // ...
@@ -50,7 +49,7 @@ final Map<Type, NyApiService> apiDecoders = {
 | Learn more https://nylo.dev/docs/5.x/controllers#using-controllers-with-ny-page
 |--------------------------------------------------------------------------
 */
-final Map<Type, BaseController Function()> controllers = {
+final Map<Type, dynamic> controllers = {
   HomeController: () => HomeController(),
 
   // ...

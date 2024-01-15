@@ -15,8 +15,31 @@ class HomePage extends NyStatefulWidget<HomeController> {
 
 class _HomePageState extends NyState<HomePage> {
 
+  /// The boot method is called before the view is rendered.
+  /// You can override this method to perform any async operations.
+  /// Try uncommenting the code below.
+  // @override
+  // boot() async {
+  //   dump("boot");
+  //   await Future.delayed(Duration(seconds: 2));
+  // }
+
+  /// If you would like to use the Skeletonizer loader,
+  /// uncomment the code below.
+  // bool get useSkeletonizer => true;
+
+  /// The Loading widget is shown while the [boot] method is running.
+  /// You can override this method to show a custom loading widget.
+  // @override
+  // Widget loading(BuildContext context) {
+  //   return Scaffold(
+  //       body: Center(child: Text("Loading..."))
+  //   );
+  // }
+
+  /// The [view] method should display your page.
   @override
-  Widget build(BuildContext context) {
+  Widget view(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Hello World".tr()),
