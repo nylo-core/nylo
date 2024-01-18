@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
-/*
-|--------------------------------------------------------------------------
-| Default text theme
-|--------------------------------------------------------------------------
-*/
+/* Default text theme
+|-------------------------------------------------------------------------- */
 
 const TextTheme defaultTextTheme = TextTheme(
   titleLarge: TextStyle(

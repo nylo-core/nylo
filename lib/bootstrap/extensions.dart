@@ -14,6 +14,11 @@ extension NyText on Text {
   }
 }
 
+/// [BuildContext] Extensions
+extension NyApp on BuildContext {
+  ColorStyles get color => ThemeColor.get(this);
+}
+
 /// [TextStyle] Extensions
 extension NyTextStyle on TextStyle {
   TextStyle? setColor(

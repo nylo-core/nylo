@@ -3,15 +3,12 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import '/config/decoders.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-/*
-|--------------------------------------------------------------------------
-| ApiService
+/* ApiService
 | -------------------------------------------------------------------------
 | Define your API endpoints
 
-| Learn more https://nylo.dev/docs/5.x/networking
-|--------------------------------------------------------------------------
-*/
+| Learn more https://nylo.dev/docs/5.20.0/networking
+|-------------------------------------------------------------------------- */
 
 class ApiService extends NyApiService {
   ApiService({BuildContext? buildContext}) :
@@ -33,16 +30,14 @@ class ApiService extends NyApiService {
   }
 
   /* Helpers
-  |--------------------------------------------------------------------------
-  */
+  |-------------------------------------------------------------------------- */
 
 
   /* Authentication Headers
   |--------------------------------------------------------------------------
   | Set your auth headers
   | Authenticate your API requests using a bearer token or any other method
-  |--------------------------------------------------------------------------
-  */
+  |-------------------------------------------------------------------------- */
 
   // @override
   // Future<RequestHeaders> setAuthHeaders(RequestHeaders headers) async {
@@ -58,8 +53,7 @@ class ApiService extends NyApiService {
   |--------------------------------------------------------------------------
   | Check if your Token should be refreshed
   | Set `false` if your API does not require a token refresh
-  |--------------------------------------------------------------------------
-  */
+  |-------------------------------------------------------------------------- */
 
   // @override
   // Future<bool> shouldRefreshToken() async {
@@ -72,8 +66,7 @@ class ApiService extends NyApiService {
   | If `shouldRefreshToken` returns true then this method
   | will be called to refresh your token. Save your new token to
   | local storage and then use the value in `setAuthHeaders`.
-  |--------------------------------------------------------------------------
-  */
+  |-------------------------------------------------------------------------- */
 
   // @override
   // refreshToken(Dio dio) async {
@@ -90,8 +83,7 @@ class ApiService extends NyApiService {
   | api<ApiService>(
   |        request: (request) => request.myApiCall(),
   |         context: context);
-  |--------------------------------------------------------------------------
-  */
+  |-------------------------------------------------------------------------- */
 
   // displayError(DioException dioException, BuildContext context) {
   //   showToastNotification(context,

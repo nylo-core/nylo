@@ -1,11 +1,10 @@
-/*
-|--------------------------------------------------------------------------
-| Validation Rules
+import 'package:nylo_framework/nylo_framework.dart';
+
+/* Validation Rules
 | -------------------------------------------------------------------------
 | Add custom validation rules for your project in this file.
-| Learn more https://nylo.dev/docs/5.x/validation#custom-validation-rules
-|--------------------------------------------------------------------------
-*/
+| Learn more https://nylo.dev/docs/5.20.0/validation#custom-validation-rules
+|-------------------------------------------------------------------------- */
 
 final Map<String, dynamic> validationRules = {
   /// Example

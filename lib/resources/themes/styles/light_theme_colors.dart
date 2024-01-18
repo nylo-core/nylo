@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import '/resources/themes/styles/color_styles.dart';
 
-/*
-|--------------------------------------------------------------------------
-| Light Theme Colors
-|--------------------------------------------------------------------------
-*/
+/* Light Theme Colors
+|-------------------------------------------------------------------------- */
 
 class LightThemeColors implements ColorStyles {
   // general

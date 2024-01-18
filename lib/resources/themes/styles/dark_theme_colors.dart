@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import '/resources/themes/styles/color_styles.dart';
 
-/*
-|--------------------------------------------------------------------------
-| Dark Theme Colors
-|--------------------------------------------------------------------------
-*/
+/* Dark Theme Colors
+|-------------------------------------------------------------------------- */
 
 class DarkThemeColors implements ColorStyles {
   // general

@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import '/resources/pages/home_page.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-/*
+/* Auth Route Guard
 |--------------------------------------------------------------------------
-| Auth Route Guard
-|
 | Checks if the User is authenticated.
-| Learn more https://nylo.dev/docs/5.x/router#route-guards
-|--------------------------------------------------------------------------
-*/
+| Learn more https://nylo.dev/docs/5.20.0/router#route-guards
+|-------------------------------------------------------------------------- */
 
 class AuthRouteGuard extends NyRouteGuard {
   AuthRouteGuard();

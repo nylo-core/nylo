@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import '/resources/themes/styles/color_styles.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-/*
+/* Helpers
 |--------------------------------------------------------------------------
-| Helpers
-|
 | Add your helper methods here
-|--------------------------------------------------------------------------
-*/
+|-------------------------------------------------------------------------- */
 
 /// helper to find correct color from the [context].
 class ThemeColor {
