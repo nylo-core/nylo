@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import '/config/storage_keys.dart';
 import '/config/decoders.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -11,8 +12,17 @@ import 'package:nylo_framework/nylo_framework.dart';
 |-------------------------------------------------------------------------- */
 
 class ApiService extends NyApiService {
-  ApiService({BuildContext? buildContext}) :
-        super(buildContext, decoders: modelDecoders);
+
+  ApiService({BuildContext? buildContext}) : super(
+      buildContext,
+      decoders: modelDecoders,
+      // baseOptions: (BaseOptions baseOptions) {
+      //   return baseOptions
+      //             ..connectTimeout = Duration(seconds: 5)
+      //             ..sendTimeout = Duration(seconds: 5)
+      //             ..receiveTimeout = Duration(seconds: 5);
+      // },
+  );
 
   @override
   String get baseUrl => getEnv('API_BASE_URL');
@@ -71,7 +81,7 @@ class ApiService extends NyApiService {
   // @override
   // refreshToken(Dio dio) async {
   //  dynamic response = (await dio.get("https://example.com/refresh-token")).data();
-  //  Save the new token
+  //  // Save the new token
   //   await StorageKey.userToken.store(response['token']);
   // }
 
