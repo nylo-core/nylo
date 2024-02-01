@@ -15,7 +15,7 @@ class HomePage extends NyStatefulWidget<HomeController> {
 
 class _HomePageState extends NyState<HomePage> {
 
-  /// The boot method is called before the view is rendered.
+  /// The boot method is called before the [view] is rendered.
   /// You can override this method to perform any async operations.
   /// Try uncommenting the code below.
   // @override
