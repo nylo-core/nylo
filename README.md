@@ -53,6 +53,7 @@ If you discover any security related issues, please email support@nylo.dev inste
 * [Rashid-Khabeer](https://github.com/Rashid-Khabeer)
 * [youssefKadaouiAbbassi](https://github.com/youssefKadaouiAbbassi)
 * [jeremyhalin](https://github.com/jeremyhalin)
+* [abdulawalarif](https://github.com/abdulawalarif)
 
 ## Licence
 
