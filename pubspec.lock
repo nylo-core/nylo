@@ -21,10 +21,10 @@ packages:
     dependency: transitive
     description:
       name: animate_do
-      sha256: "8a9d0f91d066d5f86bd9de9455e5741e6bbb284b114c76375f01584065dd3da1"
+      sha256: "7a3162729f0ea042f9dd84da217c5bde5472ad9cef644079929d4304a5dc4ca0"
       url: "https://pub.dev"
     source: hosted
-    version: "3.3.3"
+    version: "3.3.4"
   archive:
     dependency: transitive
     description:
@@ -297,10 +297,10 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: f0b8d115a13ecf827013ec9fc883390ccc0e87a96ed5347a3114cac177ef18e8
+      sha256: "5b1726fee554d1cc9db1baef8061b126567ff0a1140a03ed7de936e62f2ab98b"
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.0"
+    version: "6.2.0"
   http:
     dependency: transitive
     description:
@@ -401,18 +401,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: efd725c5dc20f341c14496a33c8c36520a4e81802b7d463df2eb734c86b90926
+      sha256: "7973671a9f840b2d183e812a7c4e2f084e5fd43574c2c08aba5278a23d17057b"
       url: "https://pub.dev"
     source: hosted
-    version: "5.21.6"
+    version: "5.21.7"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "049a8f69a349a2f038fb95637320798e409de8287138b47a3c85784462e45388"
+      sha256: ca1ed13234368429abb5c371c4258c2413ba65d0a98d38a090ab3a62f8b6f912
       url: "https://pub.dev"
     source: hosted
-    version: "5.50.0"
+    version: "5.51.0"
   package_config:
     dependency: transitive
     description:
@@ -617,10 +617,10 @@ packages:
     dependency: transitive
     description:
       name: skeletonizer
-      sha256: "86f373126d9a887a2d63f2463a9913a973ce7f282efa7f0d9d06a17e3f19838c"
+      sha256: "2eb80153c80507359ff05f6a18ed50ae0bafa1b999aa867a8cef0a53387b5650"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.1"
+    version: "1.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
