@@ -20,7 +20,7 @@ class HomeController extends Controller {
 
   onTapChangeLog() async {
     await launchUrl(Uri.parse(
-        "https://github.com/nylo-core/framework/blob/5.x/CHANGELOG.md"));
+        "https://github.com/nylo-core/nylo/releases"));
   }
 
   onTapYouTube() async {
