@@ -3,7 +3,6 @@ import 'package:nylo_framework/nylo_framework.dart';
 /* Toast Notification Styles
 |--------------------------------------------------------------------------
 | Define your toast notification styles here.
-| Learn more: https://nylo.dev/docs/5.20.0/toast-notifications
 |-------------------------------------------------------------------------- */
 
 class NyToastNotificationStyleMetaHelper extends ToastNotificationStyleMetaHelper {
@@ -26,7 +25,8 @@ class NyToastNotificationStyleMetaHelper extends ToastNotificationStyleMetaHelpe
     return ToastMeta.danger();
   }
 
-  // Example customizing a notification
+  // Example customizing the default notification
+  // for 'ToastNotificationStyleType.SUCCESS'
   // onSuccess() {
   //   return ToastMeta.success(
   //     title: "Hello",
