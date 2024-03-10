@@ -15,4 +15,12 @@ appRouter() => nyRoutes((router) {
 
   // router.route(NewPage.path, (context) => NewPage(), transition: PageTransitionType.fade);
 
+  // Example using grouped routes
+  // router.group(() => {
+  //   "route_guards": [AuthRouteGuard()],
+  //   "prefix": "/dashboard"
+  // }, (router) {
+  //
+  //   router.route(AccountPage.path, (context) => AccountPage());
+  // });
 });
