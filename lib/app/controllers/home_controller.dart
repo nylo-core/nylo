@@ -5,10 +5,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'controller.dart';
 
 class HomeController extends Controller {
-  @override
-  construct(BuildContext context) {
-    super.construct(context);
-  }
 
   onTapDocumentation() async {
     await launchUrl(Uri.parse("https://nylo.dev/docs"));
@@ -31,7 +27,7 @@ class HomeController extends Controller {
     showAboutDialog(
       context: context!,
       applicationName: getEnv('APP_NAME'),
-      applicationIcon: Logo(),
+      applicationIcon: const Logo(),
       applicationVersion: nyloVersion,
     );
   }

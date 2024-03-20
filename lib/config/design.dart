@@ -30,7 +30,7 @@ final TextStyle appFont = GoogleFonts.montserrat();
 | Use the Logo() widget or Nylo.getAppLogo() display your logo
 | -------------------------------------------------------------------------- */
 
-Widget logo = Logo();
+Widget logo = const Logo();
 // File: resources/widgets/logo_widget.dart
 
 
@@ -40,7 +40,7 @@ Widget logo = Logo();
 | Use the Loader() widget or Nylo.getAppLoader() display your loader
 | -------------------------------------------------------------------------- */
 
-Widget loader = Loader();
+Widget loader = const Loader();
 // File: resources/widgets/loader_widget.dart
 
 
@@ -53,7 +53,7 @@ Widget loader = Loader();
 Widget getToastNotificationWidget({
   required ToastNotificationStyleType style,
   Function(ToastNotificationStyleMetaHelper helper)? toastNotificationStyleMeta, Function? onDismiss}) {
-  if (toastNotificationStyleMeta == null) return SizedBox.shrink();
+  if (toastNotificationStyleMeta == null) return const SizedBox.shrink();
 
   ToastMeta toastMeta = toastNotificationStyleMeta(NyToastNotificationStyleMetaHelper(style));
 

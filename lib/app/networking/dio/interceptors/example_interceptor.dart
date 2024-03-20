@@ -1,10 +1,6 @@
 import 'package:nylo_framework/nylo_framework.dart';
 
 class ExampleInterceptor extends Interceptor {
-  @override
-  void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    return super.onRequest(options, handler);
-  }
 
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
@@ -12,7 +8,7 @@ class ExampleInterceptor extends Interceptor {
   }
 
   @override
-  void onError(DioException dioException, ErrorInterceptorHandler handler) {
-    handler.next(dioException);
+  void onError(DioException err, ErrorInterceptorHandler handler) {
+    handler.next(err);
   }
 }

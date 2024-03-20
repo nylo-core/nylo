@@ -19,19 +19,19 @@ final String languageCode = getEnv('DEFAULT_LOCALE', defaultValue: "en");
 | Define if you want the application to read the locale from the users
 | device settings or as you've defined in the [languageCode].
 |-------------------------------------------------------------------------- */
-final LocaleType localeType = LocaleType.asDefined; // device, asDefined
+const LocaleType localeType = LocaleType.asDefined; // device, asDefined
 
 /* languagesList
 | -------------------------------------------------------------------------
 | Add a list of supported languages.
 |-------------------------------------------------------------------------- */
-final List<String> languagesList = const ['en'];
+const List<String> languagesList = ['en'];
 
 /* assetsDirectory
 | -------------------------------------------------------------------------
 | Asset directory for your languages.
 |-------------------------------------------------------------------------- */
-final String assetsDirectory = 'lang/';
+const String assetsDirectory = 'lang/';
 
 /* valuesAsMap
 | -------------------------------------------------------------------------

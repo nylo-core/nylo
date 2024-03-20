@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class Logo extends StatelessWidget {
-  const Logo({Key? key, this.height, this.width}) : super(key: key);
+  const Logo({super.key, this.height, this.width});
   final double? height;
   final double? width;
 

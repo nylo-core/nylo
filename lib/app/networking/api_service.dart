@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import '/config/storage_keys.dart';
 import '/config/decoders.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -28,6 +27,7 @@ class ApiService extends NyApiService {
   String get baseUrl => getEnv('API_BASE_URL');
 
   @override
+  // ignore: overridden_fields
   final interceptors = {
     if (getEnv('APP_DEBUG') == true)
     PrettyDioLogger: PrettyDioLogger()
