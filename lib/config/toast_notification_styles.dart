@@ -7,20 +7,24 @@ import 'package:nylo_framework/nylo_framework.dart';
 
 class NyToastNotificationStyleMetaHelper extends ToastNotificationStyleMetaHelper {
 
-  NyToastNotificationStyleMetaHelper(ToastNotificationStyleType? style) : super(style);
+  NyToastNotificationStyleMetaHelper(super.style);
 
+  @override
   onSuccess() {
     return ToastMeta.success();
   }
 
+  @override
   onWarning() {
     return ToastMeta.warning();
   }
 
+  @override
   onInfo() {
     return ToastMeta.info();
   }
 
+  @override
   onDanger() {
     return ToastMeta.danger();
   }

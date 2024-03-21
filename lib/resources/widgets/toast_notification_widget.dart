@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class ToastNotification extends StatelessWidget {
-  const ToastNotification(ToastMeta toastMeta, {Function? onDismiss, Key? key})
+  const ToastNotification(ToastMeta toastMeta, {Function? onDismiss, super.key})
       : _toastMeta = toastMeta,
-        _dismiss = onDismiss,
-        super(key: key);
+        _dismiss = onDismiss;
 
   final Function? _dismiss;
   final ToastMeta _toastMeta;
@@ -13,9 +12,9 @@ class ToastNotification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 12),
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 8.0),
+        margin: const EdgeInsets.symmetric(horizontal: 8.0),
         height: 100,
         decoration: BoxDecoration(
           color: context.isDarkMode ? "#282c34".toHexColor() : Colors.white,
@@ -25,7 +24,7 @@ class ToastNotification extends StatelessWidget {
               color: context.isDarkMode ? Colors.black12 : Colors.grey.withOpacity(0.1),
               spreadRadius: 3,
               blurRadius: 5,
-              offset: Offset(0, 2),
+              offset: const Offset(0, 2),
             ),
           ],
         ),
@@ -43,16 +42,16 @@ class ToastNotification extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     color: _toastMeta.color,
-                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(8), topLeft: Radius.circular(8))
+                    borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(8), topLeft: Radius.circular(8))
                   ),
                   alignment: Alignment.center,
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  margin: const EdgeInsets.only(right: 12),
                   child: Center(child: _toastMeta.icon),
-                  padding: EdgeInsets.symmetric(horizontal: 12),
-                  margin: EdgeInsets.only(right: 12),
                 ),
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(right: 40),
+                    margin: const EdgeInsets.only(right: 40),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,

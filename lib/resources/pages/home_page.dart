@@ -10,7 +10,7 @@ import '/app/controllers/home_controller.dart';
 class HomePage extends NyStatefulWidget<HomeController> {
   static const path = '/home';
 
-  HomePage() : super(path, child: _HomePageState());
+  HomePage({super.key}) : super(path, child: _HomePageState());
 }
 
 class _HomePageState extends NyState<HomePage> {
@@ -47,7 +47,7 @@ class _HomePageState extends NyState<HomePage> {
         actions: [
           IconButton(
             onPressed: widget.controller.showAbout,
-            icon: Icon(Icons.info_outline),
+            icon: const Icon(Icons.info_outline),
           ),
         ],
       ),
@@ -57,26 +57,26 @@ class _HomePageState extends NyState<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Logo(),
+              const Logo(),
               Text(
                 getEnv("APP_NAME"),
               ).displayMedium(context),
-              Text("Micro-framework for Flutter", textAlign: TextAlign.center)
+              const Text("Micro-framework for Flutter", textAlign: TextAlign.center)
                   .titleMedium(context)
                   .setColor(context, (color) => color.primaryAccent),
-              Text(
+              const Text(
                 "Build something amazing 💡",
               ).bodyMedium(context).alignCenter(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Divider(),
+                  const Divider(),
                   Container(
                     height: 250,
                     width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     decoration: BoxDecoration(
                         color: ThemeColor.get(context).surfaceBackground,
                         borderRadius: BorderRadius.circular(8),
@@ -85,7 +85,7 @@ class _HomePageState extends NyState<HomePage> {
                             color: Colors.grey.withOpacity(0.1),
                             spreadRadius: 1,
                             blurRadius: 9,
-                            offset: Offset(0, 3),
+                            offset: const Offset(0, 3),
                           ),
                         ]),
                     child: Center(
@@ -95,38 +95,38 @@ class _HomePageState extends NyState<HomePage> {
                         children:
                         ListTile.divideTiles(context: context, tiles: [
                           MaterialButton(
+                            onPressed: widget.controller.onTapDocumentation,
                             child: Text(
                               "documentation".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: widget.controller.onTapDocumentation,
                           ),
                           MaterialButton(
-                            child: Text(
+                            onPressed: widget.controller.onTapGithub,
+                            child: const Text(
                               "GitHub",
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: widget.controller.onTapGithub,
                           ),
                           MaterialButton(
+                            onPressed: widget.controller.onTapChangeLog,
                             child: Text(
                               "changelog".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: widget.controller.onTapChangeLog,
                           ),
                           MaterialButton(
+                            onPressed: widget.controller.onTapYouTube,
                             child: Text(
                               "YouTube Channel".tr().capitalize(),
                             ).bodyLarge(context).setColor(
                                 context, (color) => color.surfaceContent),
-                            onPressed: widget.controller.onTapYouTube,
                           ),
                         ]).toList(),
                       ),
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Framework Version: $nyloVersion",
                   )
                       .bodyMedium(context)

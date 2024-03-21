@@ -1,4 +1,3 @@
-import 'package:nylo_framework/nylo_framework.dart';
 
 /* Validation Rules
 | -------------------------------------------------------------------------

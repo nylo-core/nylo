@@ -66,7 +66,7 @@ ThemeData lightTheme(ColorStyles color) {
 
 TextTheme _textTheme(ColorStyles colors) {
   Color primaryContent = colors.primaryContent;
-  TextTheme textTheme = TextTheme().apply(displayColor: primaryContent);
+  TextTheme textTheme = const TextTheme().apply(displayColor: primaryContent);
   return textTheme.copyWith(
       labelLarge: TextStyle(color: primaryContent.withOpacity(0.8)));
 }

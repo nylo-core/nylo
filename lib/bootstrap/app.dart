@@ -29,7 +29,7 @@ class AppBuild extends StatelessWidget {
   Route<dynamic>? Function(RouteSettings settings) onGenerateRoute;
 
   AppBuild({
-    Key? key,
+    super.key,
     this.initialRoute,
     this.title,
     this.locale,
@@ -54,7 +54,7 @@ class AppBuild extends StatelessWidget {
     this.debugShowCheckedModeBanner = true,
     this.shortcuts,
     this.actions,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

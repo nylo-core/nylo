@@ -11,5 +11,6 @@ class User extends Model {
     email = data['email'];
   }
 
+  @override
   toJson() => {"name": name, "email": email};
 }
