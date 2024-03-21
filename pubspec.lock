@@ -417,18 +417,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: a2ad0295a8fc9cb7ea1e22d005003514da5bd44053e3f5762d91a85212c8fd4b
+      sha256: c294dc2a90a3ab30299cb3cdbde4ed6a5b37d26404884d56e81e626b651a550d
       url: "https://pub.dev"
     source: hosted
-    version: "5.22.2"
+    version: "5.23.0"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "2927b62a1dfbed8e85847e9460d0b8bcca3ec61b4d72318f3835dbbad6980fb0"
+      sha256: "0b933c275855582f4dcd36a87a3a2b7084a261104d3bb3035e787ed6e945ec77"
       url: "https://pub.dev"
     source: hosted
-    version: "5.56.1"
+    version: "5.57.0"
   package_config:
     dependency: transitive
     description:
@@ -633,10 +633,10 @@ packages:
     dependency: transitive
     description:
       name: skeletonizer
-      sha256: "2eb80153c80507359ff05f6a18ed50ae0bafa1b999aa867a8cef0a53387b5650"
+      sha256: "9a3ae2f4ee4349bdbed3292d04586a1315a44745d2c454684f82f0c46dbeabf9"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   sky_engine:
     dependency: transitive
     description: flutter
