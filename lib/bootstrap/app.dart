@@ -100,7 +100,9 @@ class AppBuild extends StatelessWidget {
               localizationsDelegates: NyLocalization.instance.delegates,
               locale: locale,
               supportedLocales:
-                  supportedLocales ?? NyLocalization.instance.locals(),
+                  supportedLocales ?? [
+                    Locale('en', 'US')
+                  ],
             ),
           ),
         ),

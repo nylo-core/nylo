@@ -21,21 +21,8 @@ final String languageCode = getEnv('DEFAULT_LOCALE', defaultValue: "en");
 |-------------------------------------------------------------------------- */
 const LocaleType localeType = LocaleType.asDefined; // device, asDefined
 
-/* languagesList
-| -------------------------------------------------------------------------
-| Add a list of supported languages.
-|-------------------------------------------------------------------------- */
-const List<String> languagesList = ['en'];
-
 /* assetsDirectory
 | -------------------------------------------------------------------------
 | Asset directory for your languages.
 |-------------------------------------------------------------------------- */
 const String assetsDirectory = 'lang/';
-
-/* valuesAsMap
-| -------------------------------------------------------------------------
-| If you want to define your own language map in code rather than using
-| the asset json files.
-|-------------------------------------------------------------------------- */
-final Map<String, String> valuesAsMap = {};

@@ -141,10 +141,10 @@ packages:
     dependency: transitive
     description:
       name: dio
-      sha256: "49af28382aefc53562459104f64d16b9dfd1e8ef68c862d5af436cc8356ce5a8"
+      sha256: "50fec96118958b97c727d0d8f67255d3683f16cc1f90d9bc917b5d4fe3abeca9"
       url: "https://pub.dev"
     source: hosted
-    version: "5.4.1"
+    version: "5.4.2"
   equatable:
     dependency: transitive
     description:
@@ -401,18 +401,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "76e02bd0124d319fba5e24ae5d9c8f2c85483aeb94d2e9c295f09689c43001b8"
+      sha256: "6a46d9d48c59aa3e4e50e78dc9b738d4cf98b2cda4abc98cf5fc42a612e730f0"
       url: "https://pub.dev"
     source: hosted
-    version: "5.24.0"
+    version: "5.24.2"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "0b933c275855582f4dcd36a87a3a2b7084a261104d3bb3035e787ed6e945ec77"
+      sha256: "837ebdc972916006be78d9a77c7ed9c1a99d6266df92dc32cbdd89f56905d617"
       url: "https://pub.dev"
     source: hosted
-    version: "5.57.0"
+    version: "5.60.0"
   package_config:
     dependency: transitive
     description:
