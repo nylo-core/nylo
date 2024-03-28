@@ -141,10 +141,10 @@ packages:
     dependency: transitive
     description:
       name: dio
-      sha256: "50fec96118958b97c727d0d8f67255d3683f16cc1f90d9bc917b5d4fe3abeca9"
+      sha256: "0978e9a3e45305a80a7210dbeaf79d6ee8bee33f70c8e542dc654c952070217f"
       url: "https://pub.dev"
     source: hosted
-    version: "5.4.2"
+    version: "5.4.2+1"
   equatable:
     dependency: transitive
     description:
@@ -401,18 +401,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "6a46d9d48c59aa3e4e50e78dc9b738d4cf98b2cda4abc98cf5fc42a612e730f0"
+      sha256: d1a31372917642529e27bf804ecadf1dd00000825fe0d59f2c16f7c291a20bf5
       url: "https://pub.dev"
     source: hosted
-    version: "5.24.2"
+    version: "5.24.3"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "837ebdc972916006be78d9a77c7ed9c1a99d6266df92dc32cbdd89f56905d617"
+      sha256: "76ecb47e2d90b572ea81dc971926d18884f1a1a9ab9a0820cfd3ddafdebdfd7c"
       url: "https://pub.dev"
     source: hosted
-    version: "5.60.0"
+    version: "5.60.1"
   package_config:
     dependency: transitive
     description:
@@ -819,5 +819,5 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.2.0 <4.0.0"
+  dart: ">=3.3.2 <4.0.0"
   flutter: ">=3.16.0"
