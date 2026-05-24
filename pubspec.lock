@@ -21,18 +21,18 @@ packages:
     dependency: transitive
     description:
       name: app_badge_plus
-      sha256: dab607342bbf73b33a532e384117ccb13efbaabadb6058c40fd74d743b0ef1ab
+      sha256: c0d9e318d0c516764945d0d1997d4e99e9b7d26523e8404a35c70c9fe5ec249b
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.9"
+    version: "1.2.10"
   app_links:
     dependency: transitive
     description:
       name: app_links
-      sha256: "5f88447519add627fe1cbcab4fd1da3d4fed15b9baf29f28b22535c95ecee3e8"
+      sha256: "3462d9defc61565fde4944858b59bec5be2b9d5b05f20aed190adb3ad08a7abc"
       url: "https://pub.dev"
     source: hosted
-    version: "6.4.1"
+    version: "7.0.0"
   app_links_linux:
     dependency: transitive
     description:
@@ -245,10 +245,10 @@ packages:
     dependency: transitive
     description:
       name: error_stack
-      sha256: "354ca9d873e7397681e6189814514571b43ed864fb0c35c151ad7dfe5facc214"
+      sha256: dcd3b536878e181570ac0dbb5542bc5ead0babc975eedb9226a289f92b5e0cbb
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.3"
+    version: "2.1.4"
   fake_async:
     dependency: transitive
     description:
@@ -265,6 +265,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
+  ffi_leak_tracker:
+    dependency: transitive
+    description:
+      name: ffi_leak_tracker
+      sha256: "4093d4ef9ca06ffe2786e73bfb25e22aa92112b9bb4ec941f11e3e6b61489a97"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.2"
   file:
     dependency: transitive
     description:
@@ -335,34 +343,34 @@ packages:
     dependency: transitive
     description:
       name: flutter_multi_formatter
-      sha256: "29d9b3d30a985f5a9c3dd52b4e25e64b9a20ebdcf4d9fed0c71e653406598604"
+      sha256: "84c51226fc5684dc36b4ad13c5df3d0a28952d76bbeeafc873d9cc2ca0cdcbdf"
       url: "https://pub.dev"
     source: hosted
-    version: "2.13.10"
+    version: "2.13.11"
   flutter_secure_storage:
     dependency: transitive
     description:
       name: flutter_secure_storage
-      sha256: "6848263f9744072d0977347c383fb8b57d9780319a6bf5238b5a2866a029de62"
+      sha256: d2a6ac2df7353f5ca47eb159a5407c1dba7ec48ca0e02dc38c9ff4d29447b261
       url: "https://pub.dev"
     source: hosted
-    version: "10.2.0"
+    version: "10.3.0"
   flutter_secure_storage_darwin:
     dependency: transitive
     description:
       name: flutter_secure_storage_darwin
-      sha256: "67cd1ff671add31dc13e45194398187a04bb63804b37fa47866afae296d73fcb"
+      sha256: "82329fa5cdf343773b1b6897dea959105a29f092454259edff92f9f6637e8149"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.1"
+    version: "0.3.2"
   flutter_secure_storage_linux:
     dependency: transitive
     description:
       name: flutter_secure_storage_linux
-      sha256: "2b5c76dce569ab752d55a1cee6a2242bcc11fdba927078fb88c503f150767cda"
+      sha256: a5f35ddab43cf5c8215d2feb4ce1957851f28c5c37e6f04335066a0602087bf5
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.0"
+    version: "3.0.1"
   flutter_secure_storage_platform_interface:
     dependency: transitive
     description:
@@ -383,10 +391,10 @@ packages:
     dependency: transitive
     description:
       name: flutter_secure_storage_windows
-      sha256: "3b7c8e068875dfd46719ff57c90d8c459c87f2302ed6b00ff006b3c9fcad1613"
+      sha256: "471951813a97006d899db4948acc654a4f28c440083ea08178935ce20b173ec1"
       url: "https://pub.dev"
     source: hosted
-    version: "4.1.0"
+    version: "4.2.2"
   flutter_staggered_grid_view:
     dependency: transitive
     description:
@@ -617,18 +625,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: eb72b883e97aa0aab7eb82daa29b9ea099b2e16e27c1851234a5469f7b55d8af
+      sha256: "59abddea6d42b9e6e3429461583928ac751cf20c34ad2c3dcd8d9f7a0e46998a"
       url: "https://pub.dev"
     source: hosted
-    version: "7.1.18"
+    version: "7.1.20"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: cff8e94eed7ab0777298e094b8beea77e5bd2b92d0f1d24923da528c3c519ab8
+      sha256: "41688fe1085d38c9eee283794524d5546eb0d8c92c81b13695d92cc57dbbdc34"
       url: "https://pub.dev"
     source: hosted
-    version: "7.26.0"
+    version: "7.26.2"
   objective_c:
     dependency: transitive
     description:
@@ -705,26 +713,26 @@ packages:
     dependency: transitive
     description:
       name: patrol
-      sha256: "7825a6e96a8f0755f68eec600a91a08b19bd0975488a70885b3696f6b65ffc0f"
+      sha256: baebcc5e7dbd22ac6838512b7efdd432f33188ad5f3c4b3bfe00680c1bbef453
       url: "https://pub.dev"
     source: hosted
-    version: "4.5.0"
+    version: "4.6.0"
   patrol_finders:
     dependency: transitive
     description:
       name: patrol_finders
-      sha256: "9970eac0669a90b20ec7e1bcaabd0475655655998068ca656f4df9f6ec84f336"
+      sha256: "915da1e63fe7fd024418ab30b2394b1c8d6e812ce25be7d0b11634202521f0a9"
       url: "https://pub.dev"
     source: hosted
-    version: "3.2.0"
+    version: "3.4.0"
   patrol_log:
     dependency: transitive
     description:
       name: patrol_log
-      sha256: a2360db165c34692665c0de146e5157887d6b584fdccca8f141f947a5acf1b2e
+      sha256: "16ab747b28621640115d9493138eae82a1d410a613857cb0caf9000ce62fc546"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0"
+    version: "0.9.0"
   petitparser:
     dependency: transitive
     description:
@@ -1054,10 +1062,10 @@ packages:
     dependency: transitive
     description:
       name: win32
-      sha256: d7cb55e04cd34096cd3a79b3330245f54cb96a370a1c27adb3c84b917de8b08e
+      sha256: ba6f4bba816c8d7e3c1580e170f3786d216951cc6b94babc3b814c08d2cb2738
       url: "https://pub.dev"
     source: hosted
-    version: "5.15.0"
+    version: "6.3.0"
   xdg_directories:
     dependency: transitive
     description:
