@@ -17,7 +17,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 |-------------------------------------------------------------------------- */
 
 final class ToastNotificationConfig {
-  static final Map<String, dynamic> styles = {
+  static final Map<String, dynamic> styles = <String, dynamic>{
     'success': ToastNotification.style(
       icon: const Icon(Icons.check, color: Colors.green, size: 20),
       color: Colors.green.shade50,
@@ -47,8 +47,8 @@ final class ToastNotificationConfig {
       duration: Duration(seconds: 2),
       reverseAnimation: ToastAnimation.fadeOut(),
     ),
-    'my_custom_toast': (data) => ToastNotification.builder(
-      (context) {
+    'my_custom_toast': (dynamic data) => ToastNotification.builder(
+      (BuildContext context) {
         return Container(
           height: 90,
           width: double.infinity,
@@ -62,7 +62,7 @@ final class ToastNotificationConfig {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text(data['title'] ?? '')],
+            children: <Widget>[Text(data['title'] ?? '')],
           ),
         );
       },

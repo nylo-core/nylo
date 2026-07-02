@@ -27,7 +27,7 @@ class BottomSheetModal extends NyBaseModal {
       context,
       isScrollControlled: false,
       child: const LogoutModal(),
-      actionsRow: [
+      actionsRow: <Widget>[
         Button.secondary(
           text: "Logout",
           onPressed: () async {

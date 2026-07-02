@@ -55,12 +55,12 @@ abstract class StatefulAppButton extends StatelessWidget with FormSubmittable {
       onFailure: onFailure,
       showToastError: showToastError,
       loadingStyle: loadingStyle ?? LoadingStyle.skeletonizer(),
-      child: (pressed) {
+      child: (VoidCallback? pressed) {
         Widget result = buildButton(context);
 
-        final hasAnimation = animationStyle != null &&
+        final bool hasAnimation = animationStyle != null &&
             animationStyle!.type != ButtonAnimationType.none;
-        final hasSplash = splashStyle != null &&
+        final bool hasSplash = splashStyle != null &&
             splashStyle!.type != ButtonSplashType.none;
 
         // Apply splash styling to the button

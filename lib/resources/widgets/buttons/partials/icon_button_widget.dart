@@ -29,14 +29,14 @@ class IconButton extends StatefulAppButton {
 
   @override
   Widget buildButton(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
+    final ThemeData theme = Theme.of(context);
+    final bool isDark = theme.brightness == Brightness.dark;
 
-    final bgColor = backgroundColor ?? theme.colorScheme.primary;
-    final fgColor = contentColor ?? theme.colorScheme.onPrimary;
-    final radius = BorderRadius.circular(14);
+    final Color bgColor = backgroundColor ?? theme.colorScheme.primary;
+    final Color fgColor = contentColor ?? theme.colorScheme.onPrimary;
+    final BorderRadius radius = BorderRadius.circular(14);
 
-    final iconWidget = IconTheme(
+    final IconTheme iconWidget = IconTheme(
       data: IconThemeData(color: fgColor, size: 20),
       child: icon,
     );
@@ -47,7 +47,7 @@ class IconButton extends StatefulAppButton {
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: radius,
-        boxShadow: [
+        boxShadow: <BoxShadow>[
           BoxShadow(
             color: bgColor.withValues(alpha: isDark ? 0.3 : 0.25),
             blurRadius: 12,
@@ -58,8 +58,8 @@ class IconButton extends StatefulAppButton {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
-        children: [
-          if (iconLeading) ...[
+        children: <Widget>[
+          if (iconLeading) ...<Widget>[
             iconWidget,
             SizedBox(width: iconSpacing),
           ],
@@ -72,7 +72,7 @@ class IconButton extends StatefulAppButton {
               letterSpacing: 0.3,
             ),
           ),
-          if (!iconLeading) ...[
+          if (!iconLeading) ...<Widget>[
             SizedBox(width: iconSpacing),
             iconWidget,
           ],

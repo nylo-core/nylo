@@ -16,7 +16,7 @@ class ThemeToggle extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             Text("Dark Mode", textAlign: TextAlign.center).fontWeightBold(),
             Text(
                 "Your device is in Dark Mode, turn off Dark Mode from your device settings to change the theme",
@@ -27,7 +27,7 @@ class ThemeToggle extends StatelessWidget {
     }
 
     return Column(
-      children: [
+      children: <Widget>[
         Switch(
             trackOutlineColor: WidgetStateProperty.all(
               NyColor(
@@ -36,7 +36,7 @@ class ThemeToggle extends StatelessWidget {
               ).toColor(context),
             ),
             value: isThemeDark,
-            onChanged: (value) {
+            onChanged: (bool value) {
               NyTheme.set(
                 context,
                 id: value ? 'dark_theme' : 'light_theme',

@@ -14,7 +14,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 |-------------------------------------------------------------------------- */
 
 // App Themes
-final List<BaseThemeConfig<ColorStyles>> appThemes = [
+final List<BaseThemeConfig<ColorStyles>> appThemes = <BaseThemeConfig<ColorStyles>>[
   BaseThemeConfig<ColorStyles>(
     id: 'light_theme',
     theme: lightTheme,

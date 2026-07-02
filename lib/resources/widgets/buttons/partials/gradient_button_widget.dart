@@ -27,16 +27,16 @@ class GradientButton extends StatefulAppButton {
 
   @override
   Widget buildButton(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
+    final ThemeData theme = Theme.of(context);
+    final bool isDark = theme.brightness == Brightness.dark;
 
-    final colors = gradientColors ??
-        [
+    final List<Color> colors = gradientColors ??
+        <Color>[
           theme.colorScheme.primary,
           theme.colorScheme.tertiary,
         ];
-    final fgColor = contentColor ?? Colors.white;
-    final radius = BorderRadius.circular(14);
+    final Color fgColor = contentColor ?? Colors.white;
+    final BorderRadius radius = BorderRadius.circular(14);
 
     return Container(
       width: width ?? double.infinity,
@@ -48,7 +48,7 @@ class GradientButton extends StatefulAppButton {
           end: gradientEnd,
         ),
         borderRadius: radius,
-        boxShadow: [
+        boxShadow: <BoxShadow>[
           BoxShadow(
             color: colors.first.withValues(alpha: isDark ? 0.25 : 0.3),
             blurRadius: 16,

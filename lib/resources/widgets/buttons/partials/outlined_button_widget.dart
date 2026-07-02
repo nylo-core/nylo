@@ -25,11 +25,11 @@ class OutlinedButton extends StatefulAppButton {
 
   @override
   Widget buildButton(BuildContext context) {
-    final theme = Theme.of(context);
+    final ThemeData theme = Theme.of(context);
 
-    final strokeColor = borderColor ?? theme.colorScheme.outline;
-    final fgColor = textColor ?? theme.colorScheme.primary;
-    final radius = BorderRadius.circular(14);
+    final Color strokeColor = borderColor ?? theme.colorScheme.outline;
+    final Color fgColor = textColor ?? theme.colorScheme.primary;
+    final BorderRadius radius = BorderRadius.circular(14);
 
     return Container(
       width: width ?? double.infinity,

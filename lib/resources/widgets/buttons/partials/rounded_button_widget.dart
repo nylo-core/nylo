@@ -25,12 +25,12 @@ class RoundedButton extends StatefulAppButton {
 
   @override
   Widget buildButton(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
+    final ThemeData theme = Theme.of(context);
+    final bool isDark = theme.brightness == Brightness.dark;
 
-    final bgColor = backgroundColor ?? theme.colorScheme.primaryContainer;
-    final fgColor = contentColor ?? theme.colorScheme.onPrimaryContainer;
-    final radius = borderRadius ?? BorderRadius.circular(height / 2);
+    final Color bgColor = backgroundColor ?? theme.colorScheme.primaryContainer;
+    final Color fgColor = contentColor ?? theme.colorScheme.onPrimaryContainer;
+    final BorderRadius radius = borderRadius ?? BorderRadius.circular(height / 2);
 
     return Container(
       width: width ?? double.infinity,
@@ -40,7 +40,7 @@ class RoundedButton extends StatefulAppButton {
         borderRadius: radius,
         boxShadow: isDark
             ? null
-            : [
+            : <BoxShadow>[
                 BoxShadow(
                   color: bgColor.withValues(alpha: 0.3),
                   blurRadius: 8,

@@ -34,7 +34,7 @@ class _MainState extends NyPage<Main> {
 
   /// Map of lifecycle actions
   @override
-  get lifecycleActions => widget.nylo?.appLifecycleStates ?? {};
+  get lifecycleActions => widget.nylo?.appLifecycleStates ?? <AppLifecycleState, dynamic Function()>{};
 
   /// Disable dev panel for main app page.
   @override

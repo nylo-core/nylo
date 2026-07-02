@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Logo(), Spacing.vertical(50), AnimatedLoader()],
+            children: <Widget>[Logo(), Spacing.vertical(50), AnimatedLoader()],
           ),
         ),
       ),
@@ -67,10 +67,10 @@ class _AnimatedLoaderState extends State<AnimatedLoader>
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _controller,
-      builder: (context, child) {
+      builder: (BuildContext context, Widget? child) {
         return Stack(
           alignment: Alignment.center,
-          children: [
+          children: <Widget>[
             _buildPulsatingCircle(),
             _buildRotatingDots(),
           ],
@@ -81,10 +81,10 @@ class _AnimatedLoaderState extends State<AnimatedLoader>
 
   Widget _buildPulsatingCircle() {
     return TweenAnimationBuilder<double>(
-      tween: Tween(begin: 0.8, end: 1.0),
+      tween: Tween<double>(begin: 0.8, end: 1.0),
       duration: const Duration(milliseconds: 750),
       curve: Curves.easeInOut,
-      builder: (context, value, child) {
+      builder: (BuildContext context, double value, Widget? child) {
         return Transform.scale(
           scale: value,
           child: Container(
@@ -104,7 +104,7 @@ class _AnimatedLoaderState extends State<AnimatedLoader>
       angle: _controller.value * 2 * pi,
       child: Stack(
         alignment: Alignment.center,
-        children: List.generate(8, (index) {
+        children: List<Widget>.generate(8, (int index) {
           final double angle = (index / 8) * 2 * pi;
           final double offset = widget.size * 0.35;
           return Transform(

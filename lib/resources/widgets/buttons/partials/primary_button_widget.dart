@@ -25,12 +25,12 @@ class PrimaryButton extends StatefulAppButton {
 
   @override
   Widget buildButton(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
+    final ThemeData theme = Theme.of(context);
+    final bool isDark = theme.brightness == Brightness.dark;
 
-    final bgColor = backgroundColor ?? theme.colorScheme.primary;
-    final fgColor = contentColor ?? theme.colorScheme.onPrimary;
-    final radius = BorderRadius.circular(14);
+    final Color bgColor = backgroundColor ?? theme.colorScheme.primary;
+    final Color fgColor = contentColor ?? theme.colorScheme.onPrimary;
+    final BorderRadius radius = BorderRadius.circular(14);
 
     return Container(
       width: width ?? double.infinity,
@@ -38,7 +38,7 @@ class PrimaryButton extends StatefulAppButton {
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: radius,
-        boxShadow: [
+        boxShadow: <BoxShadow>[
           BoxShadow(
             color: Colors.grey.shade400.withValues(alpha: isDark ? 0.3 : 0.25),
             blurRadius: elevation ?? 12,

@@ -9,7 +9,7 @@ class LogoutModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      children: <Widget>[
         Container(
           height: 70,
           width: 70,

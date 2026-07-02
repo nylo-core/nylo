@@ -22,7 +22,7 @@ final class LocalizationConfig {
   static const String assetsDirectory = 'lang/';
 
   // Supported locales in the application
-  static const List<Locale> supportedLocales = [
+  static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
     Locale('es'),
     // Add more locales as needed
@@ -32,7 +32,7 @@ final class LocalizationConfig {
   static const String fallbackLanguageCode = 'en';
 
   // List of language codes that use right-to-left text direction
-  static const List<String> rtlLanguages = ['ar', 'he', 'fa', 'ur'];
+  static const List<String> rtlLanguages = <String>['ar', 'he', 'fa', 'ur'];
 
   // Check if a language code uses right-to-left text direction
   static bool isRtl(String languageCode) => rtlLanguages.contains(languageCode);

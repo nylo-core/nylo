@@ -23,8 +23,8 @@ class TextOnlyButton extends StatefulAppButton {
 
   @override
   Widget buildButton(BuildContext context) {
-    final theme = Theme.of(context);
-    final fgColor = contentColor ?? theme.colorScheme.primary;
+    final ThemeData theme = Theme.of(context);
+    final Color fgColor = contentColor ?? theme.colorScheme.primary;
 
     return Container(
       width: width,

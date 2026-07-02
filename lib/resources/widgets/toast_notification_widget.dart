@@ -40,7 +40,7 @@ class ToastNotification {
     ToastOnInitStateCallback? onInitState,
   }) {
     return (ToastMeta meta, void Function(ToastMeta) updateMeta) {
-      final updatedMeta = meta.copyWith(
+      final ToastMeta updatedMeta = meta.copyWith(
         position: position,
         duration: duration,
         animation: meta.animation ?? animation,
@@ -60,7 +60,7 @@ class ToastNotification {
         onInitState: meta.onInitState ?? onInitState,
       );
       updateMeta(updatedMeta);
-      return Builder(builder: (context) => builder(context));
+      return Builder(builder: (BuildContext context) => builder(context));
     };
   }
 
@@ -97,7 +97,7 @@ class ToastNotification {
     Widget Function(ToastMeta toastMeta)? builder,
   }) {
     return (ToastMeta meta, void Function(ToastMeta) updateMeta) {
-      final updatedMeta = meta.copyWith(
+      final ToastMeta updatedMeta = meta.copyWith(
         icon: meta.icon ?? icon,
         color: meta.color ?? color,
         title: meta.title.isEmpty ? defaultTitle : null,
@@ -147,7 +147,7 @@ class _ToastNotificationBase extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             boxShadow: context.isThemeDark
                 ? null
-                : [
+                : <BoxShadow>[
                     BoxShadow(
                       color: Colors.grey.withAlpha(25),
                       spreadRadius: 3,
@@ -162,7 +162,7 @@ class _ToastNotificationBase extends StatelessWidget {
                 : null,
             borderRadius: BorderRadius.circular(16),
             child: Row(
-              children: [
+              children: <Widget>[
                 // Icon section
                 SizedBox(width: 50, child: Center(child: _toastMeta.icon)),
                 // Content section
@@ -172,7 +172,7 @@ class _ToastNotificationBase extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: <Widget>[
                         Text(_toastMeta.title.tr()).bodyLarge(
                           color: context.color.general.content,
                           fontWeight: FontWeight.bold,

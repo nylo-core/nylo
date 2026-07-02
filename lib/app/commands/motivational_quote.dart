@@ -15,14 +15,14 @@ class _MotivationalQuoteCommand extends NyCustomCommand {
   @override
   Future<void> handle(CommandResult result) async {
     // prompt for input
-    final responseName = prompt("Hello, what's your name?");
+    final String responseName = prompt("Hello, what's your name?");
     if (responseName.isEmpty) {
       error('Please provide a valid name.');
       return;
     }
 
     // confirmation prompt
-    final response = confirm(
+    final bool response = confirm(
       '$responseName, would you like to get a motivational quote?',
     );
     if (response == false) {
@@ -34,7 +34,7 @@ class _MotivationalQuoteCommand extends NyCustomCommand {
     await withSpinner(
       task: () async {
         final List<dynamic>? data = await api(
-          (request) => request.get('https://zenquotes.io/api/today'),
+          (ApiService request) => request.get('https://zenquotes.io/api/today'),
         );
 
         if (data == null || data.isEmpty) {
@@ -67,14 +67,14 @@ extension QuoteFormatter on NyCustomCommand {
     int maxWidth = 60,
   }) {
     // Reset code
-    final reset = '\x1B[0m';
+    final String reset = '\x1B[0m';
 
     // Format the quote by wrapping text to fit within maxWidth
-    final wrappedQuote = _wrapText(quote, maxWidth - 4); // -4 for padding
+    final List<String> wrappedQuote = _wrapText(quote, maxWidth - 4); // -4 for padding
 
     // Calculate width based on the longest line in the wrapped quote
     int width = 0;
-    for (final line in wrappedQuote) {
+    for (final String line in wrappedQuote) {
       if (line.length > width) width = line.length;
     }
 
@@ -82,7 +82,7 @@ extension QuoteFormatter on NyCustomCommand {
     width += 4; // 2 spaces on each side
 
     // Prepare the author text
-    final authorText = '— $author '; // Note the space after author name
+    final String authorText = '— $author '; // Note the space after author name
 
     // Ensure width is at least as wide as the author text plus padding
     if (width < authorText.length + 2) {
@@ -90,18 +90,18 @@ extension QuoteFormatter on NyCustomCommand {
     }
 
     // Top border
-    final topBorder = '$borderColor╭${'─' * (width)}╮$reset';
+    final String topBorder = '$borderColor╭${'─' * (width)}╮$reset';
     print(topBorder);
 
     // Empty line
-    final emptyLine = '$borderColor│${' ' * width}│$reset';
+    final String emptyLine = '$borderColor│${' ' * width}│$reset';
     print(emptyLine);
 
     // Quote content with rainbow effect if requested
-    for (final line in wrappedQuote) {
+    for (final String line in wrappedQuote) {
       // Ensure exact padding to maintain alignment
-      final paddingRight = width - line.length - 2;
-      final paddedLine = ' $line${' ' * paddingRight} ';
+      final int paddingRight = width - line.length - 2;
+      final String paddedLine = ' $line${' ' * paddingRight} ';
 
       print('$borderColor│$quoteColor$paddedLine$reset$borderColor│$reset');
     }
@@ -110,23 +110,23 @@ extension QuoteFormatter on NyCustomCommand {
     print(emptyLine);
 
     // Author line
-    final authorPadding = width - authorText.length;
-    final authorLine =
+    final int authorPadding = width - authorText.length;
+    final String authorLine =
         '$borderColor│${' ' * authorPadding}$authorColor$authorText$reset$borderColor│$reset';
     print(authorLine);
 
     // Bottom border
-    final bottomBorder = '$borderColor╰${'─' * (width)}╯$reset';
+    final String bottomBorder = '$borderColor╰${'─' * (width)}╯$reset';
     print(bottomBorder);
   }
 
   /// Wrap text to fit within maxWidth
   List<String> _wrapText(String text, int maxWidth) {
-    final words = text.split(' ');
-    final result = <String>[];
+    final List<String> words = text.split(' ');
+    final List<String> result = <String>[];
     String currentLine = '';
 
-    for (final word in words) {
+    for (final String word in words) {
       if (currentLine.isEmpty) {
         currentLine = word;
       } else if (currentLine.length + word.length + 1 <= maxWidth) {

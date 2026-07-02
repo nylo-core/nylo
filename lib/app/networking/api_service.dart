@@ -25,7 +25,7 @@ class ApiService extends NyApiService {
   String get baseUrl => getEnv('API_BASE_URL');
 
   @override
-  Map<Type, Interceptor> get interceptors => {
+  Map<Type, Interceptor> get interceptors => <Type, Interceptor>{
     ...super.interceptors,
     // MyCustomInterceptor: MyCustomInterceptor(),
   };
@@ -33,7 +33,7 @@ class ApiService extends NyApiService {
   /// Example to fetch the Nylo repository info from Github
   Future<Map<String, dynamic>?> githubInfo() async {
     return await network(
-      request: (request) =>
+      request: (Dio request) =>
           request.get("https://api.github.com/repos/nylo-core/nylo"),
       // cacheKey: "github_nylo_info", // Optional: Cache the response
       // cacheDuration: const Duration(hours: 1),

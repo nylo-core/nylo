@@ -6,15 +6,15 @@ class BearerAuthInterceptor extends Interceptor {
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     dynamic authData = Auth.data();
     if (authData == null) return super.onRequest(options, handler);
-    final token = authData['token'];
+    final dynamic token = authData['token'];
     if (token != null && token.toString().isNotEmpty) {
-      options.headers.addAll({"Authorization": "Bearer $token"});
+      options.headers.addAll(<String, dynamic>{"Authorization": "Bearer $token"});
     }
     return super.onRequest(options, handler);
   }
 
   @override
-  void onResponse(Response response, ResponseInterceptorHandler handler) {
+  void onResponse(Response<dynamic> response, ResponseInterceptorHandler handler) {
     handler.next(response);
   }
 

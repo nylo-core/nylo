@@ -16,7 +16,7 @@ class AuthRouteGuard extends NyRouteGuard {
   AuthRouteGuard();
 
   @override
-  Future<GuardResult> onBefore(RouteContext context) async {
+  Future<GuardResult> onBefore(RouteContext<dynamic> context) async {
     // context.data - data passed to the route
     // context.queryParameters - query parameters from the URL
     // context.routeName - the route being navigated to

@@ -18,14 +18,14 @@ class _CurrentTimeCommand extends NyCustomCommand {
 
   @override
   Future<void> handle(CommandResult result) async {
-    final format = result.getString("format");
+    final String? format = result.getString("format");
 
     // Get the current time
-    final now = DateTime.now();
+    final DateTime now = DateTime.now();
     final DateFormat dateFormat = DateFormat(format);
 
     // Format the current time
-    final formattedTime = dateFormat.format(now);
+    final String formattedTime = dateFormat.format(now);
     info("The current time is $formattedTime");
   }
 }

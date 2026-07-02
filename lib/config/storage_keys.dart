@@ -12,7 +12,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 final class StorageKeysConfig {
   // Define the keys you want to be synced on boot
   static Future<List<StorageKey>> Function() syncedOnBoot() => () async {
-        return [
+        return <StorageKey>[
           auth,
           bearerToken,
           // coins.defaultValue(10), // give the user 10 coins by default

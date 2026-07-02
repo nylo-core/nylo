@@ -24,15 +24,15 @@ class TransparencyButton extends StatefulAppButton {
 
   @override
   Widget buildButton(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
+    final ThemeData theme = Theme.of(context);
+    final bool isDark = theme.brightness == Brightness.dark;
 
-    final fgColor = contentColor ??
+    final Color fgColor = contentColor ??
         (isDark ? Colors.white : theme.colorScheme.onSurface);
-    final bgColor = isDark
+    final Color bgColor = isDark
         ? Colors.white.withValues(alpha: 0.12)
         : Colors.black.withValues(alpha: 0.05);
-    final radius = BorderRadius.circular(12);
+    final BorderRadius radius = BorderRadius.circular(12);
 
     return ClipRRect(
       borderRadius: radius,

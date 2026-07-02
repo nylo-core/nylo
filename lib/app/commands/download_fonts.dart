@@ -50,25 +50,25 @@ class _DownloadFontsCommand extends NyCustomCommand {
     info('📦 Downloading Google Font: $fontName');
 
     // Create fonts directory if it doesn't exist
-    final fontsDir = Directory(assetDirectory);
+    final Directory fontsDir = Directory(assetDirectory);
     if (!fontsDir.existsSync()) {
       fontsDir.createSync(recursive: true);
     }
 
     // Download the font
-    final success = await _downloadFont(fontName, fontsDir.path);
+    final bool success = await _downloadFont(fontName, fontsDir.path);
 
     if (success) {
       this.success('✅ Font downloaded to $assetDirectory/');
 
       // Add fonts to pubspec.yaml
-      final addedToPubspec = await _addFontsToPubspec(fontName, assetDirectory);
+      final bool addedToPubspec = await _addFontsToPubspec(fontName, assetDirectory);
       if (addedToPubspec) {
         this.success('✅ Added font family to pubspec.yaml');
       }
 
       // Update design.dart with the new font
-      final updatedDesign = await _updateDesignFont(fontName);
+      final bool updatedDesign = await _updateDesignFont(fontName);
       if (updatedDesign) {
         this.success('✅ Updated appFont in lib/config/design.dart');
       }
@@ -81,22 +81,22 @@ class _DownloadFontsCommand extends NyCustomCommand {
 
   /// Detect font family from lib/config/design.dart
   Future<String?> _detectFontFromDesign() async {
-    final designFile = File('lib/config/design.dart');
+    final File designFile = File('lib/config/design.dart');
     if (!designFile.existsSync()) {
       return null;
     }
 
-    final content = await designFile.readAsString();
+    final String content = await designFile.readAsString();
 
     // Look for GoogleFonts.fontName() pattern
-    final regex = RegExp(r'GoogleFonts\.(\w+)\s*\(');
-    final match = regex.firstMatch(content);
+    final RegExp regex = RegExp(r'GoogleFonts\.(\w+)\s*\(');
+    final RegExpMatch? match = regex.firstMatch(content);
 
     if (match != null) {
-      final fontMethod = match.group(1)!;
+      final String fontMethod = match.group(1)!;
       // Convert method name to proper font family name
       // e.g., "outfit" -> "Outfit", "robotoMono" -> "Roboto Mono"
-      final fontName = _methodToFontName(fontMethod);
+      final String fontName = _methodToFontName(fontMethod);
       info('🔍 Detected font from design.dart: $fontName');
       return fontName;
     }
@@ -107,9 +107,9 @@ class _DownloadFontsCommand extends NyCustomCommand {
   /// Convert GoogleFonts method name to font family name
   String _methodToFontName(String methodName) {
     // Handle camelCase -> "Title Case With Spaces"
-    final result = StringBuffer();
+    final StringBuffer result = StringBuffer();
     for (int i = 0; i < methodName.length; i++) {
-      final char = methodName[i];
+      final String char = methodName[i];
       if (i == 0) {
         result.write(char.toUpperCase());
       } else if (char.toUpperCase() == char && char != char.toLowerCase()) {
@@ -125,16 +125,16 @@ class _DownloadFontsCommand extends NyCustomCommand {
   /// Update the appFont in lib/config/design.dart
   Future<bool> _updateDesignFont(String fontFamily) async {
     try {
-      final designFile = File('lib/config/design.dart');
+      final File designFile = File('lib/config/design.dart');
       if (!designFile.existsSync()) {
         warning('lib/config/design.dart not found');
         return false;
       }
 
-      var content = await designFile.readAsString();
+      String content = await designFile.readAsString();
 
       // Replace GoogleFonts.xxx() with TextStyle(fontFamily: 'FontName')
-      final regex = RegExp(r'GoogleFonts\.\w+\(\)');
+      final RegExp regex = RegExp(r'GoogleFonts\.\w+\(\)');
       if (!regex.hasMatch(content)) {
         warning('Could not find GoogleFonts usage in design.dart');
         return false;
@@ -159,14 +159,14 @@ class _DownloadFontsCommand extends NyCustomCommand {
   Future<bool> _addFontsToPubspec(
       String fontFamily, String assetDirectory) async {
     try {
-      final pubspecFile = File('pubspec.yaml');
+      final File pubspecFile = File('pubspec.yaml');
       if (!pubspecFile.existsSync()) {
         warning('pubspec.yaml not found');
         return false;
       }
 
-      final content = await pubspecFile.readAsString();
-      final familyClean = fontFamily.replaceAll(' ', '');
+      final String content = await pubspecFile.readAsString();
+      final String familyClean = fontFamily.replaceAll(' ', '');
 
       // Check if font family already exists in pubspec.yaml
       if (content.contains('family: $fontFamily') ||
@@ -176,18 +176,18 @@ class _DownloadFontsCommand extends NyCustomCommand {
       }
 
       // Find all downloaded font files for this family
-      final fontsDir = Directory(assetDirectory);
-      final fontFiles = fontsDir
+      final Directory fontsDir = Directory(assetDirectory);
+      final List<File> fontFiles = fontsDir
           .listSync()
           .whereType<File>()
-          .where((f) =>
+          .where((File f) =>
               f.path.endsWith('.ttf') &&
               f.path
                   .split('/')
                   .last
                   .startsWith(familyClean))
           .toList()
-        ..sort((a, b) => a.path.compareTo(b.path));
+        ..sort((File a, File b) => a.path.compareTo(b.path));
 
       if (fontFiles.isEmpty) {
         warning('No font files found for $fontFamily');
@@ -195,19 +195,19 @@ class _DownloadFontsCommand extends NyCustomCommand {
       }
 
       // Build the font family YAML entry
-      final buffer = StringBuffer();
+      final StringBuffer buffer = StringBuffer();
       buffer.writeln('    - family: $fontFamily');
       buffer.writeln('      fonts:');
 
-      for (final file in fontFiles) {
-        final fileName = file.path.split('/').last;
-        final assetPath = '$assetDirectory/$fileName';
-        final lowerName = fileName.toLowerCase();
+      for (final File file in fontFiles) {
+        final String fileName = file.path.split('/').last;
+        final String assetPath = '$assetDirectory/$fileName';
+        final String lowerName = fileName.toLowerCase();
 
         buffer.write('        - asset: $assetPath');
 
         // Detect weight from filename
-        final weight = _detectWeight(lowerName);
+        final int? weight = _detectWeight(lowerName);
         if (weight != null && weight != 400) {
           buffer.write('\n          weight: $weight');
         }
@@ -220,26 +220,26 @@ class _DownloadFontsCommand extends NyCustomCommand {
         buffer.writeln();
       }
 
-      final fontEntry = buffer.toString();
+      final String fontEntry = buffer.toString();
 
       // Find the root-level "flutter:" section (no indentation)
-      final flutterSectionRegex = RegExp(r'\nflutter:\s*\n');
-      final flutterMatch = flutterSectionRegex.firstMatch(content);
+      final RegExp flutterSectionRegex = RegExp(r'\nflutter:\s*\n');
+      final RegExpMatch? flutterMatch = flutterSectionRegex.firstMatch(content);
 
       if (flutterMatch == null) {
         error('Could not find root-level "flutter:" section in pubspec.yaml');
         return false;
       }
 
-      final afterFlutter = content.substring(flutterMatch.end);
+      final String afterFlutter = content.substring(flutterMatch.end);
 
       String updatedContent;
       if (afterFlutter.contains('\n  fonts:\n') ||
           afterFlutter.startsWith('  fonts:\n')) {
         // Append to existing fonts section within the flutter block
-        final fontsIndex =
+        final int fontsIndex =
             content.indexOf(RegExp(r'\n  fonts:\s*\n'), flutterMatch.start);
-        final insertPos = content.indexOf('\n', fontsIndex + 1) + 1;
+        final int insertPos = content.indexOf('\n', fontsIndex + 1) + 1;
         updatedContent =
             '${content.substring(0, insertPos)}$fontEntry${content.substring(insertPos)}';
       } else {
@@ -274,43 +274,43 @@ class _DownloadFontsCommand extends NyCustomCommand {
   Future<bool> _downloadFont(String fontFamily, String outputDir) async {
     try {
       // Google Fonts API URL
-      final apiKey = ''; // Public API key for Google Fonts
-      final encodedFamily = Uri.encodeComponent(fontFamily);
-      final apiUrl =
+      final String apiKey = ''; // Public API key for Google Fonts
+      final String encodedFamily = Uri.encodeComponent(fontFamily);
+      final String apiUrl =
           'https://www.googleapis.com/webfonts/v1/webfonts?key=$apiKey&family=$encodedFamily';
 
       // Fetch font metadata
-      final httpClient = HttpClient();
-      final request = await httpClient.getUrl(Uri.parse(apiUrl));
-      final response = await request.close();
+      final HttpClient httpClient = HttpClient();
+      final HttpClientRequest request = await httpClient.getUrl(Uri.parse(apiUrl));
+      final HttpClientResponse response = await request.close();
 
       if (response.statusCode != 200) {
         // Try alternative approach - direct download from fonts.google.com
         return await _downloadFontDirect(fontFamily, outputDir);
       }
 
-      final responseBody = await response.transform(utf8.decoder).join();
-      final data = json.decode(responseBody) as Map<String, dynamic>;
+      final String responseBody = await response.transform(utf8.decoder).join();
+      final Map<String, dynamic> data = json.decode(responseBody) as Map<String, dynamic>;
 
-      final items = data['items'] as List?;
+      final List<dynamic>? items = data['items'] as List<dynamic>?;
       if (items == null || items.isEmpty) {
         warning('Font "$fontFamily" not found in Google Fonts API');
         return await _downloadFontDirect(fontFamily, outputDir);
       }
 
-      final fontData = items[0] as Map<String, dynamic>;
-      final files = fontData['files'] as Map<String, dynamic>;
+      final Map<String, dynamic> fontData = items[0] as Map<String, dynamic>;
+      final Map<String, dynamic> files = fontData['files'] as Map<String, dynamic>;
 
       // Download each font weight
       int downloadCount = 0;
-      for (final entry in files.entries) {
-        final weight = entry.key;
-        final url = entry.value as String;
+      for (final MapEntry<String, dynamic> entry in files.entries) {
+        final String weight = entry.key;
+        final String url = entry.value as String;
 
         // Convert weight name to filename
-        final weightName = _weightToName(weight);
-        final fileName = '${fontFamily.replaceAll(' ', '')}-$weightName.ttf';
-        final filePath = '$outputDir/$fileName';
+        final String weightName = _weightToName(weight);
+        final String fileName = '${fontFamily.replaceAll(' ', '')}-$weightName.ttf';
+        final String filePath = '$outputDir/$fileName';
 
         await withSpinner(
           message: 'Downloading $fileName',
@@ -335,7 +335,7 @@ class _DownloadFontsCommand extends NyCustomCommand {
     info('Trying direct download method...');
 
     // Common font weights to download
-    final weights = {
+    final Map<String, String> weights = <String, String>{
       '100': 'Thin',
       '200': 'ExtraLight',
       '300': 'Light',
@@ -349,19 +349,19 @@ class _DownloadFontsCommand extends NyCustomCommand {
 
     int downloadCount = 0;
 
-    for (final entry in weights.entries) {
-      final weightName = entry.value;
-      final fileName =
+    for (final MapEntry<String, String> entry in weights.entries) {
+      final String weightName = entry.value;
+      final String fileName =
           '${fontFamily.replaceAll(' ', '')}-$weightName.ttf';
-      final filePath = '$outputDir/$fileName';
+      final String filePath = '$outputDir/$fileName';
 
       // Try to download from Google Fonts static URL
-      final url =
+      final String url =
           'https://fonts.gstatic.com/s/${fontFamily.toLowerCase().replaceAll(' ', '')}/'
           'v1/${fontFamily.replaceAll(' ', '')}-$weightName.ttf';
 
       try {
-        final downloaded = await _tryDownloadFile(url, filePath);
+        final bool downloaded = await _tryDownloadFile(url, filePath);
         if (downloaded) {
           success('Downloaded $fileName');
           downloadCount++;
@@ -432,20 +432,20 @@ class _DownloadFontsCommand extends NyCustomCommand {
 
   /// Download a file from URL
   Future<void> _downloadFile(String url, String filePath) async {
-    final httpClient = HttpClient();
+    final HttpClient httpClient = HttpClient();
 
     // Handle http:// URLs by converting to https://
-    var downloadUrl = url;
+    String downloadUrl = url;
     if (url.startsWith('http://')) {
       downloadUrl = url.replaceFirst('http://', 'https://');
     }
 
-    final request = await httpClient.getUrl(Uri.parse(downloadUrl));
-    final response = await request.close();
+    final HttpClientRequest request = await httpClient.getUrl(Uri.parse(downloadUrl));
+    final HttpClientResponse response = await request.close();
 
     if (response.statusCode == 200) {
-      final file = File(filePath);
-      final sink = file.openWrite();
+      final File file = File(filePath);
+      final IOSink sink = file.openWrite();
       await response.pipe(sink);
       await sink.close();
     } else {
@@ -456,13 +456,13 @@ class _DownloadFontsCommand extends NyCustomCommand {
   /// Try to download a file, return false if not found
   Future<bool> _tryDownloadFile(String url, String filePath) async {
     try {
-      final httpClient = HttpClient();
-      final request = await httpClient.getUrl(Uri.parse(url));
-      final response = await request.close();
+      final HttpClient httpClient = HttpClient();
+      final HttpClientRequest request = await httpClient.getUrl(Uri.parse(url));
+      final HttpClientResponse response = await request.close();
 
       if (response.statusCode == 200) {
-        final file = File(filePath);
-        final sink = file.openWrite();
+        final File file = File(filePath);
+        final IOSink sink = file.openWrite();
         await response.pipe(sink);
         await sink.close();
         return true;

@@ -10,7 +10,7 @@ import 'package:nylo_framework/nylo_framework.dart';
 | Learn more https://nylo.dev/docs/7.x/router
 |-------------------------------------------------------------------------- */
 
-appRouter() => nyRoutes((router) {
+appRouter() => nyRoutes((NyRouter router) {
       router.add(HomePage.path).initialRoute();
 
       router.add(NotFoundPage.path).unknownRoute();

@@ -23,15 +23,15 @@ class SecondaryButton extends StatefulAppButton {
 
   @override
   Widget buildButton(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
+    final ThemeData theme = Theme.of(context);
+    final bool isDark = theme.brightness == Brightness.dark;
 
-    final bgColor = backgroundColor ??
+    final Color bgColor = backgroundColor ??
         (isDark
             ? theme.colorScheme.surfaceContainerHighest
             : theme.colorScheme.surfaceContainerHigh);
-    final fgColor = contentColor ?? theme.colorScheme.onSurface;
-    final radius = BorderRadius.circular(14);
+    final Color fgColor = contentColor ?? theme.colorScheme.onSurface;
+    final BorderRadius radius = BorderRadius.circular(14);
 
     return Container(
       width: width ?? double.infinity,
@@ -41,7 +41,7 @@ class SecondaryButton extends StatefulAppButton {
         borderRadius: radius,
         boxShadow: isDark
             ? null
-            : [
+            : <BoxShadow>[
                 BoxShadow(
                   color: Colors.black.withValues(alpha: 0.04),
                   blurRadius: 8,
