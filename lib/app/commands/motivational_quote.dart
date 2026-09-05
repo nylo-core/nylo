@@ -26,7 +26,7 @@ class _MotivationalQuoteCommand extends NyCustomCommand {
       '$responseName, would you like to get a motivational quote?',
     );
     if (response == false) {
-      print('No problem, have a great day!');
+      info('No problem, have a great day!');
       return;
     }
 
@@ -42,11 +42,11 @@ class _MotivationalQuoteCommand extends NyCustomCommand {
           return;
         }
 
-        print("\n");
+        info("\n");
 
-        printQuote(quote: data[0]['q'], author: data[0]['a']);
+        printInfoQuote(quote: data[0]['q'], author: data[0]['a']);
 
-        print("\n");
+        info("\n");
       },
       message: 'Fetching motivational quote...',
       successMessage: 'Quote fetched successfully!',
@@ -55,10 +55,10 @@ class _MotivationalQuoteCommand extends NyCustomCommand {
   }
 }
 
-/// Example extension to add a printQuote method to NyCustomCommand
+/// Example extension to add a printInfoQuote method to NyCustomCommand
 extension QuoteFormatter on NyCustomCommand {
   /// Prints a beautifully formatted quote in the console
-  void printQuote({
+  void printInfoQuote({
     required String quote,
     required String author,
     String borderColor = '\x1B[36m', // Cyan
@@ -91,11 +91,11 @@ extension QuoteFormatter on NyCustomCommand {
 
     // Top border
     final String topBorder = '$borderColor╭${'─' * (width)}╮$reset';
-    print(topBorder);
+    info(topBorder);
 
     // Empty line
     final String emptyLine = '$borderColor│${' ' * width}│$reset';
-    print(emptyLine);
+    info(emptyLine);
 
     // Quote content with rainbow effect if requested
     for (final String line in wrappedQuote) {
@@ -103,21 +103,21 @@ extension QuoteFormatter on NyCustomCommand {
       final int paddingRight = width - line.length - 2;
       final String paddedLine = ' $line${' ' * paddingRight} ';
 
-      print('$borderColor│$quoteColor$paddedLine$reset$borderColor│$reset');
+      info('$borderColor│$quoteColor$paddedLine$reset$borderColor│$reset');
     }
 
     // Empty line
-    print(emptyLine);
+    info(emptyLine);
 
     // Author line
     final int authorPadding = width - authorText.length;
     final String authorLine =
         '$borderColor│${' ' * authorPadding}$authorColor$authorText$reset$borderColor│$reset';
-    print(authorLine);
+    info(authorLine);
 
     // Bottom border
     final String bottomBorder = '$borderColor╰${'─' * (width)}╯$reset';
-    print(bottomBorder);
+    info(bottomBorder);
   }
 
   /// Wrap text to fit within maxWidth

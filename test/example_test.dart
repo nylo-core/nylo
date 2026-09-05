@@ -58,7 +58,7 @@ void main() {
       await tester.pumpNyWidgetSimple(HomePage());
 
       // Verify interactive widgets exist
-      final fab = find.byType(FloatingActionButton);
+      final Finder fab = find.byType(FloatingActionButton);
       expect(fab, findsOneWidget);
 
       // For buttons that show toasts/dialogs, you may need
@@ -101,7 +101,7 @@ void main() {
 
     nyTest('can travel forward in time', () async {
       NyTest.freezeTime();
-      final now = NyTime.now();
+      final DateTime now = NyTime.now();
 
       NyTest.travelForward(const Duration(days: 30));
 
@@ -112,7 +112,7 @@ void main() {
 
     nyTest('can travel backward in time', () async {
       NyTest.freezeTime();
-      final now = NyTime.now();
+      final DateTime now = NyTime.now();
 
       NyTest.travelBackward(const Duration(hours: 5));
 
@@ -184,7 +184,7 @@ void main() {
 
   nyGroup('Authentication', () {
     nyTest('can act as authenticated user', () async {
-      final testUser = {'id': 1, 'name': 'Test User', 'email': 'test@example.com'};
+      final Map<String, dynamic> testUser = {'id': 1, 'name': 'Test User', 'email': 'test@example.com'};
 
       NyTest.actingAs(testUser);
 
