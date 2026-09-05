@@ -177,7 +177,9 @@ class _HomePageState extends NyPage<HomePage> {
                             builder: (context,
                                 CollectionItem<Map<String, dynamic>> item) {
                               Map<String, dynamic> link = item.data;
-                              return ListTile(
+                              return Material(
+                                color: Colors.transparent,
+                                child: ListTile(
                                   leading: FaIcon(
                                     link["icon"],
                                     color: NyColor.resolveColor(
@@ -199,7 +201,9 @@ class _HomePageState extends NyPage<HomePage> {
                                     light: Colors.grey.shade800,
                                     dark: Colors.white,
                                   ),),
-                                  onTap: () => link["onTap"]());
+                                  onTap: () => link["onTap"](),
+                                ),
+                              );
                             },
                           ),
                         ),
