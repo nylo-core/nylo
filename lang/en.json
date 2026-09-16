@@ -31,6 +31,61 @@
     },
     "offline_banner": {
       "message": "No internet connection"
+    },
+    "toast": {
+      "success": "Success",
+      "warning": "Warning",
+      "info": "Info",
+      "error": "Error",
+      "oops": "Oops",
+      "sorry": "Sorry",
+      "dismiss": "Dismiss notification"
+    },
+    "input_field": {
+      "password": "Password",
+      "email_address": "Email Address"
+    },
+    "form_collection": {
+      "select_option": "Please select an option",
+      "invalid_selection": "Invalid selection"
+    },
+    "validation": {
+      "default_attribute": "data",
+      "invalid_data": "Invalid data",
+      "field_required": "{{attribute}} is required",
+      "field_failed": "Validation failed for {{attribute}}",
+      "email": "The {{attribute}} must be a valid email address.",
+      "password_strength_1": "The {{attribute}} must contain at least one uppercase letter, one digit, and a minimum of 8 characters.",
+      "password_strength_2": "The {{attribute}} must contain at least one uppercase letter, one digit, a minimum of 8 characters, and at least one special character.",
+      "equals": "The {{attribute}} must match.",
+      "custom": "The {{attribute}} is invalid.",
+      "min_length": "The {{attribute}} must be at least {{minLength}} characters long.",
+      "min_size": "The {{attribute}} must be at least {{minSize}} in size.",
+      "min_value": "The {{attribute}} must be at least {{minValue}}.",
+      "max_length": "The {{attribute}} must be at most {{maxLength}} characters long.",
+      "max_size": "The {{attribute}} must be at most {{maxSize}} in size.",
+      "max_value": "The {{attribute}} must be at most {{maxValue}}.",
+      "regex": "The {{attribute}} is invalid.",
+      "date_age_is_younger": "The {{attribute}} must be younger than {{age}} years.",
+      "date_age_is_older": "The {{attribute}} must be older than {{age}} years.",
+      "date_in_past": "The {{attribute}} must be in the past.",
+      "date_in_future": "The {{attribute}} must be in the future.",
+      "phone_number_us": "The {{attribute}} is not a valid phone number.",
+      "phone_number_uk": "The {{attribute}} is not a valid phone number",
+      "url": "The {{attribute}} must be a valid URL.",
+      "contains": "The {{attribute}} must contain one of the following values: {{values}}.",
+      "begins_with": "The {{attribute}} must begin with '{{prefix}}'.",
+      "ends_with": "The {{attribute}} must end with '{{suffix}}'.",
+      "boolean_true": "The {{attribute}} must be true.",
+      "boolean_false": "The {{attribute}} must be false.",
+      "not_empty": "The {{attribute}} must not be empty.",
+      "numeric": "The {{attribute}} must be a numeric value.",
+      "date": "The {{attribute}} must be a valid date.",
+      "capitalized": "The {{attribute}} must be capitalized.",
+      "lowercase": "The {{attribute}} must be in lowercase.",
+      "uppercase": "The {{attribute}} must be in uppercase.",
+      "zipcode_us": "The {{attribute}} field is not a valid zip code",
+      "postcode_uk": "The {{attribute}} must be a valid UK postcode."
     }
   },
   "documentation": "documentation",

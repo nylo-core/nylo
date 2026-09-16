@@ -31,6 +31,61 @@
     },
     "offline_banner": {
       "message": "Sin conexión a internet"
+    },
+    "toast": {
+      "success": "Éxito",
+      "warning": "Advertencia",
+      "info": "Información",
+      "error": "Error",
+      "oops": "Ups",
+      "sorry": "Lo sentimos",
+      "dismiss": "Cerrar notificación"
+    },
+    "input_field": {
+      "password": "Contraseña",
+      "email_address": "Correo electrónico"
+    },
+    "form_collection": {
+      "select_option": "Por favor, selecciona una opción",
+      "invalid_selection": "Selección no válida"
+    },
+    "validation": {
+      "default_attribute": "datos",
+      "invalid_data": "Datos no válidos",
+      "field_required": "El campo {{attribute}} es obligatorio",
+      "field_failed": "Error de validación en {{attribute}}",
+      "email": "El campo {{attribute}} debe ser una dirección de correo electrónico válida.",
+      "password_strength_1": "El campo {{attribute}} debe contener al menos una letra mayúscula, un dígito y un mínimo de 8 caracteres.",
+      "password_strength_2": "El campo {{attribute}} debe contener al menos una letra mayúscula, un dígito, un mínimo de 8 caracteres y al menos un carácter especial.",
+      "equals": "El campo {{attribute}} debe coincidir.",
+      "custom": "El campo {{attribute}} no es válido.",
+      "min_length": "El campo {{attribute}} debe tener al menos {{minLength}} caracteres.",
+      "min_size": "El campo {{attribute}} debe tener un tamaño mínimo de {{minSize}}.",
+      "min_value": "El campo {{attribute}} debe ser como mínimo {{minValue}}.",
+      "max_length": "El campo {{attribute}} no debe tener más de {{maxLength}} caracteres.",
+      "max_size": "El campo {{attribute}} debe tener un tamaño máximo de {{maxSize}}.",
+      "max_value": "El campo {{attribute}} debe ser como máximo {{maxValue}}.",
+      "regex": "El campo {{attribute}} no es válido.",
+      "date_age_is_younger": "El campo {{attribute}} debe indicar una edad menor de {{age}} años.",
+      "date_age_is_older": "El campo {{attribute}} debe indicar una edad mayor de {{age}} años.",
+      "date_in_past": "El campo {{attribute}} debe ser una fecha pasada.",
+      "date_in_future": "El campo {{attribute}} debe ser una fecha futura.",
+      "phone_number_us": "El campo {{attribute}} no es un número de teléfono válido.",
+      "phone_number_uk": "El campo {{attribute}} no es un número de teléfono válido.",
+      "url": "El campo {{attribute}} debe ser una URL válida.",
+      "contains": "El campo {{attribute}} debe contener uno de los siguientes valores: {{values}}.",
+      "begins_with": "El campo {{attribute}} debe empezar por '{{prefix}}'.",
+      "ends_with": "El campo {{attribute}} debe terminar en '{{suffix}}'.",
+      "boolean_true": "El campo {{attribute}} debe ser verdadero.",
+      "boolean_false": "El campo {{attribute}} debe ser falso.",
+      "not_empty": "El campo {{attribute}} no debe estar vacío.",
+      "numeric": "El campo {{attribute}} debe ser un valor numérico.",
+      "date": "El campo {{attribute}} debe ser una fecha válida.",
+      "capitalized": "El campo {{attribute}} debe empezar con mayúscula.",
+      "lowercase": "El campo {{attribute}} debe estar en minúsculas.",
+      "uppercase": "El campo {{attribute}} debe estar en mayúsculas.",
+      "zipcode_us": "El campo {{attribute}} no es un código postal válido.",
+      "postcode_uk": "El campo {{attribute}} debe ser un código postal válido del Reino Unido."
     }
   },
   "documentation": "documentación",
