@@ -5,16 +5,16 @@ import '/config/design.dart';
 import '/bootstrap/theme.dart';
 import '/config/localization.dart';
 import 'package:nylo_framework/nylo_framework.dart';
+import '/bootstrap/seeders.dart';
 
 class AppProvider implements NyProvider {
-
   @override
   setup(Nylo nylo) async {
     await nylo.configure(
       localization: NyLocalizationConfig(
-          languageCode: LocalizationConfig.languageCode,
-          localeType: LocalizationConfig.localeType,
-          assetsDirectory: LocalizationConfig.assetsDirectory
+        languageCode: LocalizationConfig.languageCode,
+        localeType: LocalizationConfig.localeType,
+        assetsDirectory: LocalizationConfig.assetsDirectory,
       ),
       loader: DesignConfig.loader,
       logo: DesignConfig.logo,
@@ -30,6 +30,7 @@ class AppProvider implements NyProvider {
       showDateTimeInLogs: false,
       broadcastEvents: false,
       useErrorStack: true,
+      seeders: seeders,
     );
 
     return nylo;
