@@ -177,6 +177,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
+  cross_file:
+    dependency: transitive
+    description:
+      name: cross_file
+      sha256: f141ea4f277af142a0356955707f6556f37b03947d39d55585981a06ca437bd6
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.5+5"
   crypto:
     dependency: transitive
     description:
@@ -625,18 +633,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "900574e68e335072c7f6d05f0d92ad6993f4755564574a60cce44185383703c2"
+      sha256: "45a411d7df447f3feb62f0344956453b932fb371cb422f157576e5b6c3eeed00"
       url: "https://pub.dev"
     source: hosted
-    version: "7.2.3"
+    version: "7.2.4"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "6b2c8c6b4a34697e9f7e81e36b4ede91fbd358a1a62a996caf97f1fa7c3038da"
+      sha256: "52bb5ea0c243b77c52fe9b6929d023115a1670f545d05bf56b73bfdaea1e4a30"
       url: "https://pub.dev"
     source: hosted
-    version: "7.30.1"
+    version: "7.31.0"
   objective_c:
     dependency: transitive
     description:
