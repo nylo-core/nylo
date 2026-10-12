@@ -12,6 +12,20 @@ Nylo is a micro-framework for Flutter which is designed to help simplify develop
 
 This project is open source and MIT-licenced, we welcome any contributions. You can join as a backer/sponsor to fund future development for this project [here](https://nylo.dev)
 
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://discord.gg/eKZC9FbVDv">
+        <img src="https://cdn.simpleicons.org/discord/5865F2" width="56" alt="Discord">
+      </a>
+      <h3><a href="https://discord.gg/eKZC9FbVDv">Join the Nylo Community</a></h3>
+      Discord · Q&amp;A · Show and Tell
+    </td>
+  </tr>
+</table>
+</div>
+
 ---
 
 ## Features
@@ -41,6 +55,7 @@ View our [docs](https://nylo.dev/docs) and visit [nylo.dev](https://nylo.dev)
 Please see [CHANGELOG](https://github.com/nylo-core/framework/blob/7.x/CHANGELOG.md) for more information what has changed recently.
 
 ## Social
+* [Discord](https://discord.gg/eKZC9FbVDv)
 * [Twitter](https://twitter.com/nylo_dev)
 
 ## Security
