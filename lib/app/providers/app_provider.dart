@@ -6,6 +6,7 @@ import '/bootstrap/theme.dart';
 import '/config/localization.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import '/bootstrap/seeders.dart';
+import '/bootstrap/playbooks.dart';
 
 class AppProvider implements NyProvider {
   @override
@@ -31,6 +32,7 @@ class AppProvider implements NyProvider {
       broadcastEvents: false,
       useErrorStack: true,
       seeders: seeders,
+      playbooks: playbooks,
     );
 
     return nylo;
