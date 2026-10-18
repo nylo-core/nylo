@@ -15,7 +15,7 @@ import 'package:nylo_framework/playbook.dart';
 | Release builds get an empty map, so playbooks are left out of the app
 | you ship.
 |
-| Learn more: https://nylo.dev/docs/7.x/metro
+| Learn more: https://nylo.dev/docs/7.x/playbooks
 |-------------------------------------------------------------------------- */
 
 final Map<String, Playbook Function()> playbooks = kReleaseMode
