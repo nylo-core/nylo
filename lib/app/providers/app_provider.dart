@@ -19,6 +19,7 @@ class AppProvider implements NyProvider {
       ),
       loader: DesignConfig.loader,
       logo: DesignConfig.logo,
+      formFieldStyle: DesignConfig.formFieldStyle,
       themes: appThemes,
       initialThemeId: 'light_theme',
       toastNotifications: ToastNotificationConfig.styles,

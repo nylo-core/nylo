@@ -1,3 +1,4 @@
+import '/app/models/github_repo.dart';
 import '/config/storage_keys.dart';
 import '/bootstrap/decoders.dart';
 import 'package:nylo_framework/nylo_framework.dart';
@@ -31,7 +32,7 @@ class ApiService extends NyApiService {
   };
 
   /// Example to fetch the Nylo repository info from Github
-  Future<Map<String, dynamic>?> githubInfo() async {
+  Future<GithubRepoResult?> githubInfo() async {
     return await network(
       request: (Dio request) =>
           request.get("https://api.github.com/repos/nylo-core/nylo"),

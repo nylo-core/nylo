@@ -92,7 +92,7 @@ ThemeData buildAppTheme(ColorStyles color, {required Brightness brightness}) {
     colorScheme: isDark
         ? ColorScheme.dark(
             primary: color.general.primaryAccent,
-            onSurface: Colors.black,
+            onSurface: color.general.content,
           )
         : ColorScheme.light(
             surface: color.general.background,

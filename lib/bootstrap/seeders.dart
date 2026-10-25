@@ -13,4 +13,8 @@ import 'package:nylo_framework/live.dart';
 | Learn more: https://nylo.dev/docs/7.x/metro
 |-------------------------------------------------------------------------- */
 
-final Map<String, Seeder Function()> seeders = kReleaseMode ? const {} : {};
+final Map<String, Seeder Function()> seeders = kReleaseMode
+    ? const {}
+    : {
+
+      };

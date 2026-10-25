@@ -15,11 +15,11 @@ environment:
   sdk: ^3.10.7
 
 dependencies:
-  google_fonts: ^8.2.1
-  analyzer: ^14.4.0
+  google_fonts: ^9.0.0
+  analyzer: ^14.6.0
   intl: ^0.20.3
-  nylo_framework: ^7.4.1
-  cupertino_icons: ^1.0.9
+  nylo_framework: ^7.5.0
+  cupertino_icons: ^2.0.0
   font_awesome_flutter: ^11.0.0
   flutter:
     sdk: flutter
@@ -47,6 +47,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - CHANGELOG.md
     - assets/fonts/
     - assets/images/
     - assets/app_icon/

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nylo_framework/nylo_framework.dart';
 import '/resources/widgets/loader_widget.dart';
 import '/resources/widgets/logo_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,4 +22,8 @@ final class DesignConfig {
 
   // App Loader - Use the `Loader()` widget to display a loader
   static final Widget loader = const Loader();
+
+  // Form Field Style - How every form field is drawn:
+  // FormFieldStyle.filled(), .outlined(), .underlined() or .grouped()
+  static const FormFieldStyle formFieldStyle = FormFieldStyle.filled();
 }

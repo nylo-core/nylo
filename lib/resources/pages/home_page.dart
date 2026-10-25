@@ -1,4 +1,5 @@
 import '/config/app.dart';
+import '/app/models/github_repo.dart';
 import '/app/networking/api_service.dart';
 import '/resources/widgets/theme_toggle_widget.dart';
 import '/bootstrap/extensions.dart';
@@ -11,6 +12,9 @@ import 'package:nylo_framework/nylo_framework.dart';
 class HomePage extends NyStatefulWidget<HomeController> {
   static RouteView path = ("/home", (_) => HomePage());
 
+  /// Actions e.g. HomePage.actions.showToast("hello");
+  static final actions = path.actions;
+
   HomePage({super.key}) : super(child: () => _HomePageState());
 }
 
@@ -20,12 +24,22 @@ class _HomePageState extends NyPage<HomePage> {
   @override
   get init => () async {
     /// Uncomment the code below to fetch the number of stars for the Nylo
-    //     Map<String, dynamic>? githubResponse = await api<ApiService>(
+    //     GithubRepoResult? github = await api<ApiService>(
     //       (request) => request.githubInfo(),
     //     );
     //
-    //     _stars = githubResponse?["stargazers_count"];
+    //     switch (github) {
+    //       case GithubRepo repo:
+    //         _stars = repo.stargazersCount;
+    //       case GithubError error:
+    //         printError(error.message);
+    //       case null:
+    //         break;
+    //     }
   };
+
+  @override
+  bool get stateManaged => true;
 
   /// Define the Loading style for the page.
   /// Options: LoadingStyle.normal(), LoadingStyle.skeletonizer(), LoadingStyle.none()
