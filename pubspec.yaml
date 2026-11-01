@@ -18,7 +18,7 @@ dependencies:
   google_fonts: ^9.0.0
   analyzer: ^14.6.0
   intl: ^0.20.3
-  nylo_framework: ^7.5.0
+  nylo_framework: ^7.5.1
   cupertino_icons: ^2.0.0
   font_awesome_flutter: ^11.0.0
   flutter:
