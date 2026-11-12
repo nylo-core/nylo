@@ -21,10 +21,10 @@ packages:
     dependency: transitive
     description:
       name: app_badge_plus
-      sha256: "975683e1b6efbad7af769f6d6f56564c633c9698d0e2f9e974585a5527bf900d"
+      sha256: "08d2512d360f0fd2db7c0e404b759bf7931683007c583e2abcc6d12f1bd124ab"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.5"
+    version: "1.4.0"
   app_links:
     dependency: transitive
     description:
@@ -189,10 +189,10 @@ packages:
     dependency: transitive
     description:
       name: crypto
-      sha256: c8ea0233063ba03258fbcf2ca4d6dadfefe14f02fab57702265467a19f27fadf
+      sha256: e3626ae6270383c9e3a549f34c9e4cd26c09ae6a9adaab2bf4737a00340efdc4
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.7"
+    version: "3.0.8"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -641,18 +641,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "93c2c222ed4333b1ed93ce8e3170112a9569cb0d3a5f89a72e79c1178c937083"
+      sha256: "735337f62137f1b04d0246455757b7f8c0f7febd08f5af310b9d6ab0225a8e51"
       url: "https://pub.dev"
     source: hosted
-    version: "7.5.1"
+    version: "7.5.2"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "759984b6c58ea0e89a25f845abdc25dc7434ab2ef9287fa03010bd54441c94f4"
+      sha256: bcaf2fbf843b63a993c3a6ad822f3598b77e11770700f6468427c04366d8d907
       url: "https://pub.dev"
     source: hosted
-    version: "7.37.1"
+    version: "7.37.2"
   objective_c:
     dependency: transitive
     description:
