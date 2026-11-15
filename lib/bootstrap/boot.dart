@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import '/config/app.dart';
 import '/resources/widgets/splash_screen.dart';
 import '../resources/widgets/main_widget.dart';

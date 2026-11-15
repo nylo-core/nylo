@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import '/resources/widgets/buttons/abstract/app_button.dart';
 
 class TransparencyButton extends StatefulAppButton {

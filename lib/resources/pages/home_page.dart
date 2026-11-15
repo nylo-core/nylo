@@ -6,7 +6,7 @@ import '/bootstrap/extensions.dart';
 import '/resources/widgets/logo_widget.dart';
 import '/app/controllers/home_controller.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 class HomePage extends NyStatefulWidget<HomeController> {

@@ -3,7 +3,7 @@
 | Learn more: https://nylo.dev/docs/7.x/configuration
 |-------------------------------------------------------------------------- */
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import '/resources/widgets/toast_notification_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 

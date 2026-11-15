@@ -6,7 +6,7 @@ import '/resources/widgets/buttons/partials/gradient_button_widget.dart';
 import '/resources/widgets/buttons/partials/rounded_button_widget.dart';
 import '/resources/widgets/buttons/partials/outlined_button_widget.dart' as app;
 import '/resources/widgets/buttons/partials/icon_button_widget.dart' as app;
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 export 'package:nylo_framework/nylo_framework.dart'
     show ButtonAnimationStyle, ButtonSplashStyle, ButtonSplashType;
