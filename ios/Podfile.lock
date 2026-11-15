@@ -1,5 +1,5 @@
 PODS:
-  - app_badge_plus (1.3.5):
+  - app_badge_plus (1.4.0):
     - Flutter
   - app_links (7.0.0):
     - Flutter
@@ -51,7 +51,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
 
 SPEC CHECKSUMS:
-  app_badge_plus: 61669f601f51ea6c45fb7e8a6f1e0b12ba50864b
+  app_badge_plus: 0a94831a7789a3de4c2c53947d8b624cb525637e
   app_links: a754cbec3c255bd4bbb4d236ecc06f28cd9a7ce8
   connectivity_plus: cb623214f4e1f6ef8fe7403d580fdad517d2f7dd
   Flutter: 71a624a5bc0c04062bf19101d501e466baf2fb47
